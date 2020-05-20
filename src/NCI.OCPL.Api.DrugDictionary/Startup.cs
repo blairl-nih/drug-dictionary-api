@@ -5,9 +5,13 @@ using Microsoft.Extensions.Logging;
 
 using NCI.OCPL.Api.Common;
 using NCI.OCPL.Api.DrugDictionary.Models;
+using NCI.OCPL.Api.DrugDictionary.Services;
 
 namespace NCI.OCPL.Api.DrugDictionary
 {
+    /// <summary>
+    /// Defines the configuration for the Drug Dictionary API
+    /// </summary>
     public class Startup : NciStartupBase
     {
         /// <summary>
@@ -37,6 +41,7 @@ namespace NCI.OCPL.Api.DrugDictionary
         protected override void AddAppServices(IServiceCollection services)
         {
             // Add our Query Service
+            services.AddTransient<IAutosuggestQueryService, ESAutosuggestQueryService>();
             services.Configure<DrugDictionaryAPIOptions>(Configuration.GetSection("DrugDictionaryAPI"));
         }
 

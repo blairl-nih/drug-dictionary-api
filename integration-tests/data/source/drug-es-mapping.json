@@ -6,7 +6,7 @@
                 "filter": {
                     "autocomplete_filter": {
                         "type": "edge_ngram",
-                        "min_gram": 3,
+                        "min_gram": 1,
                         "max_gram": 30,
                         "token_chars": [
                             "letter",
@@ -30,7 +30,7 @@
                 "analyzer": {
                     "autocomplete_index": {
                         "type": "custom",
-                        "tokenizer": "whitespace",
+                        "tokenizer": "standard",
                         "filter": [
                             "lowercase",
                             "autocomplete_filter",
@@ -46,10 +46,18 @@
                     },
                     "ngram_analyzer": {
                         "type": "custom",
-                        "tokenizer": "whitespace",
+                        "tokenizer": "keyword",
                         "filter": [
                             "lowercase",
                             "ngram_filter",
+                            "asciifolding"
+                        ]
+                    },
+                    "autocomplete_search": {
+                        "type": "custom",
+                        "tokenizer": "standard",
+                        "filter": [
+                            "lowercase",
                             "asciifolding"
                         ]
                     }
@@ -78,7 +86,7 @@
                         "_autocomplete": {
                             "type": "text",
                             "analyzer": "autocomplete_index",
-                            "search_analyzer": "lowercase_search"
+                            "search_analyzer": "autocomplete_search"
                         },
                         "_contain": {
                             "type": "text",
