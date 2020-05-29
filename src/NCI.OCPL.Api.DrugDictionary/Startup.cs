@@ -40,8 +40,10 @@ namespace NCI.OCPL.Api.DrugDictionary
         /// <param name="services">Services.</param>
         protected override void AddAppServices(IServiceCollection services)
         {
-            // Add our Query Service
+            // Add our Query Services
             services.AddTransient<IAutosuggestQueryService, ESAutosuggestQueryService>();
+            services.AddTransient<IDrugsQueryService, ESDrugsQueryService>();
+
             services.Configure<DrugDictionaryAPIOptions>(Configuration.GetSection("DrugDictionaryAPI"));
         }
 

@@ -15,7 +15,9 @@ namespace NCI.OCPL.Api.DrugDictionary
     /// </summary>
     public class Program
     {
+        /// <summary>
         /// The main entrypoint for running the drug dictionary API.
+        /// </summary>
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();

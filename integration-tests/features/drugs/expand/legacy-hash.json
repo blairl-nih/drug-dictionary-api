@@ -1,0 +1,163 @@
+{
+    "meta": {
+        "totalResults": 56,
+        "from": 5
+    },
+    "results": [
+        {
+            "aliases": [
+                {
+                    "type": "Abbreviation",
+                    "name": "dmPGE2"
+                },
+                {
+                    "type": "LexicalVariant",
+                    "name": "16,16-Dimethyl Prostaglandin E2"
+                }
+            ],
+            "definition": {
+                "html": "A stable derivative of prostaglandin E2 (PGE2) with potential hematopoietic activity. Administration of 16,16 dimethyl-prostaglandin E2 (dmPGE2) appears to lead to increased formation of hematopoietic stem and progenitor cells. Even though the exact mechanism of action has yet to be fully elucidated, this agent may stimulate hematopoiesis by activating the Wnt signaling pathway, which increases cellular levels of beta-catenin, a subunit of the cadherin protein complex. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C84850\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C84850\">NCI Thesaurus</a>)",
+                "text": "A stable derivative of prostaglandin E2 (PGE2) with potential hematopoietic activity. Administration of 16,16 dimethyl-prostaglandin E2 (dmPGE2) appears to lead to increased formation of hematopoietic stem and progenitor cells. Even though the exact mechanism of action has yet to be fully elucidated, this agent may stimulate hematopoiesis by activating the Wnt signaling pathway, which increases cellular levels of beta-catenin, a subunit of the cadherin protein complex. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C84850",
+            "nciConceptName": "16,16-Dimethyl Prostaglandin E2",
+            "termId": 651165,
+            "name": "16, 16-dimethyl prostaglandin E2",
+            "firstLetter": "#",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "1616-dimethyl-prostaglandin-e2"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "Abbreviation",
+                    "name": "(18)F-FAC"
+                },
+                {
+                    "type": "Abbreviation",
+                    "name": "F-AC"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "fluorine F 18 fluoroacetate"
+                }
+            ],
+            "definition": {
+                "html": "A radioconjugate and an acetate analog labeled with fluorine F 18 ((18)F-FAC), a positron-emitting isotope, with potential prostate tumor tracer property using positron emission tomography (PET). Although the mechanism of action is unclear, fluorine F 18 acetate preferentially accumulates in tumor tissue, serving as a tracer for imaging tumors with PET. Fluorine 18 has a longer radioactive half-life (110 min) vs. the half-life of carbon-11 acetate (20.4 min). Furthermore, (18)F-FAC showed a rapid clearance from liver and extensive excretion to bile and urine in comparison with carbon-11 acetate, therefore this tracer may be a useful alternative to C-11 acetate for the detection of prostate tumors by PET. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C96236\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C96236\">NCI Thesaurus</a>)",
+                "text": "A radioconjugate and an acetate analog labeled with fluorine F 18 ((18)F-FAC), a positron-emitting isotope, with potential prostate tumor tracer property using positron emission tomography (PET). Although the mechanism of action is unclear, fluorine F 18 acetate preferentially accumulates in tumor tissue, serving as a tracer for imaging tumors with PET. Fluorine 18 has a longer radioactive half-life (110 min) vs. the half-life of carbon-11 acetate (20.4 min). Furthermore, (18)F-FAC showed a rapid clearance from liver and extensive excretion to bile and urine in comparison with carbon-11 acetate, therefore this tracer may be a useful alternative to C-11 acetate for the detection of prostate tumors by PET. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C96236",
+            "nciConceptName": "18-F-fluoroacetate",
+            "termId": 698007,
+            "name": "18-F-fluoroacetate",
+            "firstLetter": "#",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "18-f-fluoroacetate"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "9-(4-18F-fluoro-3-[hydroxymethyl]butyl)guanine"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "reporter probe 18F-FHBG"
+                }
+            ],
+            "definition": {
+                "html": "A fluorine-18-labeled acycloguanosine derivative substrate for herpes simplex virus type-1 thymidine kinase (HSV1-tk). 18F-FHBG is used as a reporter probe to image the expression of the herpes simplex virus type-1 thymidine kinase (HSV1-tk) gene in gene transfer therapy. HSV1-tk and HSV1-tk-metabolized 18F-FHBG co-localize, allowing positron emission tomography (PET) localization of HSV1-tk gene-transfected tissue and the assessment of gene transfer efficiency. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C62533\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C62533\">NCI Thesaurus</a>)",
+                "text": "A fluorine-18-labeled acycloguanosine derivative substrate for herpes simplex virus type-1 thymidine kinase (HSV1-tk). 18F-FHBG is used as a reporter probe to image the expression of the herpes simplex virus type-1 thymidine kinase (HSV1-tk) gene in gene transfer therapy. HSV1-tk and HSV1-tk-metabolized 18F-FHBG co-localize, allowing positron emission tomography (PET) localization of HSV1-tk gene-transfected tissue and the assessment of gene transfer efficiency. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C62533",
+            "nciConceptName": "18F-FHBG",
+            "termId": 488475,
+            "name": "18F-FHBG",
+            "firstLetter": "#",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "18f-fhbg"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "Abbreviation",
+                    "name": "18F-FMISO"
+                }
+            ],
+            "definition": {
+                "html": "A radiofluorinated 2-nitroimidazole derivate with hypoxia-specific tracer activity.  Misonidazole is reduced under hypoxic conditions and in reduced form covalently binds to macromolecules in hypoxic cells. 18F (fluorine-18) radiofluorination of misonidazole to form 18F-fluoromisonidazole allows radioisotopic imaging of reduced misonidazole bound to macromolecules in hypoxic cells. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C52180\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C52180\">NCI Thesaurus</a>)",
+                "text": "A radiofluorinated 2-nitroimidazole derivate with hypoxia-specific tracer activity.  Misonidazole is reduced under hypoxic conditions and in reduced form covalently binds to macromolecules in hypoxic cells. 18F (fluorine-18) radiofluorination of misonidazole to form 18F-fluoromisonidazole allows radioisotopic imaging of reduced misonidazole bound to macromolecules in hypoxic cells. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C52180",
+            "nciConceptName": "18F-Fluoromisonidazole",
+            "termId": 458064,
+            "name": "18F-fluoromisonidazole",
+            "firstLetter": "#",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "18f-fluoromisonidazole"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "Abbreviation",
+                    "name": "[18F] FPRGD2"
+                },
+                {
+                    "type": "Abbreviation",
+                    "name": "(18)F-FB-mini-PEG-E[c(RGDyK)](2)"
+                },
+                {
+                    "type": "Abbreviation",
+                    "name": "18F-FPRGD2"
+                }
+            ],
+            "definition": {
+                "html": "A radiotracer containing a pegylated dimeric Arg-Gly-Asp (RGD) peptide (NH2-mini-PEG-E[c(RGDyK)]2 or PRGD2) radiolabeled with fluorine 18F-fluorobenzoate (18F-FB), with potential alphaVbeta3 integrin imaging activity upon positron emission topography (PET). Upon administration, the RGD moiety of 18F-labeled mini-PEG spacered RGD dimer (18F-FPRGD2) binds to alphaVbeta3 integrin. Upon PET, alphaVbeta3-expressing tumor cells can be visualized and the degree of tumor angiogenesis can be determined. This agent exhibits increased integrin receptor binding affinity, tumor cell uptake and increased radiolabeling yield as compared to the non-pegylated form (18F-FRGD2). Integrins, transmembrane glycoproteins, may be upregulated on proliferating tumor vessel endothelial cells and various cancer cells; their overexpression has been associated with neovascularization, differentiation, proliferation of tumor cells, metastasis and an overall poor prognosis. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C97334\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C97334\">NCI Thesaurus</a>)",
+                "text": "A radiotracer containing a pegylated dimeric Arg-Gly-Asp (RGD) peptide (NH2-mini-PEG-E[c(RGDyK)]2 or PRGD2) radiolabeled with fluorine 18F-fluorobenzoate (18F-FB), with potential alphaVbeta3 integrin imaging activity upon positron emission topography (PET). Upon administration, the RGD moiety of 18F-labeled mini-PEG spacered RGD dimer (18F-FPRGD2) binds to alphaVbeta3 integrin. Upon PET, alphaVbeta3-expressing tumor cells can be visualized and the degree of tumor angiogenesis can be determined. This agent exhibits increased integrin receptor binding affinity, tumor cell uptake and increased radiolabeling yield as compared to the non-pegylated form (18F-FRGD2). Integrins, transmembrane glycoproteins, may be upregulated on proliferating tumor vessel endothelial cells and various cancer cells; their overexpression has been associated with neovascularization, differentiation, proliferation of tumor cells, metastasis and an overall poor prognosis. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C97334",
+            "nciConceptName": "18F-labeled Mini-PEG Spacered RGD Dimer",
+            "termId": 703211,
+            "name": "18F-labeled mini-PEG spacered RGD dimer",
+            "firstLetter": "#",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "18f-labeled-mini-peg-spacered-rgd-dimer"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "1-(2'-deoxy-2'-fluoro-beta-D-arabinofuranosyl) uracil"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "FAU"
+                }
+            ],
+            "definition": {
+                "html": "A deoxyuridine prodrug with potential antineoplastic activity. Upon cellular uptake, 2’-F-ara-deoxyuridine (FAU) is phosphorylated by thymidine kinase to FAU monophosphate and subsequently methylated in the 5'-position by thymidylate synthase (TS) to its activated form, 1-(2-deoxy-2-fluoro-beta-D-arabinofuranosyl) 5-methyluracil monophosphate (FMAUMP). FMAUMP is incorporated into DNA leading to an inhibition of DNA synthesis and so cell growth. The catalytic activity of TS is critical to activation of FAU and subsequent incorporation into DNA. FAU may be beneficial in the case of tumors with high TS activity that are resistant to TS inhibitors. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C80036\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C80036\">NCI Thesaurus</a>)",
+                "text": "A deoxyuridine prodrug with potential antineoplastic activity. Upon cellular uptake, 2’-F-ara-deoxyuridine (FAU) is phosphorylated by thymidine kinase to FAU monophosphate and subsequently methylated in the 5'-position by thymidylate synthase (TS) to its activated form, 1-(2-deoxy-2-fluoro-beta-D-arabinofuranosyl) 5-methyluracil monophosphate (FMAUMP). FMAUMP is incorporated into DNA leading to an inhibition of DNA synthesis and so cell growth. The catalytic activity of TS is critical to activation of FAU and subsequent incorporation into DNA. FAU may be beneficial in the case of tumors with high TS activity that are resistant to TS inhibitors. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C80036",
+            "nciConceptName": "2'-F-ara-deoxyuridine",
+            "termId": 616102,
+            "name": "2'-F-ara-deoxyuridine",
+            "firstLetter": "#",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "2-f-ara-deoxyuridine"
+        }
+    ],
+    "links": null
+}

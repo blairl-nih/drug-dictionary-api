@@ -1,0 +1,95 @@
+{
+    "meta": {
+        "totalResults": 385,
+        "from": 20
+    },
+    "results": [
+        {
+            "aliases": [
+                {
+                    "type": "Synonym",
+                    "name": "153Sm-DOTMP"
+                },
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "Sm-153-1,4,7,10-tetraazacyclododecane-1,4,7,10-tetrayltetrakis(methylene)tetrakisphosphonic acid"
+                },
+                {
+                    "type": "USBrandName",
+                    "name": "CycloSam"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "Sm-153-DOTMP"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "153 Sm-DOTMP"
+                },
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "Sm-153-1,4,7,10-tetraazacyclododecane-1,4,7,10-tetra(methylene)phosphonic acid"
+                }
+            ],
+            "definition": {
+                "html": "A radioconjugate composed of the phosphonic acid chelator DOTMP (1,4,7,10-tetraazacyclododecane-1,4,7,10-tetramethylenephosphonic acid) conjugated to the beta- and gamma-emitting radioisotope samarium Sm 153, with potential antineoplastic activity. Upon administration of samarium Sm 153-DOTMP, the DOTMP moiety targets and binds to growing bone, thereby selectively delivering samarium Sm 153-mediated cytotoxic radiation to bone tumor and metastases, which may help destroy bone metastases and mitigate pain from bone metastases. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C165558\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C165558\">NCI Thesaurus</a>)",
+                "text": "A radioconjugate composed of the phosphonic acid chelator DOTMP (1,4,7,10-tetraazacyclododecane-1,4,7,10-tetramethylenephosphonic acid) conjugated to the beta- and gamma-emitting radioisotope samarium Sm 153, with potential antineoplastic activity. Upon administration of samarium Sm 153-DOTMP, the DOTMP moiety targets and binds to growing bone, thereby selectively delivering samarium Sm 153-mediated cytotoxic radiation to bone tumor and metastases, which may help destroy bone metastases and mitigate pain from bone metastases. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C165558",
+            "nciConceptName": "Samarium Sm 153-DOTMP",
+            "termId": 799673,
+            "name": "samarium Sm 153-DOTMP",
+            "firstLetter": "s",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "samarium-sm-153-dotmp"
+        },
+        {
+            "preferredName": "diphencyprone",
+            "termId": 742143,
+            "name": "Samcyprone",
+            "firstLetter": "s",
+            "type": "DrugAlias",
+            "termNameType": "USBrandName",
+            "prettyUrlName": "diphencyprone"
+        },
+        {
+            "preferredName": "granisetron transdermal system",
+            "termId": 642824,
+            "name": "Sancuso",
+            "firstLetter": "s",
+            "type": "DrugAlias",
+            "termNameType": "USBrandName",
+            "prettyUrlName": "granisetron-transdermal-patch"
+        },
+        {
+            "preferredName": "granisetron",
+            "termId": 794007,
+            "name": "Sancuso",
+            "firstLetter": "s",
+            "type": "DrugAlias",
+            "termNameType": "USBrandName",
+            "prettyUrlName": "granisetron"
+        },
+        {
+            "preferredName": "cyclosporine",
+            "termId": 39201,
+            "name": "Sandimmun",
+            "firstLetter": "s",
+            "type": "DrugAlias",
+            "termNameType": "USBrandName",
+            "prettyUrlName": "cyclosporine"
+        },
+        {
+            "preferredName": "cyclosporine",
+            "termId": 39201,
+            "name": "Sandimmune",
+            "firstLetter": "s",
+            "type": "DrugAlias",
+            "termNameType": "USBrandName",
+            "prettyUrlName": "cyclosporine"
+        }
+    ],
+    "links": null
+}
