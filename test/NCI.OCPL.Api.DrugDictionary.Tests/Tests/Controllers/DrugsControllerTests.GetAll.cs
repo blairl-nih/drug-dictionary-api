@@ -16,34 +16,21 @@ using NCI.OCPL.Api.Common.Testing;
 
 namespace NCI.OCPL.Api.DrugDictionary.Tests
 {
-
     /// <summary>
-    /// Tests for the DrugsController's Expand method.
+    /// Tests for the DrugsController's GetAll method.
     /// </summary>
     public partial class DrugsControllerTests
     {
-        const int DEFAULT_SEARCH_SIZE = 100;
-        const int DEFAULT_SEARCH_FROM = 0;
-        static readonly DrugResourceType[] DEFAULT_DRUG_RESOURCE_TYPE_LIST = { DrugResourceType.DrugTerm, DrugResourceType.DrugAlias };
-        static readonly TermNameType[] DEFAULT_INCLUDED_TERM_TYPE_LIST = { TermNameType.CodeName, TermNameType.ObsoleteName, TermNameType.Abbreviation,
-                            TermNameType.INDCode, TermNameType.NSCNumber, TermNameType.ForeignBrandName, TermNameType.Synonym,
-                            TermNameType.CASRegistryName, TermNameType.Subtype, TermNameType.Spanish, TermNameType.LexicalVariant,
-                            TermNameType.ChemicalStructureName, TermNameType.CommonUsage, TermNameType.Acronym, TermNameType.USBrandName,
-                            TermNameType.Broader, TermNameType.RelatedString, TermNameType.PreferredName };
-        static readonly TermNameType[] DEFAULT_EXCLUDED_TERM_TYPE_LIST = { };
-        static readonly string[] DEFAULT_REQUESTED_FIELD_LIST = { "termId", "name", "firstLetter", "type", "termNameType", "prettyUrlName", "aliases", "definition", "drugInfoSummaryLink", "nciConceptId", "nciConceptName", "PreferredName" };
-
         /// <summary>
-        /// Verify that Expand behaves in the expected manner when only required parameters are passed in.
+        /// Verify that GetAll behaves in the expected manner when only required parameters are passed in.
         /// </summary>
         [Fact]
-        public async void Expand_RequiredParametersOnly()
+        public async void GetAll_RequiredParametersOnly()
         {
             // Create a mock query that always returns the same result.
             Mock<IDrugsQueryService> querySvc = new Mock<IDrugsQueryService>();
             querySvc.Setup(
-                svc => svc.Expand(
-                    It.IsAny<char>(),
+                svc => svc.GetAll(
                     It.IsAny<int>(),
                     It.IsAny<int>(),
                     It.IsAny<DrugResourceType[]>(),
@@ -56,33 +43,32 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
             // Call the controller, we don't care about the actual return value.
             DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
-            await controller.Expand('s');
+            await controller.GetAll();
 
             // Verify that the query layer is called:
             //  a) with the expected updated values for size, from, and requestedFields.
             //  b) exactly once.
             querySvc.Verify(
-                svc => svc.Expand('s', DEFAULT_SEARCH_SIZE, DEFAULT_SEARCH_FROM,
+                svc => svc.GetAll(DEFAULT_SEARCH_SIZE, DEFAULT_SEARCH_FROM,
                     DEFAULT_DRUG_RESOURCE_TYPE_LIST,
                     DEFAULT_INCLUDED_TERM_TYPE_LIST,
                     DEFAULT_EXCLUDED_TERM_TYPE_LIST,
-                    DEFAULT_REQUESTED_FIELD_LIST ),
+                    DEFAULT_REQUESTED_FIELD_LIST),
                 Times.Once,
-                "ITermsQueryService::Expand() should be called once, using default values."
+                "ITermsQueryService::GetAll() should be called once, using default values."
             );
         }
 
         /// <Summary>
-        /// Verify that Expand behaves in the expected manner when size is an invalid value.
+        /// Verify that GetAll behaves in the expected manner when size is an invalid value.
         /// </Summary>
         [Fact]
-        public async void Expand_InvalidSize()
+        public async void GetAll_InvalidSize()
         {
             // Create a mock query that always returns the same result.
             Mock<IDrugsQueryService> querySvc = new Mock<IDrugsQueryService>();
             querySvc.Setup(
-                svc => svc.Expand(
-                    It.IsAny<char>(),
+                svc => svc.GetAll(
                     It.IsAny<int>(),
                     It.IsAny<int>(),
                     It.IsAny<DrugResourceType[]>(),
@@ -95,7 +81,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
             // Call the controller, we don't care about the actual return value.
             DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
-            await controller.Expand('s', -1, DEFAULT_SEARCH_FROM,
+            await controller.GetAll(-1, DEFAULT_SEARCH_FROM,
                 DEFAULT_DRUG_RESOURCE_TYPE_LIST,
                 DEFAULT_INCLUDED_TERM_TYPE_LIST,
                 DEFAULT_EXCLUDED_TERM_TYPE_LIST,
@@ -106,24 +92,23 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             //  a) with the expected updated values for size.
             //  b) exactly once.
             querySvc.Verify(
-                svc => svc.Expand('s', DEFAULT_SEARCH_SIZE, DEFAULT_SEARCH_FROM,
+                svc => svc.GetAll(DEFAULT_SEARCH_SIZE, DEFAULT_SEARCH_FROM,
                     DEFAULT_DRUG_RESOURCE_TYPE_LIST, DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST, DEFAULT_REQUESTED_FIELD_LIST),
                 Times.Once,
-                "ITermsQueryService::Expand() should be called once, with the updated value for size"
+                "ITermsQueryService::GetAll() should be called once, with the updated value for size"
             );
         }
 
         /// <summary>
-        /// Verify that Expand behaves in the expected manner when from is an invalid value.
+        /// Verify that GetAll behaves in the expected manner when from is an invalid value.
         /// </summary>
         [Fact]
-        public async void Expand_InvalidFrom()
+        public async void GetAll_InvalidFrom()
         {
             // Create a mock query that always returns the same result.
             Mock<IDrugsQueryService> querySvc = new Mock<IDrugsQueryService>();
             querySvc.Setup(
-                svc => svc.Expand(
-                    It.IsAny<char>(),
+                svc => svc.GetAll(
                     It.IsAny<int>(),
                     It.IsAny<int>(),
                     It.IsAny<DrugResourceType[]>(),
@@ -136,30 +121,29 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
             // Call the controller, we don't care about the actual return value.
             DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
-            await controller.Expand('s', 10, -1);
+            await controller.GetAll(10, -1);
 
             // Verify that the query layer is called:
             //  a) with the expected updated values for from and size.
             //  b) exactly once.
             querySvc.Verify(
-                svc => svc.Expand('s', 10, DEFAULT_SEARCH_FROM,
+                svc => svc.GetAll(10, DEFAULT_SEARCH_FROM,
                     DEFAULT_DRUG_RESOURCE_TYPE_LIST, DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST, DEFAULT_REQUESTED_FIELD_LIST),
                 Times.Once,
-                "ITermsQueryService::Expandl() should be called once, with the updated value for from"
+                "ITermsQueryService::GetAll() should be called once, with the updated value for from"
             );
         }
 
         /// <summary>
-        /// Verify that Expand behaves in the expected manner when requestedFields is null.
+        /// Verify that GetAll behaves in the expected manner when requestedFields is null.
         /// </summary>
         [Fact]
-        public async void Expand_NullRequestedFields()
+        public async void GetAll_NullRequestedFields()
         {
             // Create a mock query that always returns the same result.
             Mock<IDrugsQueryService> querySvc = new Mock<IDrugsQueryService>();
             querySvc.Setup(
-                svc => svc.Expand(
-                    It.IsAny<char>(),
+                svc => svc.GetAll(
                     It.IsAny<int>(),
                     It.IsAny<int>(),
                     It.IsAny<DrugResourceType[]>(),
@@ -172,33 +156,32 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
             // Call the controller, we don't care about the actual return value.
             DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
-            await controller.Expand('s', 10, -1, null);
+            await controller.GetAll(10, -1, null);
 
             // Verify that the query layer is called:
             //  a) with the expected updated values for requestedFields.
             //  b) exactly once.
             querySvc.Verify(
-                svc => svc.Expand('s', 10, DEFAULT_SEARCH_FROM,
+                svc => svc.GetAll(10, DEFAULT_SEARCH_FROM,
                     DEFAULT_DRUG_RESOURCE_TYPE_LIST,
                     DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST,
                     DEFAULT_REQUESTED_FIELD_LIST),
                 Times.Once,
-                "ITermsQueryService::Expandl() should be called once, with the updated value for requestedFields"
+                "ITermsQueryService::GetAll() should be called once, with the updated value for requestedFields"
             );
         }
 
         /// <summary>
-        /// Verify that Expand behaves in the expected manner when requestedFields is invalid
+        /// Verify that GetAll behaves in the expected manner when requestedFields is invalid
         /// by having any array items that are null.
         /// </summary>
         [Fact]
-        public async void Expand_InvalidRequestedFields()
+        public async void GetAll_InvalidRequestedFields()
         {
             // Create a mock query that always returns the same result.
             Mock<IDrugsQueryService> querySvc = new Mock<IDrugsQueryService>();
             querySvc.Setup(
-                svc => svc.Expand(
-                    It.IsAny<char>(),
+                svc => svc.GetAll(
                     It.IsAny<int>(),
                     It.IsAny<int>(),
                     It.IsAny<DrugResourceType[]>(),
@@ -211,7 +194,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
             // Call the controller, we don't care about the actual return value.
             DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
-            await controller.Expand('s', 10, DEFAULT_SEARCH_FROM,
+            await controller.GetAll(10, DEFAULT_SEARCH_FROM,
                     DEFAULT_DRUG_RESOURCE_TYPE_LIST,
                     DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST,
                     new string[] { null, null, null });
@@ -220,26 +203,25 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             //  a) with the expected updated values for requestedFields.
             //  b) exactly once.
             querySvc.Verify(
-                svc => svc.Expand('s', 10, DEFAULT_SEARCH_FROM,
+                svc => svc.GetAll(10, DEFAULT_SEARCH_FROM,
                     DEFAULT_DRUG_RESOURCE_TYPE_LIST,
                     DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST,
                     DEFAULT_REQUESTED_FIELD_LIST),
                 Times.Once,
-                "ITermsQueryService::Expandl() should be called once, with the updated value for requestedFields"
+                "ITermsQueryService::GetAll() should be called once, with the updated value for requestedFields"
             );
         }
 
         /// <summary>
-        /// Verify that Expand behaves in the expected manner when requestedFields is an empty array.
+        /// Verify that GetAll behaves in the expected manner when requestedFields is an empty array.
         /// </summary>
         [Fact]
-        public async void Expand_EmptyRequestedFields()
+        public async void GetAll_EmptyRequestedFields()
         {
             // Create a mock query that always returns the same result.
             Mock<IDrugsQueryService> querySvc = new Mock<IDrugsQueryService>();
             querySvc.Setup(
-                svc => svc.Expand(
-                    It.IsAny<char>(),
+                svc => svc.GetAll(
                     It.IsAny<int>(),
                     It.IsAny<int>(),
                     It.IsAny<DrugResourceType[]>(),
@@ -252,7 +234,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
             // Call the controller, we don't care about the actual return value.
             DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
-            await controller.Expand('s', 10, DEFAULT_SEARCH_FROM,
+            await controller.GetAll(10, DEFAULT_SEARCH_FROM,
                     DEFAULT_DRUG_RESOURCE_TYPE_LIST,
                     DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST, new string[] { });
 
@@ -260,11 +242,11 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             //  a) with the expected updated values for requestedFields.
             //  b) exactly once.
             querySvc.Verify(
-                svc => svc.Expand('s', 10, DEFAULT_SEARCH_FROM,
+                svc => svc.GetAll(10, DEFAULT_SEARCH_FROM,
                     DEFAULT_DRUG_RESOURCE_TYPE_LIST,
                     DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST, DEFAULT_REQUESTED_FIELD_LIST),
                 Times.Once,
-                "ITermsQueryService::Expandl() should be called once, with the updated value for requestedFields"
+                "ITermsQueryService::GetAll() should be called once, with the updated value for requestedFields"
             );
         }
 
@@ -273,7 +255,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
         /// (This test will need to change if Expand ever gains any logic of its own.)
         /// </summary>
         [Fact]
-        public async void ExpandTerms()
+        public async void GetAllTerms()
         {
             Mock<IDrugsQueryService> termsQueryService = new Mock<IDrugsQueryService>();
             DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, termsQueryService.Object);
@@ -360,8 +342,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             };
 
             termsQueryService.Setup(
-                termQSvc => termQSvc.Expand(
-                    It.IsAny<char>(),
+                termQSvc => termQSvc.GetAll(
                     It.IsAny<int>(),
                     It.IsAny<int>(),
                     It.IsAny<DrugResourceType[]>(),
@@ -372,7 +353,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             )
             .Returns(Task.FromResult(drugTermResults));
 
-            DrugTermResults actualReslts = await controller.Expand('s', 5, 10, DEFAULT_DRUG_RESOURCE_TYPE_LIST,
+            DrugTermResults actualReslts = await controller.GetAll(5, 10, DEFAULT_DRUG_RESOURCE_TYPE_LIST,
                 DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST,
                 requestedFields);
 
@@ -380,15 +361,15 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             //  a) with the expected values.
             //  b) exactly once.
             termsQueryService.Verify(
-                svc => svc.Expand('s', 5, 10, DEFAULT_DRUG_RESOURCE_TYPE_LIST,
+                svc => svc.GetAll(5, 10, DEFAULT_DRUG_RESOURCE_TYPE_LIST,
                     DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST,
                     new string[] { "termId", "name", "firstLetter", "prettyUrlName", "definition", "aliases", "drugInfoSummaryLink", "nciConceptId", "nciConceptName", "type", "termNameType" }
                 ),
                 Times.Once
             );
 
-            // What we're really doing is verifying that Expand() returns the same
-            // object it received from the service. If Expand() ever implements logic
+            // What we're really doing is verifying that GetAll() returns the same
+            // object it received from the service. If GetAll() ever implements logic
             // to do its own processing, this test will need to change.
             Assert.Equal(drugTermResults, actualReslts, new DrugTermResultsComparer());
         }

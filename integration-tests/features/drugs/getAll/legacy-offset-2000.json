@@ -1,0 +1,142 @@
+{
+    "meta": {
+        "totalResults": 7575,
+        "from": 2000
+    },
+    "results": [
+        {
+            "aliases": [
+                {
+                    "type": "USBrandName",
+                    "name": "Zerbaxa"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "CXA-201"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "CXA 201"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "CXA201"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "ceftolozane/tazobactam"
+                },
+                {
+                    "type": "CASRegistryName",
+                    "name": "1613740-46-7"
+                }
+            ],
+            "definition": {
+                "html": "A combination preparation containing ceftolozane, a semi-synthetic, broad-spectrum, fifth-generation cephalosporin and tazobactam, a beta-lactamase inhibitor, with activity against Gram-negative and Gram-positive bacteria. Upon intravenous administration, ceftolozane binds to and inactivates penicillin-binding proteins (PBPs) located on the inner membrane of the bacterial cell wall. This interferes with the final transpeptidation step required to form peptidoglycan chain cross-links, which are a key component of and provide strength and rigidity to the bacterial cell wall. This inhibits bacterial cell wall synthesis and reduces cell wall stability, which weakens the bacterial cell wall and causes bacterial cell lysis. Tazobactam irreversibly inhibits certain penicillinases and cephalosporinases and covalently binds to some chromosomal and plasmid-mediated bacterial beta-lactamases, thereby protecting ceftolozane from degradation and improving ceftolozane’s activity. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C156396\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C156396\">NCI Thesaurus</a>)",
+                "text": "A combination preparation containing ceftolozane, a semi-synthetic, broad-spectrum, fifth-generation cephalosporin and tazobactam, a beta-lactamase inhibitor, with activity against Gram-negative and Gram-positive bacteria. Upon intravenous administration, ceftolozane binds to and inactivates penicillin-binding proteins (PBPs) located on the inner membrane of the bacterial cell wall. This interferes with the final transpeptidation step required to form peptidoglycan chain cross-links, which are a key component of and provide strength and rigidity to the bacterial cell wall. This inhibits bacterial cell wall synthesis and reduces cell wall stability, which weakens the bacterial cell wall and causes bacterial cell lysis. Tazobactam irreversibly inhibits certain penicillinases and cephalosporinases and covalently binds to some chromosomal and plasmid-mediated bacterial beta-lactamases, thereby protecting ceftolozane from degradation and improving ceftolozane’s activity. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C156396",
+            "nciConceptName": "Ceftolozane-Tazobactam",
+            "termId": 795424,
+            "name": "ceftolozane-tazobactam",
+            "firstLetter": "c",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "ceftolozane-tazobactam"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "USBrandName",
+                    "name": "Rocephin"
+                }
+            ],
+            "definition": {
+                "html": "The sodium salt form of ceftriaxone, a beta-lactam, third-generation cephalosporin antibiotic with bactericidal activity. Ceftriaxone binds to and inactivates penicillin-binding proteins (PBP) located on the inner membrane of the bacterial cell wall. PBPs participate in the terminal stages of assembling the bacterial cell wall, and in reshaping the cell wall during cell division. Inactivation of PBPs interferes with the cross-linkage of peptidoglycan chains necessary for bacterial cell wall strength and rigidity. This results in the weakening of the bacterial cell wall and causes cell lysis. Compared to the second and first generation cephalosporins, ceftriaxone is more active against gram-negative bacteria and less active against gram-positive bacteria. Ceftriaxone also crosses the blood-brain barrier and reaches therapeutic concentrations in the central nervous system (CNS). Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C817\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C817\">NCI Thesaurus</a>)",
+                "text": "The sodium salt form of ceftriaxone, a beta-lactam, third-generation cephalosporin antibiotic with bactericidal activity. Ceftriaxone binds to and inactivates penicillin-binding proteins (PBP) located on the inner membrane of the bacterial cell wall. PBPs participate in the terminal stages of assembling the bacterial cell wall, and in reshaping the cell wall during cell division. Inactivation of PBPs interferes with the cross-linkage of peptidoglycan chains necessary for bacterial cell wall strength and rigidity. This results in the weakening of the bacterial cell wall and causes cell lysis. Compared to the second and first generation cephalosporins, ceftriaxone is more active against gram-negative bacteria and less active against gram-positive bacteria. Ceftriaxone also crosses the blood-brain barrier and reaches therapeutic concentrations in the central nervous system (CNS). Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C817",
+            "nciConceptName": "Ceftriaxone Sodium",
+            "termId": 41088,
+            "name": "ceftriaxone sodium",
+            "firstLetter": "c",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "ceftriaxone-sodium"
+        },
+        {
+            "preferredName": "celecoxib",
+            "termId": 43023,
+            "name": "Celebrex",
+            "firstLetter": "c",
+            "type": "DrugAlias",
+            "termNameType": "USBrandName",
+            "prettyUrlName": "celecoxib"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "USBrandName",
+                    "name": "Celebrex"
+                },
+                {
+                    "type": "LexicalVariant",
+                    "name": "SC 58635"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "SC-58635"
+                },
+                {
+                    "type": "Abbreviation",
+                    "name": "SC-58635"
+                },
+                {
+                    "type": "LexicalVariant",
+                    "name": "SC58635"
+                },
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "4-(5-(4-methylphenyl)-3-(trifluoromethyl)-1H-pyrazol-1-yl)benzenesulfonamide"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "YM 177"
+                },
+                {
+                    "type": "NSCNumber",
+                    "name": "719627"
+                },
+                {
+                    "type": "CASRegistryName",
+                    "name": "169590-42-5"
+                }
+            ],
+            "definition": {
+                "html": "A nonsteroidal anti-inflammatory drug (NSAID) with a diaryl-substituted pyrazole structure.  Celecoxib selectively inhibits cyclo-oxygenase-2 activity (COX-2); COX-2 inhibition may result in apoptosis and a reduction in tumor angiogenesis and metastasis. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C1728\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C1728\">NCI Thesaurus</a>)",
+                "text": "A nonsteroidal anti-inflammatory drug (NSAID) with a diaryl-substituted pyrazole structure.  Celecoxib selectively inhibits cyclo-oxygenase-2 activity (COX-2); COX-2 inhibition may result in apoptosis and a reduction in tumor angiogenesis and metastasis. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C1728",
+            "nciConceptName": "Celecoxib",
+            "termId": 43023,
+            "name": "celecoxib",
+            "firstLetter": "c",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "celecoxib"
+        },
+        {
+            "preferredName": "betamethasone",
+            "termId": 39273,
+            "name": "Celestone",
+            "firstLetter": "c",
+            "type": "DrugAlias",
+            "termNameType": "USBrandName",
+            "prettyUrlName": "betamethasone"
+        }
+    ],
+    "links": null
+}

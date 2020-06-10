@@ -69,16 +69,89 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
         }
 
         /// <summary>
-        /// Retrieves a portion of the overall set of drug definitions for a given combination of dictionary, audience, and language.
+        /// Get all drug dictionary entries.
+        /// <param name="size">Defines the size of the search</param>
+        /// <param name="from">Defines the Offset for search</param>
+        /// <param name="includeResourceTypes">The DrugResourceTypes to include. Default: All</param>
+        /// <param name="includeNameTypes">The name types to include. Default: All</param>
+        /// <param name="excludeNameTypes">The name types to exclude. Default: All</param>
+        /// <param name="requestedFields"> The list of fields that needs to be sent in the response</param>
+        /// <returns>A DrugTermResults object containing entries matching the desired criteria.</returns>
         /// </summary>
-        /// <param name="size">The number of records to retrieve.</param>
-        /// <param name="from">The offset into the overall set to use for the first record.</param>
-        /// <param name="requestedFields">The fields to retrieve.  If not specified, defaults to TermName, Pronunciation, and Definition.</param>
-        /// <returns>A DrugTermResults object containing the desired records.</returns>
-        public async Task<DrugTermResults> GetAll(int size, int from, string[] requestedFields)
+        public async Task<DrugTermResults> GetAll(int size, int from,
+            DrugResourceType[] includeResourceTypes,
+            TermNameType[] includeNameTypes,
+            TermNameType[] excludeNameTypes,
+            string[] requestedFields)
         {
-            // Stupid placeholder to suppress lack of await message.
-            return await Task.FromResult(new DrugTermResults());
+            // Elasticsearch knows how to figure out what the ElasticSearch name is for
+            // a given field when given a PropertyInfo.
+            Field[] requestedESFields = convertRequestedFieldsToProperties(requestedFields)
+                                            .Select(pi => new Field(pi))
+                                            .ToArray();
+
+            // Set up the SearchRequest to send to elasticsearch.
+            Indices index = Indices.Index(new string[] { this._apiOptions.AliasName });
+            Types types = Types.Type(new string[] { "terms" });
+            SearchRequest request = new SearchRequest(index, types)
+            {
+                Query =
+                    new TermsQuery { Field = "type", Terms = includeResourceTypes.Select(p => p.ToString()) } &&
+                    new TermsQuery { Field = "term_name_type", Terms = includeNameTypes.Select(p => p.ToString()) } &&
+                    !new TermsQuery { Field = "term_name_type", Terms = excludeNameTypes.Select(p => p.ToString()) }
+                ,
+                Sort = new List<ISort>
+                {
+                    new SortField { Field = "name" }
+                },
+                Size = size,
+                From = from,
+                Source = new SourceFilter
+                {
+                    Includes = requestedESFields
+                }
+            };
+
+            ISearchResponse<IDrugResource> response = null;
+            try
+            {
+                response = await _elasticClient.SearchAsync<IDrugResource>(request);
+            }
+            catch (Exception ex)
+            {
+                String msg = $"Could not search size '{size}', from '{from}'.";
+                _logger.LogError($"Error searching index: '{this._apiOptions.AliasName}'.");
+                _logger.LogError(msg, ex);
+                throw new APIErrorException(500, msg);
+            }
+
+            if (!response.IsValid)
+            {
+                String msg = $"Invalid response when searching for size '{size}', from '{from}'.";
+                _logger.LogError(msg);
+                throw new APIErrorException(500, "errors occured");
+            }
+
+            DrugTermResults drugTermResults = new DrugTermResults();
+
+            if (response.Total > 0)
+            {
+                drugTermResults.Results = response.Documents.Select(res => (IDrugResource)res).ToArray();
+            }
+            else if (response.Total == 0)
+            {
+                // Create an empty list.
+                drugTermResults.Results = new IDrugResource[] { };
+            }
+
+            // Add the metadata for the returned results
+            drugTermResults.Meta = new ResultsMetadata()
+            {
+                TotalResults = (int)response.Total,
+                From = from
+            };
+
+            return drugTermResults;
         }
 
         /// <summary>

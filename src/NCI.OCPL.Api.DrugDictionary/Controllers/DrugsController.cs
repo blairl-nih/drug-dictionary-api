@@ -99,5 +99,51 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
             return res;
         }
 
+        /// <summary>
+        /// Get a list of all terms (no search string).
+        /// </summary>
+        /// <param name="size">The number of records to retrieve.</param>
+        /// <param name="from">The offset into the overall set to use for the first record.</param>
+        /// <param name="includeResourceTypes">The DrugResourceTypes to include. Default: All</param>
+        /// <param name="includeNameTypes">The name types to include. Default: All</param>
+        /// <param name="excludeNameTypes">The name types to exclude. Default: All</param>
+        /// <param name="requestedFields">The fields to retrieve.  If not specified, defaults to all fields except media and related resources.</param>
+        /// <returns>A DrugTermResults object containing the desired records.</returns>
+        [HttpGet("")]
+        public async Task<DrugTermResults> GetAll(
+            [FromQuery] int size = 100, [FromQuery] int from = 0,
+            [FromQuery] DrugResourceType[] includeResourceTypes = null,
+            [FromQuery] TermNameType[] includeNameTypes = null,
+            [FromQuery] TermNameType[] excludeNameTypes = null,
+            [FromQuery] string[] requestedFields = null
+        )
+        {
+            if (size <= 0)
+                size = 100;
+
+            if (from < 0)
+                from = 0;
+
+            // If Resource types to retrieve aren't specified, get all.
+            if (includeResourceTypes == null || includeResourceTypes.Length == 0)
+                includeResourceTypes = ALL_DRUG_RESOURCE_TYPES;
+
+            // If term name types to retrieve aren't specified, get all.
+            if (includeNameTypes == null || includeNameTypes.Length == 0)
+                includeNameTypes = ALL_TERM_NAME_TYPES;
+
+            // If term name types to exclude aren't specified, exclude none.
+            if (excludeNameTypes == null)
+                excludeNameTypes = new TermNameType[0];
+
+            if (requestedFields == null || requestedFields.Length == 0 || requestedFields.Where(f => !String.IsNullOrWhiteSpace(f)).Count() == 0)
+                requestedFields = DEFAULT_FIELD_NAMES;
+
+            DrugTermResults res = await _termsQueryService.GetAll(size, from,
+                includeResourceTypes, includeNameTypes, excludeNameTypes, requestedFields);
+
+            return res;
+        }
+
     }
 }

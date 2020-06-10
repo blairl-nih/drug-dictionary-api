@@ -28,9 +28,14 @@ namespace NCI.OCPL.Api.DrugDictionary
         /// </summary>
         /// <param name="size">The number of records to retrieve.</param>
         /// <param name="from">The offset into the overall set to use for the first record.</param>
+        /// <param name="includeResourceTypes">The DrugResourceTypes to include. Default: All</param>
+        /// <param name="includeNameTypes">The name types to include. Default: All</param>
+        /// <param name="excludeNameTypes">The name types to exclude. Default: All</param>
         /// <param name="requestedFields">The fields to retrieve.  If not specified, defaults to TermName, Pronunciation, and Definition.</param>
         /// <returns>A DrugTermResults object containing the desired records.</returns>
-        Task<DrugTermResults> GetAll(int size, int from, string[] requestedFields);
+        Task<DrugTermResults> GetAll(int size, int from,
+            DrugResourceType[] includeResourceTypes, TermNameType[] includeNameTypes, TermNameType[] excludeNameTypes,
+            string[] requestedFields);
 
         /// <summary>
         /// Search for drug definitions based on search criteria.

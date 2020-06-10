@@ -1,0 +1,132 @@
+{
+    "meta": {
+        "totalResults": 7575,
+        "from": 0
+    },
+    "results": [
+        {
+            "aliases": null,
+            "definition": {
+                "html": "A lipophilic copper(II)bis(thiosemicarbazone) labeled with the positron-emitting isotope (61)Cu with hypoxia-selective and  radioisotopic activities. With a high membrane permeability and redox potential, (61)Cu-ATSM easily enters and selectively resides in hypoxic cells. The extent of (61)Cu-ATSM retention in tissue is inversely related to the state of tissue oxygenation allowing the quantitation of  tissue hypoxia with positron emission tomography (PET). Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C74019\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C74019\">NCI Thesaurus</a>)",
+                "text": "A lipophilic copper(II)bis(thiosemicarbazone) labeled with the positron-emitting isotope (61)Cu with hypoxia-selective and  radioisotopic activities. With a high membrane permeability and redox potential, (61)Cu-ATSM easily enters and selectively resides in hypoxic cells. The extent of (61)Cu-ATSM retention in tissue is inversely related to the state of tissue oxygenation allowing the quantitation of  tissue hypoxia with positron emission tomography (PET). Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C74019",
+            "nciConceptName": "Copper Cu 61-ATSM",
+            "termId": 586119,
+            "name": "(61)Cu-ATSM",
+            "firstLetter": "#",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "copper-cu-61-atsm"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "Synonym",
+                    "name": "11β-HSD1 inhibitor AZD4017"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "AZD4017"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "AZD-4017"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "AZD 4017"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "11b-HSD1 inhibitor AZD4017"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "11bHSD1 inhibitor AZD4017"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "11-beta-hydroxysteroid dehydrogenase type 1 inhibitor AZD4017"
+                }
+            ],
+            "definition": {
+                "html": "A selective, orally bioavailable inhibitor of the enzyme 11beta-hydroxysteroid dehydrogenase type 1 (11b-HSD1; 11bHSD1; HSD11B1), with potential protective activity. Upon administration, AZD4017 selectively binds to and inhibits the activity of 11b-HSD1. This prevents the conversion of cortisone to the active hormone cortisol that activates glucocorticoid receptors. By blocking cortisol production in metabolic tissues, AZD4017 may inhibit the adverse metabolic effects, such as glucose intolerance, hyperinsulinemia, systolic hypertension, increased adiposity, myoatrophy and dermal atrophy, caused by exogenous administration of glucocorticoids in these tissues. 11bHSD1 is highly expressed in metabolic tissues, such as liver, skeletal muscle, and adipose tissue. It plays a crucial role in regenerating active glucocorticoid from circulating glucocorticoids and regulates the production of cortisol to activate the glucocorticoid receptors. AZD4017 does not inhibit the anti-inflammatory activity of the administered glucocorticoids. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C148516\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C148516\">NCI Thesaurus</a>)",
+                "text": "A selective, orally bioavailable inhibitor of the enzyme 11beta-hydroxysteroid dehydrogenase type 1 (11b-HSD1; 11bHSD1; HSD11B1), with potential protective activity. Upon administration, AZD4017 selectively binds to and inhibits the activity of 11b-HSD1. This prevents the conversion of cortisone to the active hormone cortisol that activates glucocorticoid receptors. By blocking cortisol production in metabolic tissues, AZD4017 may inhibit the adverse metabolic effects, such as glucose intolerance, hyperinsulinemia, systolic hypertension, increased adiposity, myoatrophy and dermal atrophy, caused by exogenous administration of glucocorticoids in these tissues. 11bHSD1 is highly expressed in metabolic tissues, such as liver, skeletal muscle, and adipose tissue. It plays a crucial role in regenerating active glucocorticoid from circulating glucocorticoids and regulates the production of cortisol to activate the glucocorticoid receptors. AZD4017 does not inhibit the anti-inflammatory activity of the administered glucocorticoids. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C148516",
+            "nciConceptName": "11beta-hydroxysteroid Dehydrogenase Type 1 Inhibitor AZD4017",
+            "termId": 792667,
+            "name": "11beta-hydroxysteroid dehydrogenase type 1 inhibitor AZD4017",
+            "firstLetter": "#",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "11beta-hydroxysteroid-dehydrogenase-type-1-inhibitor-azd4017"
+        },
+        {
+            "aliases": null,
+            "definition": {
+                "html": "A semisynthetic derivative of camptothecin, a cytotoxic, quinoline-based alkaloid extracted from the Asian tree Camptotheca acuminata radiolabeled with carbon 11 (11C) with antineoplastic and radiotracer properties. During the S phase of the cell cycle, topotecan inhibits topoisomerase I activity by stabilizing the cleavable complex between topoisomerase I and DNA, resulting in DNA breaks that inhibit DNA replication and trigger apoptotic cell death. Quantitation of 11C topotecan accumulated in tumor tissues by positron emission tomography (PET) may help predict responses to topotecan therapy.                  Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C49172\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C49172\">NCI Thesaurus</a>)",
+                "text": "A semisynthetic derivative of camptothecin, a cytotoxic, quinoline-based alkaloid extracted from the Asian tree Camptotheca acuminata radiolabeled with carbon 11 (11C) with antineoplastic and radiotracer properties. During the S phase of the cell cycle, topotecan inhibits topoisomerase I activity by stabilizing the cleavable complex between topoisomerase I and DNA, resulting in DNA breaks that inhibit DNA replication and trigger apoptotic cell death. Quantitation of 11C topotecan accumulated in tumor tissues by positron emission tomography (PET) may help predict responses to topotecan therapy.                  Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C49172",
+            "nciConceptName": "11C Topotecan",
+            "termId": 454314,
+            "name": "11C topotecan",
+            "firstLetter": "#",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "11c-topotecan"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "Synonym",
+                    "name": "iodine I 123 IMP-1095"
+                },
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "2-(3-{l-carboxy-5-[3-(4-iodo-phenyl)-ureido]-pentyl}-ureido)-pentanedioic acid"
+                }
+            ],
+            "definition": {
+                "html": "An iodine 123-radiolabled small molecule that exhibits high affinity for prostate-specific membrane antigen (PSMA) with potential use in molecular imaging. 123-I-MIP-1095, a radiolabeled glutamate-urea-lysine analogue, selectively binds PSMA, which allows imaging of PSMA-expressing prostate cancer cells with gamma scintigraph. PSMA is a transmembrane glycoprotein highly expressed by malignant prostate epithelial cells and vascular endothelial cells of various solid tumors. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C78828\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C78828\">NCI Thesaurus</a>)",
+                "text": "An iodine 123-radiolabled small molecule that exhibits high affinity for prostate-specific membrane antigen (PSMA) with potential use in molecular imaging. 123-I-MIP-1095, a radiolabeled glutamate-urea-lysine analogue, selectively binds PSMA, which allows imaging of PSMA-expressing prostate cancer cells with gamma scintigraph. PSMA is a transmembrane glycoprotein highly expressed by malignant prostate epithelial cells and vascular endothelial cells of various solid tumors. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C78828",
+            "nciConceptName": "Iodine I-123 MIP-1095",
+            "termId": 601823,
+            "name": "123-I-MIP-1095",
+            "firstLetter": "#",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "iodine-i-123-mip-1095"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "LexicalVariant",
+                    "name": "[14C] BMS-275183"
+                }
+            ],
+            "definition": {
+                "html": "The orally bioavailable C-4 methyl carbonate analogue of paclitaxel, labeled with radioactive carbon 14, with radioisotope and potential antineoplastic activities. 14C BMS-275183 binds to tubulin and inhibits microtubule disassembly, which may result in cell cycle arrest at the G2/M phase and inhibition of cell division, and subsequently cell death. This agent may be useful for treating multi-drug resistant (MDR) tumors because it does not appear to be a substrate for P-glycoprotein. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C62553\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C62553\">NCI Thesaurus</a>)",
+                "text": "The orally bioavailable C-4 methyl carbonate analogue of paclitaxel, labeled with radioactive carbon 14, with radioisotope and potential antineoplastic activities. 14C BMS-275183 binds to tubulin and inhibits microtubule disassembly, which may result in cell cycle arrest at the G2/M phase and inhibition of cell division, and subsequently cell death. This agent may be useful for treating multi-drug resistant (MDR) tumors because it does not appear to be a substrate for P-glycoprotein. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C62553",
+            "nciConceptName": "14C BMS-275183",
+            "termId": 487486,
+            "name": "14C BMS-275183",
+            "firstLetter": "#",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "14c-bms-275183"
+        }
+    ],
+    "links": null
+}
