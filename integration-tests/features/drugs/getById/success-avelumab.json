@@ -1,0 +1,32 @@
+{
+    "aliases": [
+        {
+            "type": "USBrandName",
+            "name": "Bavencio"
+        },
+        {
+            "type": "CodeName",
+            "name": "MSB0010718C"
+        },
+        {
+            "type": "Synonym",
+            "name": "anti-PD-L1 monoclonal antibody MSB0010718C"
+        }
+    ],
+    "definition": {
+        "html": "A human immunoglobulin G1 (IgG1) monoclonal antibody directed against the human immunosuppressive ligand programmed death-ligand 1 (PD-L1) protein, with potential immune checkpoint inhibitory and antineoplastic activities. Upon administration, avelumab binds to PD-L1 and prevents the interaction of PD-L1 with its receptor programmed cell death protein 1 (PD-1). This inhibits the activation of PD-1 and its downstream signaling pathways. This may restore immune function through the activation of cytotoxic T lymphocytes (CTLs) targeted to PD-L1-overexpressing tumor cells. In addition, avelumab induces an antibody-dependent cellular cytotoxic (ADCC) response against PD-L1-expressing tumor cells. PD-1, a cell surface receptor belonging to the immunoglobulin superfamily expressed on T cells, negatively regulates T-cell activation and effector function when activated by its ligand, and plays an important role in tumor evasion from host immunity. PD-L1, a transmembrane protein, is overexpressed on a variety of tumor cell types and is associated with poor prognosis. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C116870\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C116870\">NCI Thesaurus</a>)",
+        "text": "A human immunoglobulin G1 (IgG1) monoclonal antibody directed against the human immunosuppressive ligand programmed death-ligand 1 (PD-L1) protein, with potential immune checkpoint inhibitory and antineoplastic activities. Upon administration, avelumab binds to PD-L1 and prevents the interaction of PD-L1 with its receptor programmed cell death protein 1 (PD-1). This inhibits the activation of PD-1 and its downstream signaling pathways. This may restore immune function through the activation of cytotoxic T lymphocytes (CTLs) targeted to PD-L1-overexpressing tumor cells. In addition, avelumab induces an antibody-dependent cellular cytotoxic (ADCC) response against PD-L1-expressing tumor cells. PD-1, a cell surface receptor belonging to the immunoglobulin superfamily expressed on T cells, negatively regulates T-cell activation and effector function when activated by its ligand, and plays an important role in tumor evasion from host immunity. PD-L1, a transmembrane protein, is overexpressed on a variety of tumor cell types and is associated with poor prognosis. Check for active clinical trials using this agent. (NCI Thesaurus)"
+    },
+    "drugInfoSummaryLink": {
+        "uri": "https://www.cancer.gov/about-cancer/treatment/drugs/avelumab",
+        "text": "Avelumab"
+    },
+    "nciConceptId": "C116870",
+    "nciConceptName": "Avelumab",
+    "termId": 745752,
+    "name": "avelumab",
+    "firstLetter": "a",
+    "type": "DrugTerm",
+    "termNameType": "PreferredName",
+    "prettyUrlName": "avelumab"
+}

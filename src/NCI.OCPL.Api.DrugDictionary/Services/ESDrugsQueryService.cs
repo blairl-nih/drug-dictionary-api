@@ -51,10 +51,39 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
         /// <param name="id">The ID of the definition to retrieve.</param>
         /// <returns>A drug definitions object.</returns>
         /// </summary>
-        public async Task<IDrugResource> GetById(long id)
+        public async Task<DrugTerm> GetById(long id)
         {
-            // Stupid placeholder to suppress lack of await message.
-            return await Task.FromResult(new DrugTerm());
+            IGetResponse<DrugTerm> response = null;
+
+            try
+            {
+                response = await _elasticClient.GetAsync<DrugTerm>(new DocumentPath<DrugTerm>(id),
+                        g => g.Index(this._apiOptions.AliasName).Type("terms"));
+
+            }
+            catch (Exception ex)
+            {
+                String msg = $"Could not retrieve term id '{id}'.";
+                _logger.LogError($"Error searching index: '{this._apiOptions.AliasName}'.");
+                _logger.LogError(ex, msg);
+                throw new APIErrorException(500, msg);
+            }
+
+            if (!response.IsValid)
+            {
+                String msg = $"Invalid response when retrieving id '{id}'.";
+                _logger.LogError(msg);
+                throw new APIErrorException(500, msg);
+            }
+
+            if (null == response.Source)
+            {
+                string msg = $"Not a valid ID '{id}'.";
+                _logger.LogDebug(msg);
+                throw new APIErrorException(404, msg);
+            }
+
+            return response.Source;
         }
 
         /// <summary>

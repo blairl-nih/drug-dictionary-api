@@ -14,7 +14,7 @@ namespace NCI.OCPL.Api.DrugDictionary
         /// <param name="id">The ID of the definition to retrieve.</param>
         /// <returns>A drug definitions object.</returns>
         /// </summary>
-        Task<IDrugResource> GetById(long id);
+        Task<DrugTerm> GetById(long id);
 
         /// <summary>
         /// Retrieve a drug definitions based on its pretty URL name passed.

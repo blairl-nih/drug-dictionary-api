@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Linq;
+using NCI.OCPL.Api.Common;
 
 namespace NCI.OCPL.Api.DrugDictionary.Controllers
 {
@@ -142,6 +143,22 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
             DrugTermResults res = await _termsQueryService.GetAll(size, from,
                 includeResourceTypes, includeNameTypes, excludeNameTypes, requestedFields);
 
+            return res;
+        }
+
+        /// <summary>
+        /// Get the drug definition by its ID
+        /// </summary>
+        /// <returns>DrugTerm object</returns>
+        [HttpGet("{id:long}")]
+        public async Task<DrugTerm> GetById(long id)
+        {
+            if(id <= 0)
+            {
+                throw new APIErrorException(400, $"Not a valid ID '{id}'.");
+            }
+
+            DrugTerm res = await _termsQueryService.GetById(id);
             return res;
         }
 

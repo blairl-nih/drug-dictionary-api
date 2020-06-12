@@ -1,18 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
 
 using Microsoft.Extensions.Logging.Testing;
 using Moq;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Xunit;
 
-using NCI.OCPL.Api.Common;
-using NCI.OCPL.Api.DrugDictionary;
 using NCI.OCPL.Api.DrugDictionary.Controllers;
-using NCI.OCPL.Api.Common.Testing;
 
 namespace NCI.OCPL.Api.DrugDictionary.Tests
 {

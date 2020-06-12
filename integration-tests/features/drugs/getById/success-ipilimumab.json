@@ -1,0 +1,64 @@
+{
+    "aliases": [
+        {
+            "type": "Synonym",
+            "name": "anti-cytotoxic T-lymphocyte-associated antigen-4 monoclonal antibody"
+        },
+        {
+            "type": "Abbreviation",
+            "name": "MDX-CTLA-4"
+        },
+        {
+            "type": "LexicalVariant",
+            "name": "MDX-CTLA4"
+        },
+        {
+            "type": "Synonym",
+            "name": "monoclonal antibody CTLA-4"
+        },
+        {
+            "type": "CodeName",
+            "name": "MDX-010"
+        },
+        {
+            "type": "Synonym",
+            "name": "MOAB CTLA-4"
+        },
+        {
+            "type": "INDCode",
+            "name": "10200"
+        },
+        {
+            "type": "NSCNumber",
+            "name": "720801"
+        },
+        {
+            "type": "USBrandName",
+            "name": "Yervoy"
+        },
+        {
+            "type": "CodeName",
+            "name": "BMS-734016"
+        },
+        {
+            "type": "CodeName",
+            "name": "IBI310"
+        }
+    ],
+    "definition": {
+        "html": "A recombinant human immunoglobulin (Ig) G1 monoclonal antibody directed against the human T-cell receptor cytotoxic T-lymphocyte-associated antigen 4 (CTLA4), with immune checkpoint inhibitory and antineoplastic activities. Ipilimumab binds to CTLA4 expressed on T-cells and inhibits the CTLA4-mediated downregulation of T-cell activation. This leads to a cytotoxic T-lymphocyte (CTL)-mediated immune response against cancer cells. CTLA4, an inhibitory receptor and member of the immunoglobulin superfamily, plays a key role in the downregulation of the immune system.\n Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C2654\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C2654\">NCI Thesaurus</a>)",
+        "text": "A recombinant human immunoglobulin (Ig) G1 monoclonal antibody directed against the human T-cell receptor cytotoxic T-lymphocyte-associated antigen 4 (CTLA4), with immune checkpoint inhibitory and antineoplastic activities. Ipilimumab binds to CTLA4 expressed on T-cells and inhibits the CTLA4-mediated downregulation of T-cell activation. This leads to a cytotoxic T-lymphocyte (CTL)-mediated immune response against cancer cells. CTLA4, an inhibitory receptor and member of the immunoglobulin superfamily, plays a key role in the downregulation of the immune system.\n Check for active clinical trials using this agent. (NCI Thesaurus)"
+    },
+    "drugInfoSummaryLink": {
+        "uri": "https://www.cancer.gov/about-cancer/treatment/drugs/ipilimumab",
+        "text": "Ipilimumab"
+    },
+    "nciConceptId": "C2654",
+    "nciConceptName": "Ipilimumab",
+    "termId": 38447,
+    "name": "ipilimumab",
+    "firstLetter": "i",
+    "type": "DrugTerm",
+    "termNameType": "PreferredName",
+    "prettyUrlName": "ipilimumab"
+}

@@ -1,0 +1,36 @@
+{
+    "aliases": [
+        {
+            "type": "USBrandName",
+            "name": "Imfinzi"
+        },
+        {
+            "type": "CodeName",
+            "name": "MEDI4736"
+        },
+        {
+            "type": "CodeName",
+            "name": "MEDI-4736"
+        },
+        {
+            "type": "ChemicalStructureName",
+            "name": "immunoglobulin G1, anti-(human protein B7-H1) (human monoclonal MEDI4736 heavy chain), disulfide with human monoclonal MEDI4736 kappa-chain, dimer"
+        }
+    ],
+    "definition": {
+        "html": "A Fc optimized monoclonal antibody directed against programmed cell death-1 ligand 1 (PD-L1; B7 homolog 1; B7H1), with potential immune checkpoint inhibitory and antineoplastic activities. Upon intravenous administration, durvalumab binds to PD-L1, thereby blocking its binding to and activation of its receptor programmed death 1 (PD-1) expressed on activated T cells. This may reverse T-cell inactivation and activate the immune system to exert a cytotoxic T-lymphocyte (CTL) response against PD-L1-expressing tumor cells. PD-L1, a member of the B7 protein superfamily, is overexpressed on certain tumor cell types and on various tumor-infiltrating immune cells. PD-L1 binding to PD-1 on T cells suppresses the immune system and results in increased immune evasion. The Fc region of durvalumab is modified in such a way that it does not induce either antibody-dependent cytotoxicity (ADCC) or complement-dependent cytotoxicity (CDC).\n Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C103194\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C103194\">NCI Thesaurus</a>)",
+        "text": "A Fc optimized monoclonal antibody directed against programmed cell death-1 ligand 1 (PD-L1; B7 homolog 1; B7H1), with potential immune checkpoint inhibitory and antineoplastic activities. Upon intravenous administration, durvalumab binds to PD-L1, thereby blocking its binding to and activation of its receptor programmed death 1 (PD-1) expressed on activated T cells. This may reverse T-cell inactivation and activate the immune system to exert a cytotoxic T-lymphocyte (CTL) response against PD-L1-expressing tumor cells. PD-L1, a member of the B7 protein superfamily, is overexpressed on certain tumor cell types and on various tumor-infiltrating immune cells. PD-L1 binding to PD-1 on T cells suppresses the immune system and results in increased immune evasion. The Fc region of durvalumab is modified in such a way that it does not induce either antibody-dependent cytotoxicity (ADCC) or complement-dependent cytotoxicity (CDC).\n Check for active clinical trials using this agent. (NCI Thesaurus)"
+    },
+    "drugInfoSummaryLink": {
+        "uri": "https://www.cancer.gov/about-cancer/treatment/drugs/durvalumab",
+        "text": "Durvalumab"
+    },
+    "nciConceptId": "C103194",
+    "nciConceptName": "Durvalumab",
+    "termId": 740856,
+    "name": "durvalumab",
+    "firstLetter": "d",
+    "type": "DrugTerm",
+    "termNameType": "PreferredName",
+    "prettyUrlName": "durvalumab"
+}

@@ -1,0 +1,48 @@
+{
+    "aliases": [
+        {
+            "type": "CodeName",
+            "name": "MDX-1106"
+        },
+        {
+            "type": "CodeName",
+            "name": "ONO-4538"
+        },
+        {
+            "type": "Synonym",
+            "name": "anti-PD-1 human monoclonal antibody MDX-1106"
+        },
+        {
+            "type": "CodeName",
+            "name": "BMS-936558"
+        },
+        {
+            "type": "USBrandName",
+            "name": "Opdivo"
+        },
+        {
+            "type": "USBrandName",
+            "name": "Opdivo Injection"
+        },
+        {
+            "type": "Abbreviation",
+            "name": "NIVO"
+        }
+    ],
+    "definition": {
+        "html": "A fully human immunoglobulin (Ig) G4 monoclonal antibody directed against the negative immunoregulatory human cell surface receptor programmed death-1 (PD-1, PCD-1) with immune checkpoint inhibitory and antineoplastic activities. Upon administration, nivolumab binds to and blocks the activation of PD-1, an immunoglobulin superfamily (IgSF) transmembrane protein, by its ligands programmed cell death ligand 1 (PD-L1), which is overexpressed on certain cancer cells, and programmed cell death ligand 2 (PD-L2), which is primarily expressed on antigen-presenting cells (APCs). This results in the activation of T cells and cell-mediated immune responses against tumor cells. Activated PD-1 negatively regulates T-cell activation and plays a key role in tumor evasion from host immunity. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C68814\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C68814\">NCI Thesaurus</a>)",
+        "text": "A fully human immunoglobulin (Ig) G4 monoclonal antibody directed against the negative immunoregulatory human cell surface receptor programmed death-1 (PD-1, PCD-1) with immune checkpoint inhibitory and antineoplastic activities. Upon administration, nivolumab binds to and blocks the activation of PD-1, an immunoglobulin superfamily (IgSF) transmembrane protein, by its ligands programmed cell death ligand 1 (PD-L1), which is overexpressed on certain cancer cells, and programmed cell death ligand 2 (PD-L2), which is primarily expressed on antigen-presenting cells (APCs). This results in the activation of T cells and cell-mediated immune responses against tumor cells. Activated PD-1 negatively regulates T-cell activation and plays a key role in tumor evasion from host immunity. Check for active clinical trials using this agent. (NCI Thesaurus)"
+    },
+    "drugInfoSummaryLink": {
+        "uri": "https://www.cancer.gov/about-cancer/treatment/drugs/nivolumab",
+        "text": "Nivolumab"
+    },
+    "nciConceptId": "C68814",
+    "nciConceptName": "Nivolumab",
+    "termId": 539733,
+    "name": "nivolumab",
+    "firstLetter": "n",
+    "type": "DrugTerm",
+    "termNameType": "PreferredName",
+    "prettyUrlName": "nivolumab"
+}
