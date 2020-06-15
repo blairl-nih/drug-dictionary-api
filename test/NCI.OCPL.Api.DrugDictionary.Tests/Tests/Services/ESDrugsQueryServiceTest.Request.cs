@@ -140,6 +140,113 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             Assert.Equal(data.ExpectedData, requestBody, new JTokenEqualityComparer());
         }
 
+        public static IEnumerable<object[]> GetByNameRequestScenarios = new[]
+        {
+            new object[] { new ExpandSvc_Olaparib() },
+            new object[] { new ExpandSvc_WithDashes() },
+            new object[] { new GetByName_LongPrettyURL() }
+        };
+
+        /// <summary>
+        ///  Verify structure of the request for GetAll.
+        /// </summary>
+        [Theory, MemberData(nameof(GetByNameRequestScenarios))]
+        public async void GetByName_TestRequestSetup(BaseGetByNameSvcRequestScenario data)
+        {
+            Uri esURI = null;
+            string esContentType = String.Empty;
+            HttpMethod esMethod = HttpMethod.DELETE; // Basically, something other than the expected value.
+
+            JObject requestBody = null;
+
+            ElasticsearchInterceptingConnection conn = new ElasticsearchInterceptingConnection();
+            conn.RegisterRequestHandlerForType<Nest.SearchResponse<DrugTerm>>((req, res) =>
+            {
+                // We don't really care about the response for this test.
+                res.Stream = MockSingleTermResponse;
+                res.StatusCode = 200;
+
+                esURI = req.Uri;
+                esContentType = req.ContentType;
+                esMethod = req.Method;
+                requestBody = conn.GetRequestPost(req);
+            });
+
+            // The URI does not matter, an InMemoryConnection never requests from the server.
+            var pool = new SingleNodeConnectionPool(new Uri("http://localhost:9200"));
+
+            var connectionSettings = new ConnectionSettings(pool, conn);
+            IElasticClient client = new ElasticClient(connectionSettings);
+
+            // Setup the mocked Options
+            IOptions<DrugDictionaryAPIOptions> clientOptions = GetMockOptions();
+
+            ESDrugsQueryService query = new ESDrugsQueryService(client, clientOptions, new NullLogger<ESDrugsQueryService>());
+
+            // We don't really care that this returns anything (for this test), only that the intercepting connection
+            // sets up the request correctly.
+            DrugTerm result = await query.GetByName(data.PrettyUrlName);
+
+            Assert.Equal("/drugv1/terms/_search", esURI.AbsolutePath);
+            Assert.Equal("application/json", esContentType);
+            Assert.Equal(HttpMethod.POST, esMethod);
+            Assert.Equal(data.ExpectedData, requestBody, new JTokenEqualityComparer());
+        }
+
+         private Stream MockSingleTermResponse
+         {
+             get
+             {
+                string res = @"
+{
+    ""took"": 2,
+    ""timed_out"": false,
+    ""_shards"": {
+        ""total"": 1,
+        ""successful"": 1,
+        ""skipped"": 0,
+        ""failed"": 0
+    },
+    ""hits"": {
+        ""total"": 1,
+        ""max_score"": null,
+        ""hits"": [
+            {
+                ""_index"": ""drugv1"",
+                ""_type"": ""terms"",
+                ""_id"": ""37780"",
+                ""_score"": null,
+                ""_source"": {
+                    ""term_id"": ""37780"",
+                    ""name"": ""iodinated contrast dye"",
+                    ""first_letter"": ""i"",
+                    ""type"": ""DrugTerm"",
+                    ""term_name_type"": ""PreferredName"",
+                    ""pretty_url_name"": ""iodinated-contrast-agent"",
+                    ""aliases"": [
+                        {
+                            ""type"": ""Synonym"",
+                            ""name"": ""contrast dye, iodinated""
+                        }
+                    ],
+                    ""definition"": {
+                        ""text"": ""A contrast agent containing an iodine-based dye used in many diagnostic imaging examinations, including computed tomography, angiography, and myelography. Check for active clinical trials using this agent. (NCI Thesaurus)"",
+                        ""html"": ""A contrast agent containing an iodine-based dye used in many diagnostic imaging examinations, including computed tomography, angiography, and myelography. Check for <a ref=\""https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C28500\"">active clinical trials</a> using this agent. (<a ref=\""https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C28500\"">NCI Thesaurus</a>)""
+                    },
+                    ""nci_concept_id"": ""C28500"",
+                    ""nci_concept_name"": ""Iodinated Contrast Agent""
+                },
+                ""sort"": [ ""iodinated contrast dye"" ]
+            }
+        ]
+    }
+}
+                ";
+
+                byte[] byteArray = Encoding.UTF8.GetBytes(res);
+                return new MemoryStream(byteArray);
+             }
+         }
 
 
         /// <summary>

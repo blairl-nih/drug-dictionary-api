@@ -1,0 +1,40 @@
+{
+    "aliases": [
+        {
+            "type": "Synonym",
+            "name": "anti-PD-L1 monoclonal antibody MPDL3280A"
+        },
+        {
+            "type": "CodeName",
+            "name": "MPDL3280A"
+        },
+        {
+            "type": "CodeName",
+            "name": "RG7446"
+        },
+        {
+            "type": "CodeName",
+            "name": "RO5541267"
+        },
+        {
+            "type": "USBrandName",
+            "name": "Tecentriq"
+        }
+    ],
+    "definition": {
+        "html": "A humanized, Fc optimized, monoclonal antibody directed against the protein ligand PD-L1 (programmed cell death-1 ligand 1), with potential immune checkpoint inhibitory and antineoplastic activities. Atezolizumab binds to PD-L1, blocking its binding to and activation of its receptor programmed death 1 (PD-1) expressed on activated T-cells, which may enhance the T-cell-mediated immune response to neoplasms and reverse T-cell inactivation. In addition, by binding to PD-L1, atezolizumab also prevents binding of this ligand to B7.1 expressed on activated T cells, which further enhances the T-cell-mediated immune response. PD-L1 is overexpressed on many human cancer cell types and on various tumor-infiltrating immune cells. PD-L1 binding to PD-1 on T-cells suppresses the immune system and results in increased immune evasion. PD-1, a transmembrane protein, is a negative regulator of the immune system that limits the expansion and survival of CD8+ T cells. The Fc region of atezolizumab is modified in such a way that it does not induce either antibody-dependent cytotoxicity (ADCC) or complement-dependent cytotoxicity (CDC).\n Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C106250\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C106250\">NCI Thesaurus</a>)",
+        "text": "A humanized, Fc optimized, monoclonal antibody directed against the protein ligand PD-L1 (programmed cell death-1 ligand 1), with potential immune checkpoint inhibitory and antineoplastic activities. Atezolizumab binds to PD-L1, blocking its binding to and activation of its receptor programmed death 1 (PD-1) expressed on activated T-cells, which may enhance the T-cell-mediated immune response to neoplasms and reverse T-cell inactivation. In addition, by binding to PD-L1, atezolizumab also prevents binding of this ligand to B7.1 expressed on activated T cells, which further enhances the T-cell-mediated immune response. PD-L1 is overexpressed on many human cancer cell types and on various tumor-infiltrating immune cells. PD-L1 binding to PD-1 on T-cells suppresses the immune system and results in increased immune evasion. PD-1, a transmembrane protein, is a negative regulator of the immune system that limits the expansion and survival of CD8+ T cells. The Fc region of atezolizumab is modified in such a way that it does not induce either antibody-dependent cytotoxicity (ADCC) or complement-dependent cytotoxicity (CDC).\n Check for active clinical trials using this agent. (NCI Thesaurus)"
+    },
+    "drugInfoSummaryLink": {
+        "uri": "https://www.cancer.gov/about-cancer/treatment/drugs/atezolizumab",
+        "text": "Atezolizumab"
+    },
+    "nciConceptId": "C106250",
+    "nciConceptName": "Atezolizumab",
+    "termId": 702758,
+    "name": "atezolizumab",
+    "firstLetter": "a",
+    "type": "DrugTerm",
+    "termNameType": "PreferredName",
+    "prettyUrlName": "atezolizumab"
+}

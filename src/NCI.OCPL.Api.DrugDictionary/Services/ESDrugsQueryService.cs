@@ -91,10 +91,64 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
         /// <param name="prettyUrlName">The pretty url name to search for.</param>
         /// <returns>A drug definitions object.</returns>
         /// </summary>
-        public async Task<IDrugResource> GetByName(string prettyUrlName)
+        public async Task<DrugTerm> GetByName(string prettyUrlName)
         {
-            // Stupid placeholder to suppress lack of await message.
-            return await Task.FromResult(new DrugTerm());
+            // Set up the SearchRequest to send to elasticsearch.
+            Indices index = Indices.Index(new string[] { this._apiOptions.AliasName });
+            Types types = Types.Type(new string[] { "terms" });
+            SearchRequest request = new SearchRequest(index, types)
+            {
+                Query = new TermQuery { Field = "pretty_url_name",  Value = prettyUrlName.ToString() } &&
+                        new TermQuery { Field = "type",             Value = DrugResourceType.DrugTerm.ToString() }
+                ,
+                Sort = new List<ISort>
+                {
+                    new SortField { Field = "name" }
+                }
+            };
+
+            ISearchResponse<DrugTerm> response = null;
+            try
+            {
+                response = await _elasticClient.SearchAsync<DrugTerm>(request);
+            }
+            catch (Exception ex)
+            {
+                String msg = $"Could not search pretty URL name '{prettyUrlName}'.";
+                _logger.LogError($"Error searching index: '{this._apiOptions.AliasName}'.");
+                _logger.LogError(ex, msg);
+                throw new APIErrorException(500, msg);
+            }
+
+            if (!response.IsValid)
+            {
+                String msg = $"Invalid response when searching for pretty URL name '{prettyUrlName}'.";
+                _logger.LogError(msg);
+                _logger.LogError(response.DebugInformation);
+                throw new APIErrorException(500, "errors occured");
+            }
+
+            DrugTerm drugTerm;
+
+            // If there is only one term in the response, then the search by pretty URL name was successful.
+            if (response.Total == 1)
+            {
+                drugTerm = response.Documents.First();
+            }
+            else if (response.Total == 0)
+            {
+                string msg = $"No match for pretty URL name '{prettyUrlName}'.";
+                _logger.LogDebug(msg);
+                throw new APIErrorException(404, msg);
+            }
+            else
+            {
+                string msg = $"Incorrect response when searching for pretty URL name '{prettyUrlName}'.";
+                _logger.LogError(msg);
+                throw new APIErrorException(500, "Errors have occured.");
+            }
+
+            return drugTerm;
         }
 
         /// <summary>

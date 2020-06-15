@@ -1,0 +1,52 @@
+{
+    "aliases": [
+        {
+            "type": "USBrandName",
+            "name": "Keytruda"
+        },
+        {
+            "type": "Synonym",
+            "name": "anti-PD-1 monoclonal antibody MK-3475"
+        },
+        {
+            "type": "Synonym",
+            "name": "immunoglobulin G4, anti-(human programmed cell death 1)"
+        },
+        {
+            "type": "Synonym",
+            "name": "humanized mouse monoclonal (228-L-proline(H10-S>P))gamma 4 heavy chain (134-218')-disulfide with humanized mouse monoclonal kappa light chain dimer (226-226'':229-229'')-bisdisulfide"
+        },
+        {
+            "type": "CodeName",
+            "name": "MK-3475"
+        },
+        {
+            "type": "CodeName",
+            "name": "SCH 900475"
+        },
+        {
+            "type": "ObsoleteName",
+            "name": "lambrolizumab"
+        },
+        {
+            "type": "CASRegistryName",
+            "name": "1374853-91-4"
+        }
+    ],
+    "definition": {
+        "html": "A humanized monoclonal immunoglobulin (Ig) G4 antibody directed against human cell surface receptor PD-1 (programmed death-1 or programmed cell death-1) with potential immune checkpoint inhibitory and antineoplastic activities. Upon administration, pembrolizumab binds to PD-1, an inhibitory signaling receptor expressed on the surface of activated T cells, and blocks the binding to and activation of PD-1 by its ligands, which results in the activation of T-cell-mediated immune responses against tumor cells. The ligands for PD-1 include programmed cell death ligand 1 (PD-L1), overexpressed on certain cancer cells, and programmed cell death ligand 2 (PD-L2), which is primarily expressed on APCs. Activated PD-1 negatively regulates T-cell activation and plays a key role in in tumor evasion from host immunity.\n Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C106432\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C106432\">NCI Thesaurus</a>)",
+        "text": "A humanized monoclonal immunoglobulin (Ig) G4 antibody directed against human cell surface receptor PD-1 (programmed death-1 or programmed cell death-1) with potential immune checkpoint inhibitory and antineoplastic activities. Upon administration, pembrolizumab binds to PD-1, an inhibitory signaling receptor expressed on the surface of activated T cells, and blocks the binding to and activation of PD-1 by its ligands, which results in the activation of T-cell-mediated immune responses against tumor cells. The ligands for PD-1 include programmed cell death ligand 1 (PD-L1), overexpressed on certain cancer cells, and programmed cell death ligand 2 (PD-L2), which is primarily expressed on APCs. Activated PD-1 negatively regulates T-cell activation and plays a key role in in tumor evasion from host immunity.\n Check for active clinical trials using this agent. (NCI Thesaurus)"
+    },
+    "drugInfoSummaryLink": {
+        "uri": "https://www.cancer.gov/about-cancer/treatment/drugs/pembrolizumab",
+        "text": "Pembrolizumab"
+    },
+    "nciConceptId": "C106432",
+    "nciConceptName": "Pembrolizumab",
+    "termId": 695789,
+    "name": "pembrolizumab",
+    "firstLetter": "p",
+    "type": "DrugTerm",
+    "termNameType": "PreferredName",
+    "prettyUrlName": "pembrolizumab"
+}
