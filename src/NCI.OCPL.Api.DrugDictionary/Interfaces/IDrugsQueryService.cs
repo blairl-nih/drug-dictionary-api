@@ -21,7 +21,7 @@ namespace NCI.OCPL.Api.DrugDictionary
         /// <param name="prettyUrlName">The pretty url name to search for.</param>
         /// <returns>A drug definitions object.</returns>
         /// </summary>
-        Task<IDrugResource> GetByName(string prettyUrlName);
+        Task<DrugTerm> GetByName(string prettyUrlName);
 
         /// <summary>
         /// Retrieves a portion of the overall set of drug definitions for a given combination of dictionary, audience, and language.

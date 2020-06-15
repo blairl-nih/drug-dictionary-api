@@ -162,5 +162,19 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
             return res;
         }
 
+        /// <summary>
+        /// Get the dictionary entry based on Pretty URL Name.
+        /// </summary>
+        /// <param name="prettyUrlName">The PrettyUrlName of the term to fetch. Required.</param>
+        /// <returns>The requested dictionary entry.</returns>
+        [HttpGet("{prettyUrlName}")]
+        public async Task<DrugTerm> GetByName(string prettyUrlName)
+        {
+            if (String.IsNullOrWhiteSpace(prettyUrlName))
+                throw new APIErrorException(400, "You must specify the prettyUrlName parameter.");
+
+            return await _termsQueryService.GetByName(prettyUrlName);
+        }
+
     }
 }

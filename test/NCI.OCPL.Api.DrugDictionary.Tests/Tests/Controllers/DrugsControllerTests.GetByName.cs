@@ -11,23 +11,23 @@ using NCI.OCPL.Api.Common;
 namespace NCI.OCPL.Api.DrugDictionary.Tests
 {
     /// <summary>
-    /// Tests for the DrugsController's GetById method.
+    /// Tests for the DrugsController's GetByName method.
     /// </summary>
     public partial class DrugsControllerTests
     {
         /// <summary>
-        /// Verify correct handling of invalid IDs.
+        /// Verify correct handling of invalid names.
         /// </summary>
         [Theory]
-        [InlineData(new object[] { 0 })]
-        [InlineData(new object[] { -65537 })]
-        [InlineData(new object[] { long.MinValue })]
-        public async void GetById_InvalidId(long id)
+        [InlineData(new object[] { null })]
+        [InlineData(new object[] { "" })]       // Can't use String.Empty because it's a property instead of a constant.
+        [InlineData(new object[] { "    " })]
+        public async void GetByName_InvalidName(string prettyName)
         {
             Mock<IDrugsQueryService> querySvc = new Mock<IDrugsQueryService>();
             querySvc.Setup(
-                svc => svc.GetById(
-                    It.IsAny<int>()
+                svc => svc.GetByName(
+                    It.IsAny<string>()
                 )
             )
             .Returns(Task.FromResult(new DrugTerm()));
@@ -36,20 +36,26 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
 
             var exception = await Assert.ThrowsAsync<APIErrorException>(
-                () => controller.GetById(id)
+                () => controller.GetByName(prettyName)
             );
 
-            Assert.Equal($"Not a valid ID '{id}'.", exception.Message);
+            // Verify the service layer doesn't get called at all.
+            querySvc.Verify(
+                svc => svc.GetByName(It.IsAny<string>()),
+                Times.Never
+            );
+
+            Assert.Equal("You must specify the prettyUrlName parameter.", exception.Message);
             Assert.Equal(400, exception.HttpStatusCode);
         }
 
         /// <summary>
-        /// Cerify correct handling of a valid ID.
+        /// Verify correct handling of a valid name.
         /// </summary>
         [Fact]
-        public async void GetById_ValidId()
+        public async void GetByName_ValidName()
         {
-            const int theID = 37780;
+            const string theName = "iodinated-contrast-agent";
 
             DrugTerm testTerm = new DrugTerm()
             {
@@ -83,15 +89,15 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
             Mock<IDrugsQueryService> querySvc = new Mock<IDrugsQueryService>();
             querySvc.Setup(
-                svc => svc.GetById(
-                    It.IsAny<long>()
+                svc => svc.GetByName(
+                    It.IsAny<string>()
                 )
             )
             .Returns(Task.FromResult(testTerm));
 
             // Call the controller, we don't care about the actual return value.
             DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
-            DrugTerm actual = await controller.GetById(theID);
+            DrugTerm actual = await controller.GetByName(theName);
 
             Assert.Equal(testTerm, actual);
 
@@ -99,9 +105,9 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             //  a) with the ID value.
             //  b) exactly once.
             querySvc.Verify(
-                svc => svc.GetById(theID),
+                svc => svc.GetByName(theName),
                 Times.Once,
-                $"ITermsQueryService::GetById() should be called once, with id = '{theID}"
+                $"ITermsQueryService::GetByName() should be called once, with id = '{theName}"
             );
         }
     }

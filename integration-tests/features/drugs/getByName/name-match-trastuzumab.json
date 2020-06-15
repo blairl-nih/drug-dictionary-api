@@ -1,0 +1,136 @@
+{
+    "aliases": [
+        {
+            "type": "CodeName",
+            "name": "ABP 980"
+        },
+        {
+            "type": "Synonym",
+            "name": "anti-c-erB-2"
+        },
+        {
+            "type": "Synonym",
+            "name": "anti-c-erbB2 monoclonal antibody"
+        },
+        {
+            "type": "Synonym",
+            "name": "anti-ERB-2"
+        },
+        {
+            "type": "Synonym",
+            "name": "anti-erbB-2"
+        },
+        {
+            "type": "Synonym",
+            "name": "anti-erbB2 monoclonal antibody"
+        },
+        {
+            "type": "Synonym",
+            "name": "anti-HER2/c-erbB2 monoclonal antibody"
+        },
+        {
+            "type": "Synonym",
+            "name": "anti-p185-HER2"
+        },
+        {
+            "type": "LexicalVariant",
+            "name": "HER2 monoclonal antibody"
+        },
+        {
+            "type": "USBrandName",
+            "name": "Herceptin"
+        },
+        {
+            "type": "Synonym",
+            "name": "Herceptin biosimilar PF-05280014"
+        },
+        {
+            "type": "Synonym",
+            "name": "Herceptin trastuzumab biosimilar PF-05280014"
+        },
+        {
+            "type": "Abbreviation",
+            "name": "MOAB HER2"
+        },
+        {
+            "type": "Synonym",
+            "name": "MOAB HER2"
+        },
+        {
+            "type": "Synonym",
+            "name": "monoclonal antibody HER2"
+        },
+        {
+            "type": "Synonym",
+            "name": "monoclonal antibody c-erb-2"
+        },
+        {
+            "type": "USBrandName",
+            "name": "Ogivri"
+        },
+        {
+            "type": "CodeName",
+            "name": "PF-05280014"
+        },
+        {
+            "type": "Abbreviation",
+            "name": "rhuMAb HER2"
+        },
+        {
+            "type": "CodeName",
+            "name": "RO0452317"
+        },
+        {
+            "type": "Synonym",
+            "name": "trastuzumab biosimilar PF-05280014"
+        },
+        {
+            "type": "Synonym",
+            "name": "trastuzumab biosimilar ABP 980"
+        },
+        {
+            "type": "Synonym",
+            "name": "trastuzumab biosimilar SB3"
+        },
+        {
+            "type": "Synonym",
+            "name": "trastuzumab biosimilar HLX02"
+        },
+        {
+            "type": "Synonym",
+            "name": "trastuzumab biosimilar ALT02"
+        },
+        {
+            "type": "Synonym",
+            "name": "trastuzumab biosimilar EG12014"
+        },
+        {
+            "type": "USBrandName",
+            "name": "Herzuma"
+        },
+        {
+            "type": "INDCode",
+            "name": "6667"
+        },
+        {
+            "type": "NSCNumber",
+            "name": "688097"
+        }
+    ],
+    "definition": {
+        "html": "A recombinant humanized monoclonal antibody directed against the human epidermal growth factor receptor 2 (HER2). After binding to HER2 on the tumor cell surface, trastuzumab induces an antibody-dependent cell-mediated cytotoxicity against tumor cells that overexpress HER2. HER2 is overexpressed by many adenocarcinomas, particularly breast adenocarcinomas. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C1647\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C1647\">NCI Thesaurus</a>)",
+        "text": "A recombinant humanized monoclonal antibody directed against the human epidermal growth factor receptor 2 (HER2). After binding to HER2 on the tumor cell surface, trastuzumab induces an antibody-dependent cell-mediated cytotoxicity against tumor cells that overexpress HER2. HER2 is overexpressed by many adenocarcinomas, particularly breast adenocarcinomas. Check for active clinical trials using this agent. (NCI Thesaurus)"
+    },
+    "drugInfoSummaryLink": {
+        "uri": "https://www.cancer.gov/about-cancer/treatment/drugs/trastuzumab",
+        "text": "Trastuzumab"
+    },
+    "nciConceptId": "C1647",
+    "nciConceptName": "Trastuzumab",
+    "termId": 42265,
+    "name": "trastuzumab",
+    "firstLetter": "t",
+    "type": "DrugTerm",
+    "termNameType": "PreferredName",
+    "prettyUrlName": "trastuzumab"
+}
