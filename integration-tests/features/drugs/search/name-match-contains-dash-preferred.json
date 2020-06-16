@@ -1,0 +1,38 @@
+{
+    "meta": {
+        "totalResults": 1,
+        "from": 0
+    },
+    "results": [
+        {
+            "aliases": [
+                {
+                    "type": "Abbreviation",
+                    "name": "HSP70"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "70-kD Heat-Shock Protein"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "Heat Shock Protein 70"
+                }
+            ],
+            "definition": {
+                "html": "A recombinant peptide that is chemically identical to or similar to the endogenous 70-kD heat shock protein (HSP70).  HSP70 is a molecular chaperone that prevents physiologic stress-induced cell death by inhibiting both caspase-dependent and caspase-independent apoptosis.  Because this peptide is often overexpressed in tumor cells, autologous vaccination with HSP70 derived from tumor cells may stimulate the host immune system to mount a tumoricidal cytotoxic T lymphocyte (CTL) response. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C28696\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C28696\">NCI Thesaurus</a>)",
+                "text": "A recombinant peptide that is chemically identical to or similar to the endogenous 70-kD heat shock protein (HSP70).  HSP70 is a molecular chaperone that prevents physiologic stress-induced cell death by inhibiting both caspase-dependent and caspase-independent apoptosis.  Because this peptide is often overexpressed in tumor cells, autologous vaccination with HSP70 derived from tumor cells may stimulate the host immune system to mount a tumoricidal cytotoxic T lymphocyte (CTL) response. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C28696",
+            "nciConceptName": "Recombinant 70-kD Heat-Shock Protein",
+            "termId": 37945,
+            "name": "recombinant 70-kD heat-shock protein",
+            "firstLetter": "r",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "recombinant-70-kd-heat-shock-protein"
+        }
+    ],
+    "links": null
+}

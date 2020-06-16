@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Linq;
 using NCI.OCPL.Api.Common;
+using System.Net;
 
 namespace NCI.OCPL.Api.DrugDictionary.Controllers
 {
@@ -174,6 +175,44 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
                 throw new APIErrorException(400, "You must specify the prettyUrlName parameter.");
 
             return await _termsQueryService.GetByName(prettyUrlName);
+        }
+
+        /// <summary>
+        /// Retrieves a portion of the overall set of drug definitions that match a specific search criteria. This will return
+        /// only DrugTerms, but will match against the Drug Term's name OR any of its Aliases.
+        /// </summary>
+        /// <param name="query">The search text. Required.</param>
+        /// <param name="matchType">Should the search match items beginning with the search text, or containing it? Default: Begin.</param>
+        /// <param name="size">The number of records to retrieve. Default: 100.</param>
+        /// <param name="from">The offset into the overall set to use for the first record.</param>
+        /// <param name="requestedFields">The fields to be populated with this response.</param>
+        /// <returns>A DrugTermResults object containing the desired records.</returns>
+        [HttpGet("search/{*query:required}")]
+        public async Task<DrugTermResults> Search(string query, [FromQuery] MatchType matchType = MatchType.Begins,
+            [FromQuery] int size = 100, [FromQuery] int from = 0, [FromQuery] string[] requestedFields = null
+        )
+        {
+            if(String.IsNullOrWhiteSpace(query))
+                throw new APIErrorException(400, "You must specify a search string.");
+
+            if (!Enum.IsDefined(typeof(MatchType), matchType))
+                throw new APIErrorException(400, "The `matchType` parameter must be either 'Begins' or 'Contains'.");
+
+            if (size <= 0)
+                size = 100;
+
+            if (from < 0)
+                from = 0;
+
+            // query uses a catch-all route, make sure it's been decoded.
+            query = WebUtility.UrlDecode(query);
+
+            // if requestedFields is empty populate it with default values
+            if (requestedFields == null || requestedFields.Length == 0 || requestedFields.Where(f => f != null).Count() == 0)
+                requestedFields = DEFAULT_FIELD_NAMES;
+
+            DrugTermResults res = await _termsQueryService.Search(query, matchType, size, from, requestedFields);
+            return res;
         }
 
     }

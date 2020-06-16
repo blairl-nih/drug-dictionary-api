@@ -1,0 +1,149 @@
+{
+    "meta": {
+        "totalResults": 19,
+        "from": 0
+    },
+    "results": [
+        {
+            "aliases": [
+                {
+                    "type": "Synonym",
+                    "name": "carboplatin-paclitaxel regimen"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "carbo-Tax regimen"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "CaT regimen"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "PC regimen"
+                }
+            ],
+            "definition": {
+                "html": "A chemotherapy regimen consisting of carboplatin and paclitaxel (Taxol) used for the treatment of endometrial, epithelial ovarian,  head and neck, and advanced-stage non-small cell lung cancers. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C63402\">NCI Thesaurus</a>)",
+                "text": "A chemotherapy regimen consisting of carboplatin and paclitaxel (Taxol) used for the treatment of endometrial, epithelial ovarian,  head and neck, and advanced-stage non-small cell lung cancers. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": {
+                "uri": "https://www.cancer.gov/about-cancer/treatment/drugs/CARBOPLATIN-TAXOL",
+                "text": "CARBOPLATIN-TAXOL"
+            },
+            "nciConceptId": "C63402",
+            "nciConceptName": "Carboplatin/Paclitaxel Regimen",
+            "termId": 657273,
+            "name": "carboplatin-Taxol regimen",
+            "firstLetter": "c",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "carboplatin-paclitaxel-regimen"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "Synonym",
+                    "name": "carboplatin-paclitaxel-bevacizumab regimen"
+                }
+            ],
+            "definition": {
+                "html": " A chemoimmunotherapy regimen consisting of carboplatin, paclitaxel (Taxol) and bevacizumab used for the treatment of advanced-stage, nonsquamous non-small cell lung cancer. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C63413\">NCI Thesaurus</a>)",
+                "text": " A chemoimmunotherapy regimen consisting of carboplatin, paclitaxel (Taxol) and bevacizumab used for the treatment of advanced-stage, nonsquamous non-small cell lung cancer. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C63413",
+            "nciConceptName": "Bevacizumab/Carboplatin/Paclitaxel Regimen",
+            "termId": 657275,
+            "name": "carboplatin-Taxol-bevacizumab regimen",
+            "firstLetter": "c",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "bevacizumab-carboplatin-paclitaxel-regimen"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "ForeignBrandName",
+                    "name": "LipoPac"
+                },
+                {
+                    "type": "ForeignBrandName",
+                    "name": "EndoTAG-1"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "MBT-0206"
+                }
+            ],
+            "definition": {
+                "html": "A cationic liposome preparation of paclitaxel with antineoplastic activity. Paclitaxel, the active ingredient in cationic liposome-encapsulated paclitaxel, binds to tubulin and inhibits the disassembly of microtubules, resulting in the inhibition of mitosis and cellular proliferation, and apoptosis. Cationic liposome encapsulation of  paclitaxel allows the delivery of high doses of paclitaxel to target tissues while minimizing systemic toxicity. Tumor endothelial cells may preferentialy bind and internalize cationic liposomes.  Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C69130\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C69130\">NCI Thesaurus</a>)",
+                "text": "A cationic liposome preparation of paclitaxel with antineoplastic activity. Paclitaxel, the active ingredient in cationic liposome-encapsulated paclitaxel, binds to tubulin and inhibits the disassembly of microtubules, resulting in the inhibition of mitosis and cellular proliferation, and apoptosis. Cationic liposome encapsulation of  paclitaxel allows the delivery of high doses of paclitaxel to target tissues while minimizing systemic toxicity. Tumor endothelial cells may preferentialy bind and internalize cationic liposomes.  Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C69130",
+            "nciConceptName": "Cationic Liposome-Encapsulated Paclitaxel",
+            "termId": 543136,
+            "name": "cationic liposome-encapsulated paclitaxel",
+            "firstLetter": "c",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "cationic-liposome-encapsulated-paclitaxel"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "Abbreviation",
+                    "name": "DHA-TAX"
+                },
+                {
+                    "type": "USBrandName",
+                    "name": "Taxoprexin"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "Docosahexaenoic Acid-Paclitaxel conjugate"
+                },
+                {
+                    "type": "Abbreviation",
+                    "name": "TXP"
+                }
+            ],
+            "definition": {
+                "html": "A prodrug comprised of the naturally occurring omega-3 fatty acid docosahexaenoic acid (DHA) covalently conjugated to the anti-microtubule agent paclitaxel.  Because tumor cells take up DHA, DHA-paclitaxel is delivered directly to tumor tissue, where the paclitaxel moiety binds to tubulin and inhibits the disassembly of microtubules, thereby resulting in the inhibition of cell division. Paclitaxel also induces apoptosis by binding to and blocking the function of the apoptosis inhibitor protein Bcl-2 (B-cell Leukemia 2).  DHA-paclitaxel exhibits improved pharmacokinetic and toxicity profiles when compared to conventional paclitaxel and has demonstrated antineoplastic activity in animal models of cancer. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C2649\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C2649\">NCI Thesaurus</a>)",
+                "text": "A prodrug comprised of the naturally occurring omega-3 fatty acid docosahexaenoic acid (DHA) covalently conjugated to the anti-microtubule agent paclitaxel.  Because tumor cells take up DHA, DHA-paclitaxel is delivered directly to tumor tissue, where the paclitaxel moiety binds to tubulin and inhibits the disassembly of microtubules, thereby resulting in the inhibition of cell division. Paclitaxel also induces apoptosis by binding to and blocking the function of the apoptosis inhibitor protein Bcl-2 (B-cell Leukemia 2).  DHA-paclitaxel exhibits improved pharmacokinetic and toxicity profiles when compared to conventional paclitaxel and has demonstrated antineoplastic activity in animal models of cancer. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C2649",
+            "nciConceptName": "DHA-Paclitaxel",
+            "termId": 38414,
+            "name": "DHA-paclitaxel",
+            "firstLetter": "d",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "dha-paclitaxel"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "Abbreviation",
+                    "name": "18-F FPAC"
+                }
+            ],
+            "definition": {
+                "html": "A radiotracer containing paclitaxel labeled with the radioisotope fluorine F 18 with potential use as an imaging agent. After cellular uptake, the paclitaxel moiety of fluorine F18 fluoropaclitaxel binds to tubulin. Upon uptake, the radioisotope moiety may be detected using positron emission tomography (PET), thereby allowing imaging and quantification of the biodistribution of paclitaxel. This could identify multidrug resistant (MDR) status of tumor cells and select patients that will likely respond to paclitaxel treatment.",
+                "text": "A radiotracer containing paclitaxel labeled with the radioisotope fluorine F 18 with potential use as an imaging agent. After cellular uptake, the paclitaxel moiety of fluorine F18 fluoropaclitaxel binds to tubulin. Upon uptake, the radioisotope moiety may be detected using positron emission tomography (PET), thereby allowing imaging and quantification of the biodistribution of paclitaxel. This could identify multidrug resistant (MDR) status of tumor cells and select patients that will likely respond to paclitaxel treatment."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": null,
+            "nciConceptName": null,
+            "termId": 668863,
+            "name": "fluorine F 18 fluoropaclitaxel",
+            "firstLetter": "f",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "fluorine-f-18-fluoropaclitaxel"
+        }
+    ],
+    "links": null
+}
