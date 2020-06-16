@@ -63,11 +63,5 @@ namespace NCI.OCPL.Api.DrugDictionary
             DrugResourceType[] includeResourceTypes, TermNameType[] includeNameTypes, TermNameType[] excludeNameTypes,
             string[] requestedFields
         );
-
-        /// <summary>
-        /// Get the total number of drug definitions available in the version of a dictionary matching a specific audience and language.
-        /// </summary>
-        /// <returns>The number of drug definitions available.</returns>
-        Task<long> GetCount();
     }
 }
