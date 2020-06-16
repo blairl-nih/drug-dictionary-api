@@ -1,0 +1,34 @@
+{
+    "meta": {
+        "totalResults": 1,
+        "from": 0
+    },
+    "results": [
+        {
+            "aliases": [
+                {
+                    "type": "Synonym",
+                    "name": "HER-2 ICD Peptide"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "HER-2/neu ICD Protein"
+                }
+            ],
+            "definition": {
+                "html": "The cytoplasmic domain or intracellular domain (ICD) of the HER2/neu protein that exhibits tyrosine kinase activity.  Based on sensitization theory, co-administration of trastuzumab (anti-HER-2/neu monoclonal antibody) and HER-2/neu intracellular domain protein may result in the potentiation of a HER2/neu-specific cytotoxic T lymphocyte (CTL) response against tumor cells overexpressing the HER2/neu protein. HER-2/neu protein, a glycoprotein cell surface receptor that is composed of an extracellular domain (ECD), a transmembrane domain, and an ICD, is overexpressed by many adenocarcinomas including breast adenocarcinoma. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C2593\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C2593\">NCI Thesaurus</a>)",
+                "text": "The cytoplasmic domain or intracellular domain (ICD) of the HER2/neu protein that exhibits tyrosine kinase activity.  Based on sensitization theory, co-administration of trastuzumab (anti-HER-2/neu monoclonal antibody) and HER-2/neu intracellular domain protein may result in the potentiation of a HER2/neu-specific cytotoxic T lymphocyte (CTL) response against tumor cells overexpressing the HER2/neu protein. HER-2/neu protein, a glycoprotein cell surface receptor that is composed of an extracellular domain (ECD), a transmembrane domain, and an ICD, is overexpressed by many adenocarcinomas including breast adenocarcinoma. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C2593",
+            "nciConceptName": "HER-2/neu Intracellular Domain Protein",
+            "termId": 38047,
+            "name": "HER-2/neu intracellular domain protein",
+            "firstLetter": "h",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "her-2-neu-intracellular-domain-protein"
+        }
+    ],
+    "links": null
+}

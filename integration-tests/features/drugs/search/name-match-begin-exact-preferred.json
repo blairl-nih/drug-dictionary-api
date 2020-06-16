@@ -1,0 +1,86 @@
+{
+    "meta": {
+        "totalResults": 2,
+        "from": 0
+    },
+    "results": [
+        {
+            "aliases": [
+                {
+                    "type": "Synonym",
+                    "name": "letrozole-palbociclib"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "palbociclib + letrozole"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "letrozole + palbociclib"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "letrozole/palbociclib"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "Femara/Ibrance"
+                }
+            ],
+            "definition": {
+                "html": "A chemotherapy regimen consisting of letrozole and palbociclib that is used as a treatment for estrogen receptor (ER) positive and HER-2/neu-negative metastatic or advanced breast cancer. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C142859\">NCI Thesaurus</a>)",
+                "text": "A chemotherapy regimen consisting of letrozole and palbociclib that is used as a treatment for estrogen receptor (ER) positive and HER-2/neu-negative metastatic or advanced breast cancer. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C142859",
+            "nciConceptName": "Letrozole/Palbociclib Regimen",
+            "termId": 791794,
+            "name": "letrozole/palbociclib regimen",
+            "firstLetter": "l",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "letrozole-palbociclib-regimen"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "CodeName",
+                    "name": "PD-0332991"
+                },
+                {
+                    "type": "CASRegistryName",
+                    "name": "571190-30-2"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "PD-332991"
+                },
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "6-acetyl-8-cyclopentyl-5-methyl-2-((5-(piperazin-1-yl)pyridin-2-yl)amino)pyrido[2,3-d]pyrimidin-7(8H)-one"
+                },
+                {
+                    "type": "USBrandName",
+                    "name": "Ibrance"
+                }
+            ],
+            "definition": {
+                "html": "An orally available cyclin-dependent kinase (CDK) inhibitor with potential antineoplastic activity. Palbociclib selectively inhibits cyclin-dependent kinase 4 (CDK4) and 6 (CDK6), thereby inhibiting retinoblastoma (Rb) protein phosphorylation early in the G1 phase leading to cell cycle arrest. This suppresses DNA replication and decreases tumor cell proliferation. CDK4 and 6 are serine/threonine kinases that are upregulated in many tumor cell types and play a key role in the regulation of cell cycle progression. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C49176\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C49176\">NCI Thesaurus</a>)",
+                "text": "An orally available cyclin-dependent kinase (CDK) inhibitor with potential antineoplastic activity. Palbociclib selectively inhibits cyclin-dependent kinase 4 (CDK4) and 6 (CDK6), thereby inhibiting retinoblastoma (Rb) protein phosphorylation early in the G1 phase leading to cell cycle arrest. This suppresses DNA replication and decreases tumor cell proliferation. CDK4 and 6 are serine/threonine kinases that are upregulated in many tumor cell types and play a key role in the regulation of cell cycle progression. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": {
+                "uri": "https://www.cancer.gov/about-cancer/treatment/drugs/palbociclib",
+                "text": "Palbociclib"
+            },
+            "nciConceptId": "C49176",
+            "nciConceptName": "Palbociclib",
+            "termId": 454586,
+            "name": "palbociclib",
+            "firstLetter": "p",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "palbociclib"
+        }
+    ],
+    "links": null
+}

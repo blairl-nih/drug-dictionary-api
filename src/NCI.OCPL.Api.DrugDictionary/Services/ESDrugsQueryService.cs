@@ -248,8 +248,100 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
         /// </summary>
         public async Task<DrugTermResults> Search(string query, MatchType matchType, int size, int from, string[] requestedFields)
         {
-            // Stupid placeholder to suppress lack of await message.
-            return await Task.FromResult(new DrugTermResults());
+            // Elasticsearch knows how to figure out what the ElasticSearch name is for
+            // a given field when given a PropertyInfo.
+            Field[] requestedESFields = convertRequestedFieldsToProperties(requestedFields)
+                                            .Select(pi => new Field(pi))
+                                            .ToArray();
+
+            // Set up the SearchRequest to send to elasticsearch.
+            Indices index = Indices.Index(new string[] { this._apiOptions.AliasName });
+            Types types = Types.Type(new string[] { "terms" });
+            SearchRequest request = new SearchRequest(index, types)
+            {
+                Query = (
+                            (matchType == MatchType.Begins ?
+                                (QueryBase)new PrefixQuery { Field = "name", Value = query } :
+                                (QueryBase)new MatchQuery { Field = "name._contain", Query = query }
+                            ) &&
+                            new TermQuery { Field = "type", Value = DrugResourceType.DrugTerm.ToString() }
+                        ) ||
+                        new NestedQuery
+                            {
+                                Path = "aliases",
+                                Query = (matchType == MatchType.Begins ?
+                                        (QueryBase)new PrefixQuery { Field = "aliases.name", Value = query} :
+                                        (QueryBase)new MatchQuery { Field = "aliases.name._contain", Query = query}
+                                    )
+                            }
+                ,
+                Sort = new List<ISort>
+                {
+                    new SortField { Field = "name" }
+                },
+                Size = size,
+                From = from,
+                Source = new SourceFilter
+                {
+                    Includes = requestedESFields
+                }
+            };
+
+            ISearchResponse<DrugTerm> response = null;
+            try
+            {
+                response = await _elasticClient.SearchAsync<DrugTerm>(request);
+            }
+            catch (Exception ex)
+            {
+                String msg = $"Could not search query '{query}', size '{size}', from '{from}'.";
+                _logger.LogError($"Error searching index: '{this._apiOptions.AliasName}'.");
+                _logger.LogError(msg, ex);
+                throw new APIErrorException(500, msg);
+            }
+
+            if (!response.IsValid)
+            {
+                String msg = $"Invalid response when searching for query '{query}', size '{size}', from '{from}'.";
+                _logger.LogError(msg);
+                _logger.LogError(response.DebugInformation);
+                throw new APIErrorException(500, "errors occured");
+            }
+
+            DrugTermResults searchResults = new DrugTermResults();
+
+            if (response.Total > 0)
+            {
+                // Build the array of glossary terms for the returned results.
+                List<DrugTerm> termResults = new List<DrugTerm>();
+                foreach (DrugTerm res in response.Documents)
+                {
+                    termResults.Add(res);
+                }
+
+                searchResults.Results = termResults.ToArray();
+
+                // Add the metadata for the returned results
+                searchResults.Meta = new ResultsMetadata()
+                {
+                    TotalResults = (int)response.Total,
+                    From = from
+                };
+            }
+            else if (response.Total == 0)
+            {
+                // Add the defualt value of empty GlossaryTerm list.
+                searchResults.Results = new DrugTerm[0];
+
+                // Add the metadata for the returned results
+                searchResults.Meta = new ResultsMetadata()
+                {
+                    TotalResults = (int)response.Total,
+                    From = from
+                };
+            }
+
+            return searchResults;
         }
 
         /// <summary>
@@ -399,6 +491,9 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
 
                 propertiesReturned.Add(property.Name.ToLower());
 
+                // Return value type properties regardless whether they were requested.
+                // This protects the caller from mistakenly using a default value which was
+                // coincidentally meaningful.
                 if (property.PropertyType.IsValueType)
                 {
                     // This should be Ints, Enums, etc.

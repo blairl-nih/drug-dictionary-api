@@ -1,0 +1,132 @@
+{
+    "meta": {
+        "totalResults": 3,
+        "from": 0
+    },
+    "results": [
+        {
+            "aliases": [
+                {
+                    "type": "Synonym",
+                    "name": "PPAR-gamma agonist CS-7017"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "CS-7017"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "inolitazone dihydrochloride"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "RS5444"
+                },
+                {
+                    "type": "CASRegistryName",
+                    "name": "223132-38-5"
+                },
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "2,4-thiazolidinedione, 5-((4-((6-(4-amino-3,5-dimethylphenoxy)-1-methyl-1h-benzimidazol-2-yl)methoxy)phenyl)methyl)-, Hydrochloride (1:2)"
+                }
+            ],
+            "definition": {
+                "html": "The dihydrochloride salt of efatutazone, an orally bioavailable agonist of peroxisome proliferator-activated receptor gamma (PPAR-gamma) with potential antineoplastic activity. Efatutazone binds to and activates PPAR-gamma, a nuclear hormone receptor and a ligand-activated transcription factor controling gene expression involved in macromolecule metabolism and cell differentiation, specifically adipocyte differentiation. Mediated through activation of PPAR-gamma, this agent is capable of inducing cell differentiation and apoptosis, thereby leading to a reduction in cellular proliferation.  Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C64764\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C64764\">NCI Thesaurus</a>)",
+                "text": "The dihydrochloride salt of efatutazone, an orally bioavailable agonist of peroxisome proliferator-activated receptor gamma (PPAR-gamma) with potential antineoplastic activity. Efatutazone binds to and activates PPAR-gamma, a nuclear hormone receptor and a ligand-activated transcription factor controling gene expression involved in macromolecule metabolism and cell differentiation, specifically adipocyte differentiation. Mediated through activation of PPAR-gamma, this agent is capable of inducing cell differentiation and apoptosis, thereby leading to a reduction in cellular proliferation.  Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C64764",
+            "nciConceptName": "Efatutazone Dihydrochloride",
+            "termId": 529846,
+            "name": "efatutazone dihydrochloride",
+            "firstLetter": "e",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "efatutazone-dihydrochloride"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "(+/-)-5-[[4-[2-(Methyl-2-pyridinylamino)ethoxy]phenyl]methyl]-2,4-thiazolidinedione, ( Z )-2-Butenedioate (1:1)"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "BRL49653"
+                },
+                {
+                    "type": "USBrandName",
+                    "name": "Avandia"
+                },
+                {
+                    "type": "Abbreviation",
+                    "name": "ROS"
+                }
+            ],
+            "definition": {
+                "html": "The maleate salt of rosiglitazone, an orally-active thiazolidinedione with antidiabetic properties and potential antineoplastic activity. Rosiglitazone activates peroxisome proliferator-activated receptor gamma (PPAR-gamma), a ligand-activated transcription factor, thereby inducing cell differentiation and inhibiting cell growth and angiogenesis. This agent also modulates the transcription of insulin-responsive genes, inhibits macrophage and monocyte activation, and stimulates adipocyte differentiation. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C2583\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C2583\">NCI Thesaurus</a>)",
+                "text": "The maleate salt of rosiglitazone, an orally-active thiazolidinedione with antidiabetic properties and potential antineoplastic activity. Rosiglitazone activates peroxisome proliferator-activated receptor gamma (PPAR-gamma), a ligand-activated transcription factor, thereby inducing cell differentiation and inhibiting cell growth and angiogenesis. This agent also modulates the transcription of insulin-responsive genes, inhibits macrophage and monocyte activation, and stimulates adipocyte differentiation. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C2583",
+            "nciConceptName": "Rosiglitazone Maleate",
+            "termId": 37793,
+            "name": "rosiglitazone maleate",
+            "firstLetter": "r",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "rosiglitazone-maleate"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "USBrandName",
+                    "name": "Rezulin"
+                },
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "5-[4-[(6-Hydroxy-2,5,7,8-tetramethylchroman-2-yl)methoxy]benzyl]-2,4-thiazolidinedione"
+                },
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "5-[[4-[4(3,4-Dihydro-6-hydroxy-2,5,7,8-tetramethyl-2H-1-benzopyran-2-yl)methoxy]phenyl]methyl\\-2,4-thiazolidinedione"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "CI-991"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "CS-045"
+                },
+                {
+                    "type": "USBrandName",
+                    "name": "Prelay"
+                },
+                {
+                    "type": "USBrandName",
+                    "name": "Romozin"
+                },
+                {
+                    "type": "CASRegistryName",
+                    "name": "97322-87-7"
+                }
+            ],
+            "definition": {
+                "html": "An orally-active thiazolidinedione with antidiabetic and hepatotoxic properties and potential antineoplastic activity.  Troglitazone activates peroxisome proliferator-activated receptor gamma (PPAR-gamma), a ligand-activated transcription factor, thereby inducing cell differentiation and inhibiting cell growth and angiogenesis.  This agent also modulates the transcription of insulin-responsive genes, inhibits macrophage and monocyte activation, and stimulates adipocyte differentiation. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C1522\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C1522\">NCI Thesaurus</a>)",
+                "text": "An orally-active thiazolidinedione with antidiabetic and hepatotoxic properties and potential antineoplastic activity.  Troglitazone activates peroxisome proliferator-activated receptor gamma (PPAR-gamma), a ligand-activated transcription factor, thereby inducing cell differentiation and inhibiting cell growth and angiogenesis.  This agent also modulates the transcription of insulin-responsive genes, inhibits macrophage and monocyte activation, and stimulates adipocyte differentiation. Check for active clinical trials using this agent. (NCI Thesaurus)"
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C1522",
+            "nciConceptName": "Troglitazone",
+            "termId": 42706,
+            "name": "troglitazone",
+            "firstLetter": "t",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "troglitazone"
+        }
+    ],
+    "links": null
+}
