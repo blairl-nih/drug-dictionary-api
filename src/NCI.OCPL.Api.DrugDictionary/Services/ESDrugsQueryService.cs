@@ -342,16 +342,6 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
         }
 
         /// <summary>
-        /// Get the total number of drug definitions available in the version of a dictionary matching a specific audience and language.
-        /// </summary>
-        /// <returns>The number of drug definitions available.</returns>
-        public async Task<long> GetCount()
-        {
-            // Stupid placeholder to suppress lack of await message.
-            return await Task.FromResult(long.MaxValue);
-        }
-
-        /// <summary>
         /// Yields a collection of PropertyInfo objects representing the named requestedFields passed into the API.
         /// </summary>
         /// <param name="requestedFields">The requested fields. An array of nulls will be treated as an empty array.</param>
