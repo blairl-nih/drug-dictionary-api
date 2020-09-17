@@ -49,12 +49,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
         }
 
         /// <summary>
-        /// Search for Terms based on autosuggest criteria
-        /// </summary>
-        /// <returns>An array of Suggestion objects</returns>
-
-        /// <summary>
-        /// Searches for dictionary terms with names matching the query text.
+        /// Searches for drug dictionary terms with names matching the query text.
         /// </summary>
         /// <param name="searchText">Text to match against</param>
         /// <param name="matchType">Should the search match items beginning with the search text, or containing it?</param>
@@ -62,15 +57,20 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
         /// <param name="includeResourceTypes">The DrugResourceTypes to include. Default: All</param>
         /// <param name="includeNameTypes">The name types to include. Default: All</param>
         /// <param name="excludeNameTypes">The name types to exclude. Default: All</param>
-        /// <returns></returns>
-        [HttpGet("{*searchText:required}")]
-        public async Task<Suggestion[]> GetSuggestions(string searchText,
+        /// <returns>A Suggestion result containing the desired records.</returns>
+        [HttpGet("")]
+        public async Task<Suggestion[]> GetSuggestions(
+            [FromQuery] string searchText,
             [FromQuery] MatchType matchType = MatchType.Begins, [FromQuery] int size = 20,
             [FromQuery] DrugResourceType[] includeResourceTypes = null,
             [FromQuery] TermNameType[] includeNameTypes = null,
             [FromQuery] TermNameType[] excludeNameTypes = null
             )
         {
+            if(string.IsNullOrWhiteSpace(searchText))
+            {
+                throw new APIErrorException(400, "You must specify a search string.");
+            }
 
             if (!Enum.IsDefined(typeof(MatchType), matchType))
                 throw new APIErrorException(400, "The `matchType` parameter must be either 'Begins' or 'Contains'.");

@@ -5,8 +5,8 @@ Feature: Autosuggest, restricted to drug aliases.
 
     Scenario Outline: Given the search text and type, validate the query result.
 
-        Given path 'Autosuggest', search
-        And params { matchType: <match>, size: 3,  includeResourceTypes: [DrugAlias]}
+        Given path 'Autosuggest'
+        And params { searchText: <search>, matchType: <match>, size: 3,  includeResourceTypes: [DrugAlias]}
         When method get
         Then status 200
         And match response == read( expected )

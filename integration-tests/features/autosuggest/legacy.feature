@@ -6,8 +6,8 @@ Feature: Autosuggest, including only PreferredName and USBrandName name types in
 
     Scenario Outline: Given the search text and type, validate the query result.
 
-        Given path 'Autosuggest', search
-        And params { matchType: <match>, size: 5, includeNameTypes: ['USBrandName', 'PreferredName'] }
+        Given path 'Autosuggest'
+        And params { searchText: <search>, matchType: <match>, size: 5, includeNameTypes: ['USBrandName', 'PreferredName'] }
         When method get
         Then status 200
         And match response == read( expected )

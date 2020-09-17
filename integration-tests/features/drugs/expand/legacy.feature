@@ -13,7 +13,7 @@ Feature: Expand, with includedNameTypes set to 'PreferredName', 'USBrandName'
         And match response == read( expected )
 
         Examples:
-            | letter | from | expected       |
-            | a      | 0    | legacy-a.json  |
-            | s      | 20   | legacy-s.json  |
+            | letter | from | expected          |
+            | a      | 0    | legacy-a.json     |
+            | s      | 20   | legacy-s.json     |
             | #      | 5    | legacy-hash.json  |

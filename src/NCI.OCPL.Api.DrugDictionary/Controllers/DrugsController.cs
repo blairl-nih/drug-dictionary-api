@@ -9,8 +9,6 @@ using System.Net;
 
 namespace NCI.OCPL.Api.DrugDictionary.Controllers
 {
-
-
     /// <summary>
     /// Controller for routes used when searching for or retrieving
     /// multiple Terms.
@@ -67,7 +65,8 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
         /// <returns>A DrugTermResults object containing the desired records.</returns>
         [HttpGet("expand/{character}")]
         public async Task<DrugTermResults> Expand(char character,
-            [FromQuery] int size = 100, [FromQuery] int from = 0,
+            [FromQuery] int size = 100,
+            [FromQuery] int from = 0,
             [FromQuery] DrugResourceType[] includeResourceTypes = null,
             [FromQuery] TermNameType[] includeNameTypes = null,
             [FromQuery] TermNameType[] excludeNameTypes = null,
@@ -187,9 +186,13 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
         /// <param name="from">The offset into the overall set to use for the first record.</param>
         /// <param name="requestedFields">The fields to be populated with this response.</param>
         /// <returns>A DrugTermResults object containing the desired records.</returns>
-        [HttpGet("search/{*query:required}")]
-        public async Task<DrugTermResults> Search(string query, [FromQuery] MatchType matchType = MatchType.Begins,
-            [FromQuery] int size = 100, [FromQuery] int from = 0, [FromQuery] string[] requestedFields = null
+        [HttpGet("search")]
+        public async Task<DrugTermResults> Search(
+            [FromQuery] string query,
+            [FromQuery] MatchType matchType = MatchType.Begins,
+            [FromQuery] int size = 100,
+            [FromQuery] int from = 0,
+            [FromQuery] string[] requestedFields = null
         )
         {
             if(String.IsNullOrWhiteSpace(query))
