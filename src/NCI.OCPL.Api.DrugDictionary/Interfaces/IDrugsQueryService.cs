@@ -31,11 +31,10 @@ namespace NCI.OCPL.Api.DrugDictionary
         /// <param name="includeResourceTypes">The DrugResourceTypes to include. Default: All</param>
         /// <param name="includeNameTypes">The name types to include. Default: All</param>
         /// <param name="excludeNameTypes">The name types to exclude. Default: All</param>
-        /// <param name="requestedFields">The fields to retrieve.  If not specified, defaults to TermName, Pronunciation, and Definition.</param>
         /// <returns>A DrugTermResults object containing the desired records.</returns>
         Task<DrugTermResults> GetAll(int size, int from,
-            DrugResourceType[] includeResourceTypes, TermNameType[] includeNameTypes, TermNameType[] excludeNameTypes,
-            string[] requestedFields);
+            DrugResourceType[] includeResourceTypes, TermNameType[] includeNameTypes, TermNameType[] excludeNameTypes
+        );
 
         /// <summary>
         /// Search for drug definitions based on search criteria.
@@ -43,10 +42,9 @@ namespace NCI.OCPL.Api.DrugDictionary
         /// <param name="matchType">Defines if the search should begin with or contain the key word</param>
         /// <param name="size">Defines the size of the search</param>
         /// <param name="from">Defines the Offset for search</param>
-        /// <param name="requestedFields">The list of fields that needs to be sent in the response</param>
         /// <returns>A DrugTermResults object containing the desired records.</returns>
         /// </summary>
-        Task<DrugTermResults> Search(string query, MatchType matchType, int size, int from, string[] requestedFields);
+        Task<DrugTermResults> Search(string query, MatchType matchType, int size, int from);
 
         /// <summary>
         /// List all drug dictionary entries starting with the same first character.
@@ -56,12 +54,10 @@ namespace NCI.OCPL.Api.DrugDictionary
         /// <param name="includeResourceTypes">The DrugResourceTypes to include. Default: All</param>
         /// <param name="includeNameTypes">The name types to include. Default: All</param>
         /// <param name="excludeNameTypes">The name types to exclude. Default: All</param>
-        /// <param name="requestedFields"> The list of fields that needs to be sent in the response</param>
         /// <returns>A DrugTermResults object containing the desired records.</returns>
         /// </summary>
         Task<DrugTermResults> Expand(char firstCharacter, int size, int from,
-            DrugResourceType[] includeResourceTypes, TermNameType[] includeNameTypes, TermNameType[] excludeNameTypes,
-            string[] requestedFields
+            DrugResourceType[] includeResourceTypes, TermNameType[] includeNameTypes, TermNameType[] excludeNameTypes
         );
     }
 }

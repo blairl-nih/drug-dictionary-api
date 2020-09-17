@@ -28,8 +28,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     It.IsAny<string>(),
                     It.IsAny<MatchType>(),
                     It.IsAny<int>(),
-                    It.IsAny<int>(),
-                    It.IsAny<string[]>()
+                    It.IsAny<int>()
                 )
             )
             .Returns(Task.FromResult(new DrugTermResults()));
@@ -47,8 +46,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     It.IsAny<string>(),
                     It.IsAny<MatchType>(),
                     It.IsAny<int>(),
-                    It.IsAny<int>(),
-                    It.IsAny<string[]>()
+                    It.IsAny<int>()
                 ),
                 Times.Never
             );
@@ -109,8 +107,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     It.IsAny<string>(),
                     It.IsAny<MatchType>(),
                     It.IsAny<int>(),
-                    It.IsAny<int>(),
-                    It.IsAny<string[]>()
+                    It.IsAny<int>()
                 )
             )
             .Returns(Task.FromResult(testResults));
@@ -125,7 +122,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             //  a) with the ID value.
             //  b) exactly once.
             querySvc.Verify(
-                svc => svc.Search(theName, MatchType.Begins, DEFAULT_SEARCH_SIZE, DEFAULT_SEARCH_FROM, DEFAULT_REQUESTED_FIELD_LIST),
+                svc => svc.Search(theName, MatchType.Begins, DEFAULT_SEARCH_SIZE, DEFAULT_SEARCH_FROM),
                 Times.Once,
                 $"ITermsQueryService::Search() should be called once, with id = '{theName}"
             );

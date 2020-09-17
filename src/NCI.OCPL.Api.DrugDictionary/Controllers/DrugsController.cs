@@ -61,7 +61,6 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
         /// <param name="includeResourceTypes">The DrugResourceTypes to include. Default: All</param>
         /// <param name="includeNameTypes">The name types to include. Default: All</param>
         /// <param name="excludeNameTypes">The name types to exclude. Default: All</param>
-        /// <param name="requestedFields">The fields to retrieve.  If not specified, defaults to all fields except media and related resources.</param>
         /// <returns>A DrugTermResults object containing the desired records.</returns>
         [HttpGet("expand/{character}")]
         public async Task<DrugTermResults> Expand(char character,
@@ -69,8 +68,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
             [FromQuery] int from = 0,
             [FromQuery] DrugResourceType[] includeResourceTypes = null,
             [FromQuery] TermNameType[] includeNameTypes = null,
-            [FromQuery] TermNameType[] excludeNameTypes = null,
-            [FromQuery] string[] requestedFields = null
+            [FromQuery] TermNameType[] excludeNameTypes = null
         )
         {
             if (size <= 0)
@@ -91,11 +89,8 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
             if (excludeNameTypes == null)
                 excludeNameTypes = new TermNameType[0];
 
-            if (requestedFields == null || requestedFields.Length == 0 || requestedFields.Where(f => !String.IsNullOrWhiteSpace(f)).Count() == 0)
-                requestedFields = DEFAULT_FIELD_NAMES;
-
             DrugTermResults res = await _termsQueryService.Expand(character, size, from,
-                includeResourceTypes, includeNameTypes, excludeNameTypes, requestedFields);
+                includeResourceTypes, includeNameTypes, excludeNameTypes);
 
             return res;
         }
@@ -108,15 +103,13 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
         /// <param name="includeResourceTypes">The DrugResourceTypes to include. Default: All</param>
         /// <param name="includeNameTypes">The name types to include. Default: All</param>
         /// <param name="excludeNameTypes">The name types to exclude. Default: All</param>
-        /// <param name="requestedFields">The fields to retrieve.  If not specified, defaults to all fields except media and related resources.</param>
         /// <returns>A DrugTermResults object containing the desired records.</returns>
         [HttpGet("")]
         public async Task<DrugTermResults> GetAll(
             [FromQuery] int size = 100, [FromQuery] int from = 0,
             [FromQuery] DrugResourceType[] includeResourceTypes = null,
             [FromQuery] TermNameType[] includeNameTypes = null,
-            [FromQuery] TermNameType[] excludeNameTypes = null,
-            [FromQuery] string[] requestedFields = null
+            [FromQuery] TermNameType[] excludeNameTypes = null
         )
         {
             if (size <= 0)
@@ -137,11 +130,8 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
             if (excludeNameTypes == null)
                 excludeNameTypes = new TermNameType[0];
 
-            if (requestedFields == null || requestedFields.Length == 0 || requestedFields.Where(f => !String.IsNullOrWhiteSpace(f)).Count() == 0)
-                requestedFields = DEFAULT_FIELD_NAMES;
-
             DrugTermResults res = await _termsQueryService.GetAll(size, from,
-                includeResourceTypes, includeNameTypes, excludeNameTypes, requestedFields);
+                includeResourceTypes, includeNameTypes, excludeNameTypes);
 
             return res;
         }
@@ -184,15 +174,13 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
         /// <param name="matchType">Should the search match items beginning with the search text, or containing it? Default: Begin.</param>
         /// <param name="size">The number of records to retrieve. Default: 100.</param>
         /// <param name="from">The offset into the overall set to use for the first record.</param>
-        /// <param name="requestedFields">The fields to be populated with this response.</param>
         /// <returns>A DrugTermResults object containing the desired records.</returns>
         [HttpGet("search")]
         public async Task<DrugTermResults> Search(
             [FromQuery] string query,
             [FromQuery] MatchType matchType = MatchType.Begins,
             [FromQuery] int size = 100,
-            [FromQuery] int from = 0,
-            [FromQuery] string[] requestedFields = null
+            [FromQuery] int from = 0
         )
         {
             if(String.IsNullOrWhiteSpace(query))
@@ -210,11 +198,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
             // query uses a catch-all route, make sure it's been decoded.
             query = WebUtility.UrlDecode(query);
 
-            // if requestedFields is empty populate it with default values
-            if (requestedFields == null || requestedFields.Length == 0 || requestedFields.Where(f => f != null).Count() == 0)
-                requestedFields = DEFAULT_FIELD_NAMES;
-
-            DrugTermResults res = await _termsQueryService.Search(query, matchType, size, from, requestedFields);
+            DrugTermResults res = await _termsQueryService.Search(query, matchType, size, from);
             return res;
         }
 

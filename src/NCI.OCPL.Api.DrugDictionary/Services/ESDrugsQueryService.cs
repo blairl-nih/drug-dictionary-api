@@ -158,20 +158,18 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
         /// <param name="includeResourceTypes">The DrugResourceTypes to include. Default: All</param>
         /// <param name="includeNameTypes">The name types to include. Default: All</param>
         /// <param name="excludeNameTypes">The name types to exclude. Default: All</param>
-        /// <param name="requestedFields"> The list of fields that needs to be sent in the response</param>
         /// <returns>A DrugTermResults object containing entries matching the desired criteria.</returns>
         /// </summary>
         public async Task<DrugTermResults> GetAll(int size, int from,
             DrugResourceType[] includeResourceTypes,
             TermNameType[] includeNameTypes,
-            TermNameType[] excludeNameTypes,
-            string[] requestedFields)
+            TermNameType[] excludeNameTypes)
         {
             // Elasticsearch knows how to figure out what the ElasticSearch name is for
             // a given field when given a PropertyInfo.
-            Field[] requestedESFields = convertRequestedFieldsToProperties(requestedFields)
-                                            .Select(pi => new Field(pi))
-                                            .ToArray();
+            Field[] fieldList = getFieldList()
+                                    .Select(pi => new Field(pi))
+                                    .ToArray();
 
             // Set up the SearchRequest to send to elasticsearch.
             Indices index = Indices.Index(new string[] { this._apiOptions.AliasName });
@@ -191,7 +189,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
                 From = from,
                 Source = new SourceFilter
                 {
-                    Includes = requestedESFields
+                    Includes = fieldList
                 }
             };
 
@@ -243,16 +241,15 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
         /// <param name="matchType">Defines if the search should begin with or contain the key word</param>
         /// <param name="size">Defines the size of the search</param>
         /// <param name="from">Defines the Offset for search</param>
-        /// <param name="requestedFields">The list of fields that needs to be sent in the response</param>
         /// <returns>A DrugTermResults object containing the desired records.</returns>
         /// </summary>
-        public async Task<DrugTermResults> Search(string query, MatchType matchType, int size, int from, string[] requestedFields)
+        public async Task<DrugTermResults> Search(string query, MatchType matchType, int size, int from)
         {
             // Elasticsearch knows how to figure out what the ElasticSearch name is for
-            // a given field when given a PropertyInfo.
-            Field[] requestedESFields = convertRequestedFieldsToProperties(requestedFields)
-                                            .Select(pi => new Field(pi))
-                                            .ToArray();
+            // fields when given a PropertyInfo.
+            Field[] fieldList = getFieldList()
+                                    .Select(pi => new Field(pi))
+                                    .ToArray();
 
             // Set up the SearchRequest to send to elasticsearch.
             Indices index = Indices.Index(new string[] { this._apiOptions.AliasName });
@@ -283,7 +280,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
                 From = from,
                 Source = new SourceFilter
                 {
-                    Includes = requestedESFields
+                    Includes = fieldList
                 }
             };
 
@@ -352,21 +349,19 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
         /// <param name="includeResourceTypes">The DrugResourceTypes to include. Default: All</param>
         /// <param name="includeNameTypes">The name types to include. Default: All</param>
         /// <param name="excludeNameTypes">The name types to exclude. Default: All</param>
-        /// <param name="requestedFields"> The list of fields that needs to be sent in the response</param>
         /// <returns>A DrugTermResults object containing entries matching the desired criteria.</returns>
         /// </summary>
         public async Task<DrugTermResults> Expand(char firstCharacter, int size, int from,
             DrugResourceType[] includeResourceTypes,
             TermNameType[] includeNameTypes,
-            TermNameType[] excludeNameTypes,
-            string[] requestedFields
+            TermNameType[] excludeNameTypes
         )
         {
             // Elasticsearch knows how to figure out what the ElasticSearch name is for
-            // a given field when given a PropertyInfo.
-            Field[] requestedESFields = convertRequestedFieldsToProperties(requestedFields)
-                                            .Select(pi => new Field(pi))
-                                            .ToArray();
+            // fields when given a PropertyInfo.
+            Field[] fieldList = getFieldList()
+                                    .Select(pi => new Field(pi))
+                                    .ToArray();
 
             // Set up the SearchRequest to send to elasticsearch.
             Indices index = Indices.Index(new string[] { this._apiOptions.AliasName });
@@ -387,7 +382,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
                 From = from,
                 Source = new SourceFilter
                 {
-                    Includes = requestedESFields
+                    Includes = fieldList
                 }
             };
 
@@ -434,47 +429,20 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
         }
 
         /// <summary>
-        /// Yields a collection of PropertyInfo objects representing the named requestedFields passed into the API.
+        /// Yields a collection of PropertyInfo objects representing the named fields passed into the API.
         /// </summary>
-        /// <param name="requestedFields">The requested fields. An array of nulls will be treated as an empty array.</param>
         /// <returns>An array of PropertyInfo objects representing the fields. NOTE: If a field is a value type then it
         /// must be returned as part of the object so that we do not get incorrect default values. Dotnet cannot actually change
         /// the shape of our object, or at least not without major trouble. So we will force the return here.</returns>
-        /// <exception cref="System.ArgumentNullException">Thrown when requestedFields is null.</exception>
-        /// <exception cref="System.ArgumentException">Thrown when requestedFields contains one or more null values.</exception>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown when an unknown field is requested.</exception>
-        private IEnumerable<PropertyInfo> convertRequestedFieldsToProperties(string[] requestedFields)
+        private IEnumerable<PropertyInfo> getFieldList()
         {
-            if (requestedFields == null)
-            {
-                throw new ArgumentNullException("requestedFields");
-            }
-
-            if (requestedFields.Contains(null))
-            {
-                throw new ArgumentException("Null requested field encountered.", "requestedFields");
-            }
-
-            // Lowercase our field names.
-            string[] fieldsList = requestedFields
-                                    .Select(f => f.ToLower())
-                                    .ToArray();
-
-            // Now we will use reflection to get a list of the properties from the DrugTerm and DrugAlias classes.
-            // Combine the two lists, and return only those that match our list of names
+            // We will use reflection to get a list of the properties from the DrugTerm and DrugAlias classes.
+            // Combine the two lists, and return all
             PropertyInfo[] termProperties = typeof(DrugTerm).GetProperties(BindingFlags.Public | BindingFlags.Instance);
             PropertyInfo[] aliasProperties = typeof(DrugAlias).GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
-            var compbinedList = termProperties.ToList();
-            compbinedList.AddRange(aliasProperties);
-
-            var propertyNames = compbinedList.Select(p => p.Name.ToLower()).Concat(aliasProperties.Select(p => p.Name.ToLower())).Distinct();
-            var badFields = fieldsList.Except(propertyNames);
-
-            if (badFields.Count() > 0)
-            {
-                throw new ArgumentOutOfRangeException("requestedFields", $"Unknown fields: {String.Join(", ", badFields)} ");
-            }
+            var combinedList = termProperties.ToList();
+            combinedList.AddRange(aliasProperties);
 
             // DrugTerm and DrugAlias are both implementations of IDrugResource.
             // Any property that exists in both should be the same field.
@@ -484,28 +452,15 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
             // Track the properties returned so far.
             HashSet<string> propertiesReturned = new HashSet<string>();
 
-            foreach (PropertyInfo property in compbinedList)
+            foreach (PropertyInfo property in combinedList)
             {
                 if( propertiesReturned.Contains(property.Name.ToLower()))
                     continue;
 
                 propertiesReturned.Add(property.Name.ToLower());
 
-                // Return value type properties regardless whether they were requested.
-                // This protects the caller from mistakenly using a default value which was
-                // coincidentally meaningful.
-                if (property.PropertyType.IsValueType)
-                {
-                    // This should be Ints, Enums, etc.
-                    // It will not be strings.
-                    yield return property;
-                }
-                else if (fieldsList.Contains(property.Name.ToLower()))
-                {
-                    yield return property;
-                }
+                yield return property;
             }
         }
-
     }
 }

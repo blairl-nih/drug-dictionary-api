@@ -71,8 +71,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             // We don't really care that this returns anything (for this test), only that the intercepting connection
             // sets up the request correctly.
             DrugTermResults result = await query.Expand(data.Letter, data.Size, data.From,
-                data.IncludeResourceTypes, data.IncludeNameTypes, data.ExcludeNameTypes,
-                new string[] { "termId", "name", "firstLetter", "prettyUrlName", "definition", "aliases", "drugInfoSummaryLink", "nciConceptId", "nciConceptName", "type", "termNameType" }
+                data.IncludeResourceTypes, data.IncludeNameTypes, data.ExcludeNameTypes
                 );
 
             Assert.Equal("/drugv1/terms/_search", esURI.AbsolutePath);
@@ -130,8 +129,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             // We don't really care that this returns anything (for this test), only that the intercepting connection
             // sets up the request correctly.
             DrugTermResults result = await query.GetAll(data.Size, data.From,
-                data.IncludeResourceTypes, data.IncludeNameTypes, data.ExcludeNameTypes,
-                new string[] { "termId", "name", "firstLetter", "prettyUrlName", "definition", "aliases", "drugInfoSummaryLink", "nciConceptId", "nciConceptName", "type", "termNameType" }
+                data.IncludeResourceTypes, data.IncludeNameTypes, data.ExcludeNameTypes
                 );
 
             Assert.Equal("/drugv1/terms/_search", esURI.AbsolutePath);
@@ -241,9 +239,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
             // We don't really care that this returns anything (for this test), only that the intercepting connection
             // sets up the request correctly.
-            DrugTermResults result = await query.Search(data.SearchText, data.MatchType, data.Size, data.From,
-                new string[] { "termId", "name", "type", "prettyUrlName", "aliases", "definition", "PreferredName" }
-            );
+            DrugTermResults result = await query.Search(data.SearchText, data.MatchType, data.Size, data.From);
 
             Assert.Equal("/drugv1/terms/_search", esURI.AbsolutePath);
             Assert.Equal("application/json", esContentType);

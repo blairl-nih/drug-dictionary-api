@@ -20,6 +20,9 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
         ""includes"": [
             ""aliases"",
             ""definition"",
+            ""drug_info_summary_link"",
+            ""nci_concept_id"",
+            ""nci_concept_name"",
             ""term_id"",
             ""name"",
             ""first_letter"",

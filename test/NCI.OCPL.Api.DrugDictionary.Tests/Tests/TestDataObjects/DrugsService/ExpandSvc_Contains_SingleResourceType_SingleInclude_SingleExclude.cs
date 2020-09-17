@@ -41,7 +41,8 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     ""first_letter"",
                     ""type"",
                     ""term_name_type"",
-                    ""pretty_url_name""
+                    ""pretty_url_name"",
+                    ""preferred_name""
                 ]
             },
             ""sort"": [ { ""name"": {} } ],

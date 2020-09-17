@@ -37,8 +37,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     It.IsAny<int>(),
                     It.IsAny<DrugResourceType[]>(),
                     It.IsAny<TermNameType[]>(),
-                    It.IsAny<TermNameType[]>(),
-                    It.IsAny<string[]>()
+                    It.IsAny<TermNameType[]>()
                 )
             )
             .Returns(Task.FromResult(new DrugTermResults()));
@@ -54,8 +53,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                 svc => svc.Expand('s', DEFAULT_SEARCH_SIZE, DEFAULT_SEARCH_FROM,
                     DEFAULT_DRUG_RESOURCE_TYPE_LIST,
                     DEFAULT_INCLUDED_TERM_TYPE_LIST,
-                    DEFAULT_EXCLUDED_TERM_TYPE_LIST,
-                    DEFAULT_REQUESTED_FIELD_LIST ),
+                    DEFAULT_EXCLUDED_TERM_TYPE_LIST ),
                 Times.Once,
                 "ITermsQueryService::Expand() should be called once, using default values."
             );
@@ -76,8 +74,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     It.IsAny<int>(),
                     It.IsAny<DrugResourceType[]>(),
                     It.IsAny<TermNameType[]>(),
-                    It.IsAny<TermNameType[]>(),
-                    It.IsAny<string[]>()
+                    It.IsAny<TermNameType[]>()
                 )
             )
             .Returns(Task.FromResult(new DrugTermResults()));
@@ -87,8 +84,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             await controller.Expand('s', -1, DEFAULT_SEARCH_FROM,
                 DEFAULT_DRUG_RESOURCE_TYPE_LIST,
                 DEFAULT_INCLUDED_TERM_TYPE_LIST,
-                DEFAULT_EXCLUDED_TERM_TYPE_LIST,
-                DEFAULT_REQUESTED_FIELD_LIST
+                DEFAULT_EXCLUDED_TERM_TYPE_LIST
             );
 
             // Verify that the query layer is called:
@@ -96,7 +92,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             //  b) exactly once.
             querySvc.Verify(
                 svc => svc.Expand('s', DEFAULT_SEARCH_SIZE, DEFAULT_SEARCH_FROM,
-                    DEFAULT_DRUG_RESOURCE_TYPE_LIST, DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST, DEFAULT_REQUESTED_FIELD_LIST),
+                    DEFAULT_DRUG_RESOURCE_TYPE_LIST, DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST),
                 Times.Once,
                 "ITermsQueryService::Expand() should be called once, with the updated value for size"
             );
@@ -117,8 +113,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     It.IsAny<int>(),
                     It.IsAny<DrugResourceType[]>(),
                     It.IsAny<TermNameType[]>(),
-                    It.IsAny<TermNameType[]>(),
-                    It.IsAny<string[]>()
+                    It.IsAny<TermNameType[]>()
                 )
             )
             .Returns(Task.FromResult(new DrugTermResults()));
@@ -132,128 +127,9 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             //  b) exactly once.
             querySvc.Verify(
                 svc => svc.Expand('s', 10, DEFAULT_SEARCH_FROM,
-                    DEFAULT_DRUG_RESOURCE_TYPE_LIST, DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST, DEFAULT_REQUESTED_FIELD_LIST),
+                    DEFAULT_DRUG_RESOURCE_TYPE_LIST, DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST),
                 Times.Once,
                 "ITermsQueryService::Expandl() should be called once, with the updated value for from"
-            );
-        }
-
-        /// <summary>
-        /// Verify that Expand behaves in the expected manner when requestedFields is null.
-        /// </summary>
-        [Fact]
-        public async void Expand_NullRequestedFields()
-        {
-            // Create a mock query that always returns the same result.
-            Mock<IDrugsQueryService> querySvc = new Mock<IDrugsQueryService>();
-            querySvc.Setup(
-                svc => svc.Expand(
-                    It.IsAny<char>(),
-                    It.IsAny<int>(),
-                    It.IsAny<int>(),
-                    It.IsAny<DrugResourceType[]>(),
-                    It.IsAny<TermNameType[]>(),
-                    It.IsAny<TermNameType[]>(),
-                    It.IsAny<string[]>()
-                )
-            )
-            .Returns(Task.FromResult(new DrugTermResults()));
-
-            // Call the controller, we don't care about the actual return value.
-            DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
-            await controller.Expand('s', 10, -1, null);
-
-            // Verify that the query layer is called:
-            //  a) with the expected updated values for requestedFields.
-            //  b) exactly once.
-            querySvc.Verify(
-                svc => svc.Expand('s', 10, DEFAULT_SEARCH_FROM,
-                    DEFAULT_DRUG_RESOURCE_TYPE_LIST,
-                    DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST,
-                    DEFAULT_REQUESTED_FIELD_LIST),
-                Times.Once,
-                "ITermsQueryService::Expandl() should be called once, with the updated value for requestedFields"
-            );
-        }
-
-        /// <summary>
-        /// Verify that Expand behaves in the expected manner when requestedFields is invalid
-        /// by having any array items that are null.
-        /// </summary>
-        [Fact]
-        public async void Expand_InvalidRequestedFields()
-        {
-            // Create a mock query that always returns the same result.
-            Mock<IDrugsQueryService> querySvc = new Mock<IDrugsQueryService>();
-            querySvc.Setup(
-                svc => svc.Expand(
-                    It.IsAny<char>(),
-                    It.IsAny<int>(),
-                    It.IsAny<int>(),
-                    It.IsAny<DrugResourceType[]>(),
-                    It.IsAny<TermNameType[]>(),
-                    It.IsAny<TermNameType[]>(),
-                    It.IsAny<string[]>()
-                )
-            )
-            .Returns(Task.FromResult(new DrugTermResults()));
-
-            // Call the controller, we don't care about the actual return value.
-            DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
-            await controller.Expand('s', 10, DEFAULT_SEARCH_FROM,
-                    DEFAULT_DRUG_RESOURCE_TYPE_LIST,
-                    DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST,
-                    new string[] { null, null, null });
-
-            // Verify that the query layer is called:
-            //  a) with the expected updated values for requestedFields.
-            //  b) exactly once.
-            querySvc.Verify(
-                svc => svc.Expand('s', 10, DEFAULT_SEARCH_FROM,
-                    DEFAULT_DRUG_RESOURCE_TYPE_LIST,
-                    DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST,
-                    DEFAULT_REQUESTED_FIELD_LIST),
-                Times.Once,
-                "ITermsQueryService::Expandl() should be called once, with the updated value for requestedFields"
-            );
-        }
-
-        /// <summary>
-        /// Verify that Expand behaves in the expected manner when requestedFields is an empty array.
-        /// </summary>
-        [Fact]
-        public async void Expand_EmptyRequestedFields()
-        {
-            // Create a mock query that always returns the same result.
-            Mock<IDrugsQueryService> querySvc = new Mock<IDrugsQueryService>();
-            querySvc.Setup(
-                svc => svc.Expand(
-                    It.IsAny<char>(),
-                    It.IsAny<int>(),
-                    It.IsAny<int>(),
-                    It.IsAny<DrugResourceType[]>(),
-                    It.IsAny<TermNameType[]>(),
-                    It.IsAny<TermNameType[]>(),
-                    It.IsAny<string[]>()
-                )
-            )
-            .Returns(Task.FromResult(new DrugTermResults()));
-
-            // Call the controller, we don't care about the actual return value.
-            DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
-            await controller.Expand('s', 10, DEFAULT_SEARCH_FROM,
-                    DEFAULT_DRUG_RESOURCE_TYPE_LIST,
-                    DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST, new string[] { });
-
-            // Verify that the query layer is called:
-            //  a) with the expected updated values for requestedFields.
-            //  b) exactly once.
-            querySvc.Verify(
-                svc => svc.Expand('s', 10, DEFAULT_SEARCH_FROM,
-                    DEFAULT_DRUG_RESOURCE_TYPE_LIST,
-                    DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST, DEFAULT_REQUESTED_FIELD_LIST),
-                Times.Once,
-                "ITermsQueryService::Expandl() should be called once, with the updated value for requestedFields"
             );
         }
 
@@ -266,8 +142,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
         {
             Mock<IDrugsQueryService> termsQueryService = new Mock<IDrugsQueryService>();
             DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, termsQueryService.Object);
-            string[] requestedFields = new string[] { "termId", "name", "firstLetter", "prettyUrlName", "definition", "aliases", "drugInfoSummaryLink", "nciConceptId", "nciConceptName", "type", "termNameType" };
-
+            
             DrugTermResults drugTermResults = new DrugTermResults()
             {
                 Results = new DrugTerm[] {
@@ -355,24 +230,20 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     It.IsAny<int>(),
                     It.IsAny<DrugResourceType[]>(),
                     It.IsAny<TermNameType[]>(),
-                    It.IsAny<TermNameType[]>(),
-                    It.IsAny<string[]>()
+                    It.IsAny<TermNameType[]>()
                 )
             )
             .Returns(Task.FromResult(drugTermResults));
 
             DrugTermResults actualReslts = await controller.Expand('s', 5, 10, DEFAULT_DRUG_RESOURCE_TYPE_LIST,
-                DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST,
-                requestedFields);
+                DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST);
 
             // Verify that the service layer is called:
             //  a) with the expected values.
             //  b) exactly once.
             termsQueryService.Verify(
                 svc => svc.Expand('s', 5, 10, DEFAULT_DRUG_RESOURCE_TYPE_LIST,
-                    DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST,
-                    new string[] { "termId", "name", "firstLetter", "prettyUrlName", "definition", "aliases", "drugInfoSummaryLink", "nciConceptId", "nciConceptName", "type", "termNameType" }
-                ),
+                    DEFAULT_INCLUDED_TERM_TYPE_LIST, DEFAULT_EXCLUDED_TERM_TYPE_LIST),
                 Times.Once
             );
 

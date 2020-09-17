@@ -35,8 +35,5 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                             TermNameType.Broader, TermNameType.RelatedString, TermNameType.PreferredName };
 
         static readonly TermNameType[] DEFAULT_EXCLUDED_TERM_TYPE_LIST = { };
-
-        static readonly string[] DEFAULT_REQUESTED_FIELD_LIST = { "termId", "name", "firstLetter", "type", "termNameType", "prettyUrlName", "aliases", "definition", "drugInfoSummaryLink", "nciConceptId", "nciConceptName", "PreferredName" };
-
     }
 }
