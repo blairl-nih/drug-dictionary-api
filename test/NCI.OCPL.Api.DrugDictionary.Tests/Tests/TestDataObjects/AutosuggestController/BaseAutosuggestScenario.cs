@@ -20,21 +20,16 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests.AutosuggestControllerTestData
         public abstract int Size {get; }
 
         /// <summary>
-        /// Contains the data structure to return for the Begins query.
+        /// Contains the data structure to return from the mock autosuggest service.
         /// </summary>
-        public abstract Suggestion[] BeginsData { get; }
-
-        /// <summary>
-        /// Contains the data structure to return for the Contains query.
-        /// </summary>
-        public abstract Suggestion[] ContainsData { get; }
+        public abstract Suggestion[] Data { get; }
 
         /// <summary>
         /// Gets the expected response from the controller.
         /// NOTE: It is assumed that the length of the expected data array
         ///       is never greater than the Size property.
         /// </summary>
-        public abstract Suggestion[] ExpectedData { get; }
+        public abstract Suggestion[] ExpectedResult { get; }
 
     }
 }

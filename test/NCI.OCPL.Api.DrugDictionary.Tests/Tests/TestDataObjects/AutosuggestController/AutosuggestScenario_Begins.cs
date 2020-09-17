@@ -12,7 +12,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests.AutosuggestControllerTestData
 
         public override int Size => 6;
 
-        public override Suggestion[] BeginsData => new Suggestion[]{
+        public override Suggestion[] Data => new Suggestion[]{
             new Suggestion()
             {
                 TermId = 1,
@@ -29,24 +29,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests.AutosuggestControllerTestData
             }
         };
 
-        public override Suggestion[] ContainsData => new Suggestion[]{
-            new Suggestion()
-            {
-                TermId = 4,
-                TermName = "Contains Term 1"
-            },
-            new Suggestion()
-            {
-                TermId = 5,
-                TermName = "Contains Term 2"
-            },new Suggestion()
-            {
-                TermId = 6,
-                TermName = "Contains Term 3"
-            }
-        };
-
-        public override Suggestion[] ExpectedData => new Suggestion[]
+        public override Suggestion[] ExpectedResult => new Suggestion[]
         {
             new Suggestion()
             {
@@ -61,20 +44,6 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests.AutosuggestControllerTestData
             {
                 TermId = 3,
                 TermName = "Begins Term 3"
-            },
-            new Suggestion()
-            {
-                TermId = 4,
-                TermName = "Contains Term 1"
-            },
-            new Suggestion()
-            {
-                TermId = 5,
-                TermName = "Contains Term 2"
-            },new Suggestion()
-            {
-                TermId = 6,
-                TermName = "Contains Term 3"
             }
 
         };
