@@ -13,9 +13,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests.AutosuggestControllerTestData
         public override int Size => 5;
 
         // This should never actually be used, but the property has to exist.
-        public override Suggestion[] BeginsData => null;
-
-        public override Suggestion[] ContainsData => new Suggestion[]{
+        public override Suggestion[] Data => new Suggestion[]{
             new Suggestion()
             {
                 TermId = 1,
@@ -42,7 +40,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests.AutosuggestControllerTestData
             }
         };
 
-        public override Suggestion[] ExpectedData => new Suggestion[]
+        public override Suggestion[] ExpectedResult => new Suggestion[]
         {
             new Suggestion()
             {

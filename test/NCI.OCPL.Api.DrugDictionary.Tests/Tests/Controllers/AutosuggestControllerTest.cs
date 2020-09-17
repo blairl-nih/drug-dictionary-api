@@ -10,6 +10,7 @@ using Xunit;
 using NCI.OCPL.Api.Common;
 using NCI.OCPL.Api.Common.Testing;
 using NCI.OCPL.Api.DrugDictionary.Controllers;
+using NCI.OCPL.Api.DrugDictionary.Tests.AutosuggestControllerTestData;
 
 namespace NCI.OCPL.Api.DrugDictionary.Tests
 {
@@ -196,6 +197,40 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             Assert.Empty(result);
         }
 
+        public static IEnumerable<object[]> TestData => new[]
+        {
+            new object[] { new AutosuggestScenario_Contains() },
+            new object[] { new AutosuggestScenario_Begins() }
+        };
+
+        [Theory, MemberData(nameof(TestData))]
+        public async void Autosuggest(BaseAutosuggestControllerScenario data)
+        {
+            // Sanity check for test data.  The expected result array should never
+            // be larger than the value of the Size property. (Smaller is fine.)
+            Assert.InRange(data.ExpectedResult.Length, 0, data.Size);
+
+            // Set up the mock query service
+            Mock<IAutosuggestQueryService> querySvc = new Mock<IAutosuggestQueryService>();
+            AutosuggestController controller = new AutosuggestController(new NullLogger<AutosuggestController>(), querySvc.Object);
+
+            querySvc.Setup(
+                autoSuggestQSvc => autoSuggestQSvc.GetSuggestions(
+                    It.IsAny<string>(),
+                    It.IsAny<MatchType>(),
+                    It.IsAny<int>(),
+                    It.IsAny<DrugResourceType[]>(),
+                    It.IsAny<TermNameType[]>(),
+                    It.IsAny<TermNameType[]>()
+                )
+            )
+            .Returns(Task.FromResult(data.Data));
+
+            // The search text doesn't matter.
+            Suggestion[] actual = await controller.GetSuggestions("chicken", data.MatchType, data.Size);
+
+            Assert.Equal(data.ExpectedResult, actual, new ArrayComparer<Suggestion, SuggestionComparer>());
+        }
 
     }
 }
