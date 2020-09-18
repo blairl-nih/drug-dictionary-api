@@ -28,8 +28,8 @@
                 }
             ],
             "definition": {
-                "html": "A chemotherapy regimen consisting of letrozole and palbociclib that is used as a treatment for estrogen receptor (ER) positive and HER-2/neu-negative metastatic or advanced breast cancer. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C142859\">NCI Thesaurus</a>)",
-                "text": "A chemotherapy regimen consisting of letrozole and palbociclib that is used as a treatment for estrogen receptor (ER) positive and HER-2/neu-negative metastatic or advanced breast cancer. (NCI Thesaurus)"
+                "html": "A chemotherapy regimen consisting of letrozole and palbociclib that is used as a treatment for estrogen receptor (ER) positive and HER-2/neu-negative metastatic or advanced breast cancer.",
+                "text": "A chemotherapy regimen consisting of letrozole and palbociclib that is used as a treatment for estrogen receptor (ER) positive and HER-2/neu-negative metastatic or advanced breast cancer."
             },
             "drugInfoSummaryLink": null,
             "nciConceptId": "C142859",
@@ -65,8 +65,8 @@
                 }
             ],
             "definition": {
-                "html": "An orally available cyclin-dependent kinase (CDK) inhibitor with potential antineoplastic activity. Palbociclib selectively inhibits cyclin-dependent kinase 4 (CDK4) and 6 (CDK6), thereby inhibiting retinoblastoma (Rb) protein phosphorylation early in the G1 phase leading to cell cycle arrest. This suppresses DNA replication and decreases tumor cell proliferation. CDK4 and 6 are serine/threonine kinases that are upregulated in many tumor cell types and play a key role in the regulation of cell cycle progression. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C49176\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C49176\">NCI Thesaurus</a>)",
-                "text": "An orally available cyclin-dependent kinase (CDK) inhibitor with potential antineoplastic activity. Palbociclib selectively inhibits cyclin-dependent kinase 4 (CDK4) and 6 (CDK6), thereby inhibiting retinoblastoma (Rb) protein phosphorylation early in the G1 phase leading to cell cycle arrest. This suppresses DNA replication and decreases tumor cell proliferation. CDK4 and 6 are serine/threonine kinases that are upregulated in many tumor cell types and play a key role in the regulation of cell cycle progression. Check for active clinical trials using this agent. (NCI Thesaurus)"
+                "html": "An orally available cyclin-dependent kinase (CDK) inhibitor with potential antineoplastic activity. Palbociclib selectively inhibits cyclin-dependent kinase 4 (CDK4) and 6 (CDK6), thereby inhibiting retinoblastoma (Rb) protein phosphorylation early in the G1 phase leading to cell cycle arrest. This suppresses DNA replication and decreases tumor cell proliferation. CDK4 and 6 are serine/threonine kinases that are upregulated in many tumor cell types and play a key role in the regulation of cell cycle progression.",
+                "text": "An orally available cyclin-dependent kinase (CDK) inhibitor with potential antineoplastic activity. Palbociclib selectively inhibits cyclin-dependent kinase 4 (CDK4) and 6 (CDK6), thereby inhibiting retinoblastoma (Rb) protein phosphorylation early in the G1 phase leading to cell cycle arrest. This suppresses DNA replication and decreases tumor cell proliferation. CDK4 and 6 are serine/threonine kinases that are upregulated in many tumor cell types and play a key role in the regulation of cell cycle progression."
             },
             "drugInfoSummaryLink": {
                 "uri": "https://www.cancer.gov/about-cancer/treatment/drugs/palbociclib",

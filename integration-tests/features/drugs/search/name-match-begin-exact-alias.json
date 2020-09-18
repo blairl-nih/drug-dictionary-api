@@ -16,8 +16,8 @@
                 }
             ],
             "definition": {
-                "html": "A semisynthetic ansamycin antibiotic with potent antimycobacterial properties.  Rifabutin inhibits bacterial DNA-dependent RNA polymerase, thereby suppressing the initiation of RNA formation and leading to inhibition of RNA synthesis and transcription. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C1408\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C1408\">NCI Thesaurus</a>)",
-                "text": "A semisynthetic ansamycin antibiotic with potent antimycobacterial properties.  Rifabutin inhibits bacterial DNA-dependent RNA polymerase, thereby suppressing the initiation of RNA formation and leading to inhibition of RNA synthesis and transcription. Check for active clinical trials using this agent. (NCI Thesaurus)"
+                "html": "A semisynthetic ansamycin antibiotic with potent antimycobacterial properties.  Rifabutin inhibits bacterial DNA-dependent RNA polymerase, thereby suppressing the initiation of RNA formation and leading to inhibition of RNA synthesis and transcription.",
+                "text": "A semisynthetic ansamycin antibiotic with potent antimycobacterial properties.  Rifabutin inhibits bacterial DNA-dependent RNA polymerase, thereby suppressing the initiation of RNA formation and leading to inhibition of RNA synthesis and transcription."
             },
             "drugInfoSummaryLink": null,
             "nciConceptId": "C1408",
