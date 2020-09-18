@@ -1,6 +1,34 @@
 {
     "aliases": [
         {
+            "type": "Synonym",
+            "name": "trastuzumab biosimilar GB221"
+        },
+        {
+            "type": "USBrandName",
+            "name": "Kanjinti"
+        },
+        {
+            "type": "Synonym",
+            "name": "trastuzumab-anns"
+        },
+        {
+            "type": "USBrandName",
+            "name": "Ontruzant"
+        },
+        {
+            "type": "Synonym",
+            "name": "trastuzumab-dttb"
+        },
+        {
+            "type": "USBrandName",
+            "name": "Trazimera"
+        },
+        {
+            "type": "Synonym",
+            "name": "trastuzumab-qyyp"
+        },
+        {
             "type": "CodeName",
             "name": "ABP 980"
         },
@@ -118,8 +146,8 @@
         }
     ],
     "definition": {
-        "html": "A recombinant humanized monoclonal antibody directed against the human epidermal growth factor receptor 2 (HER2). After binding to HER2 on the tumor cell surface, trastuzumab induces an antibody-dependent cell-mediated cytotoxicity against tumor cells that overexpress HER2. HER2 is overexpressed by many adenocarcinomas, particularly breast adenocarcinomas. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C1647\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C1647\">NCI Thesaurus</a>)",
-        "text": "A recombinant humanized monoclonal antibody directed against the human epidermal growth factor receptor 2 (HER2). After binding to HER2 on the tumor cell surface, trastuzumab induces an antibody-dependent cell-mediated cytotoxicity against tumor cells that overexpress HER2. HER2 is overexpressed by many adenocarcinomas, particularly breast adenocarcinomas. Check for active clinical trials using this agent. (NCI Thesaurus)"
+        "html": "A recombinant humanized monoclonal antibody directed against the human epidermal growth factor receptor 2 (HER2). After binding to HER2 on the tumor cell surface, trastuzumab induces an antibody-dependent cell-mediated cytotoxicity against tumor cells that overexpress HER2. HER2 is overexpressed by many adenocarcinomas, particularly breast adenocarcinomas.",
+        "text": "A recombinant humanized monoclonal antibody directed against the human epidermal growth factor receptor 2 (HER2). After binding to HER2 on the tumor cell surface, trastuzumab induces an antibody-dependent cell-mediated cytotoxicity against tumor cells that overexpress HER2. HER2 is overexpressed by many adenocarcinomas, particularly breast adenocarcinomas."
     },
     "drugInfoSummaryLink": {
         "uri": "https://www.cancer.gov/about-cancer/treatment/drugs/trastuzumab",

@@ -1,141 +1,136 @@
 {
     "meta": {
-        "totalResults": 7575,
+        "totalResults": 7728,
         "from": 2000
     },
     "results": [
         {
             "aliases": [
                 {
-                    "type": "USBrandName",
-                    "name": "Zerbaxa"
-                },
-                {
-                    "type": "CodeName",
-                    "name": "CXA-201"
-                },
-                {
-                    "type": "CodeName",
-                    "name": "CXA 201"
-                },
-                {
-                    "type": "CodeName",
-                    "name": "CXA201"
+                    "type": "Synonym",
+                    "name": "CART-33 TCR zeta:CD137 cells"
                 },
                 {
                     "type": "Synonym",
-                    "name": "ceftolozane/tazobactam"
+                    "name": "CART33 TCR zeta:CD137 cells"
                 },
                 {
-                    "type": "CASRegistryName",
-                    "name": "1613740-46-7"
+                    "type": "Synonym",
+                    "name": "anti-CD33 TCR zeta:CD137 CAR T cells"
                 }
             ],
             "definition": {
-                "html": "A combination preparation containing ceftolozane, a semi-synthetic, broad-spectrum, fifth-generation cephalosporin and tazobactam, a beta-lactamase inhibitor, with activity against Gram-negative and Gram-positive bacteria. Upon intravenous administration, ceftolozane binds to and inactivates penicillin-binding proteins (PBPs) located on the inner membrane of the bacterial cell wall. This interferes with the final transpeptidation step required to form peptidoglycan chain cross-links, which are a key component of and provide strength and rigidity to the bacterial cell wall. This inhibits bacterial cell wall synthesis and reduces cell wall stability, which weakens the bacterial cell wall and causes bacterial cell lysis. Tazobactam irreversibly inhibits certain penicillinases and cephalosporinases and covalently binds to some chromosomal and plasmid-mediated bacterial beta-lactamases, thereby protecting ceftolozane from degradation and improving ceftolozane’s activity. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C156396\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C156396\">NCI Thesaurus</a>)",
-                "text": "A combination preparation containing ceftolozane, a semi-synthetic, broad-spectrum, fifth-generation cephalosporin and tazobactam, a beta-lactamase inhibitor, with activity against Gram-negative and Gram-positive bacteria. Upon intravenous administration, ceftolozane binds to and inactivates penicillin-binding proteins (PBPs) located on the inner membrane of the bacterial cell wall. This interferes with the final transpeptidation step required to form peptidoglycan chain cross-links, which are a key component of and provide strength and rigidity to the bacterial cell wall. This inhibits bacterial cell wall synthesis and reduces cell wall stability, which weakens the bacterial cell wall and causes bacterial cell lysis. Tazobactam irreversibly inhibits certain penicillinases and cephalosporinases and covalently binds to some chromosomal and plasmid-mediated bacterial beta-lactamases, thereby protecting ceftolozane from degradation and improving ceftolozane’s activity. Check for active clinical trials using this agent. (NCI Thesaurus)"
+                "html": "Autologous T-lymphocytes transduced with a retroviral vector expressing a chimeric antigen receptor (CAR) consisting of an anti-CD33 scFv (single chain variable fragment) coupled to the signaling domain of 4-1BB (CD137) and the zeta chain of the T-cell receptor (TCRzeta), with potential immunomodulating and antineoplastic activities. Upon transfusion, CD33-specific CAR retroviral vector-transduced autologous T lymphocytes target CD33-expressing tumor cells and induce selective toxicity in CD33-expressing tumor cells. Following binding to CD33, the 4-1BB co-stimulatory molecule signaling domain enhances both activation and signaling. Inclusion of the 4-1BB signaling domain may also increase the antitumor activity when compared to the inclusion of the CD3-zeta chain alone. CD33 is expressed on normal non-pluripotent hematopoietic stem cells as well as on myeloid leukemia cells.",
+                "text": "Autologous T-lymphocytes transduced with a retroviral vector expressing a chimeric antigen receptor (CAR) consisting of an anti-CD33 scFv (single chain variable fragment) coupled to the signaling domain of 4-1BB (CD137) and the zeta chain of the T-cell receptor (TCRzeta), with potential immunomodulating and antineoplastic activities. Upon transfusion, CD33-specific CAR retroviral vector-transduced autologous T lymphocytes target CD33-expressing tumor cells and induce selective toxicity in CD33-expressing tumor cells. Following binding to CD33, the 4-1BB co-stimulatory molecule signaling domain enhances both activation and signaling. Inclusion of the 4-1BB signaling domain may also increase the antitumor activity when compared to the inclusion of the CD3-zeta chain alone. CD33 is expressed on normal non-pluripotent hematopoietic stem cells as well as on myeloid leukemia cells."
             },
             "drugInfoSummaryLink": null,
-            "nciConceptId": "C156396",
-            "nciConceptName": "Ceftolozane-Tazobactam",
-            "termId": 795424,
-            "name": "ceftolozane-tazobactam",
+            "nciConceptId": "C107190",
+            "nciConceptName": "CD33CAR-CD3zeta-4-1BB-expressing Autologous T-Lymphocytes",
+            "termId": 750489,
+            "name": "CD33CAR-CD3zeta-4-1BB-expressing autologous T-lymphocytes",
             "firstLetter": "c",
             "type": "DrugTerm",
             "termNameType": "PreferredName",
-            "prettyUrlName": "ceftolozane-tazobactam"
+            "prettyUrlName": "cd33car-cd3zeta-4-1bb-expressing-autologous-t-lymphocytes"
+        },
+        {
+            "aliases": null,
+            "definition": {
+                "html": "A preparation of donor T-lymphocytes that are transfected with a retroviral vector encoding a chimeric suicide gene consisting of the extracellular and transmembrane domains of human CD34 and mutant 75 of the herpes simplex virus thymidine kinase  (HSV-TK75) with potential controllable immunomodulating activity.  Donor T cell therapy following allogeneic hematopoietic stem cell (HSC) transplantation may result in a graft-versus-leukemia (GVL) and help control transplant-related viral infections. In the event that graft-versus-host disease (GVHD) develops due to donor lymphocyte infusion, CD34/TK75-transduced donor lymphocytes may be selectively eliminated by administration of the prodrug antiviral agent ganciclovir GCV.  In CD34/T75-transduced donor lymphocytes, GCV is phosphorylated by expressed HSV-TK75 to its monophosphate form and, subsequently, converted into its active triphosphate form, which specifically kills the donor lymphocytes.  The expressed CD34 moiety of the chimeric suicide gene serves as a selection marker; mutant 75 of HSV-TK confers increased GCV sensitivity.",
+                "text": "A preparation of donor T-lymphocytes that are transfected with a retroviral vector encoding a chimeric suicide gene consisting of the extracellular and transmembrane domains of human CD34 and mutant 75 of the herpes simplex virus thymidine kinase  (HSV-TK75) with potential controllable immunomodulating activity.  Donor T cell therapy following allogeneic hematopoietic stem cell (HSC) transplantation may result in a graft-versus-leukemia (GVL) and help control transplant-related viral infections. In the event that graft-versus-host disease (GVHD) develops due to donor lymphocyte infusion, CD34/TK75-transduced donor lymphocytes may be selectively eliminated by administration of the prodrug antiviral agent ganciclovir GCV.  In CD34/T75-transduced donor lymphocytes, GCV is phosphorylated by expressed HSV-TK75 to its monophosphate form and, subsequently, converted into its active triphosphate form, which specifically kills the donor lymphocytes.  The expressed CD34 moiety of the chimeric suicide gene serves as a selection marker; mutant 75 of HSV-TK confers increased GCV sensitivity."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C82409",
+            "nciConceptName": "CD34/TK75 Retroviral Vector-Transduced Donor Lymphocytes",
+            "termId": 640980,
+            "name": "CD34/TK75-transduced donor lymphocytes",
+            "firstLetter": "c",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "cd34-tk75-retroviral-vector-transduced-donor-lymphocytes"
         },
         {
             "aliases": [
                 {
-                    "type": "USBrandName",
-                    "name": "Rocephin"
+                    "type": "Synonym",
+                    "name": "nTregs"
                 }
             ],
             "definition": {
-                "html": "The sodium salt form of ceftriaxone, a beta-lactam, third-generation cephalosporin antibiotic with bactericidal activity. Ceftriaxone binds to and inactivates penicillin-binding proteins (PBP) located on the inner membrane of the bacterial cell wall. PBPs participate in the terminal stages of assembling the bacterial cell wall, and in reshaping the cell wall during cell division. Inactivation of PBPs interferes with the cross-linkage of peptidoglycan chains necessary for bacterial cell wall strength and rigidity. This results in the weakening of the bacterial cell wall and causes cell lysis. Compared to the second and first generation cephalosporins, ceftriaxone is more active against gram-negative bacteria and less active against gram-positive bacteria. Ceftriaxone also crosses the blood-brain barrier and reaches therapeutic concentrations in the central nervous system (CNS). Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C817\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C817\">NCI Thesaurus</a>)",
-                "text": "The sodium salt form of ceftriaxone, a beta-lactam, third-generation cephalosporin antibiotic with bactericidal activity. Ceftriaxone binds to and inactivates penicillin-binding proteins (PBP) located on the inner membrane of the bacterial cell wall. PBPs participate in the terminal stages of assembling the bacterial cell wall, and in reshaping the cell wall during cell division. Inactivation of PBPs interferes with the cross-linkage of peptidoglycan chains necessary for bacterial cell wall strength and rigidity. This results in the weakening of the bacterial cell wall and causes cell lysis. Compared to the second and first generation cephalosporins, ceftriaxone is more active against gram-negative bacteria and less active against gram-positive bacteria. Ceftriaxone also crosses the blood-brain barrier and reaches therapeutic concentrations in the central nervous system (CNS). Check for active clinical trials using this agent. (NCI Thesaurus)"
+                "html": "Regulatory T cells that express CD4 and CD25 (interleukin 2 receptor) antigens, with immunomodulating activity.. CD4+CD25+ T regulatory cells (Tregs), a subset of CD4+ T cells expressing high levels of CD25 and the transcription factor Foxp3, are essential in maintaining immunologic homeostasis, preventing autoimmunity by suppressing self-reactive T cells;  CD4+CD25+ Tregs may induce tolerance to allogeneic organ transplants such as hematopoetic stem cell transplants (HSCTs).\n",
+                "text": "Regulatory T cells that express CD4 and CD25 (interleukin 2 receptor) antigens, with immunomodulating activity.. CD4+CD25+ T regulatory cells (Tregs), a subset of CD4+ T cells expressing high levels of CD25 and the transcription factor Foxp3, are essential in maintaining immunologic homeostasis, preventing autoimmunity by suppressing self-reactive T cells;  CD4+CD25+ Tregs may induce tolerance to allogeneic organ transplants such as hematopoetic stem cell transplants (HSCTs).\n"
             },
             "drugInfoSummaryLink": null,
-            "nciConceptId": "C817",
-            "nciConceptName": "Ceftriaxone Sodium",
-            "termId": 41088,
-            "name": "ceftriaxone sodium",
+            "nciConceptId": "C78829",
+            "nciConceptName": "CD4+ CD25+ Regulatory T Cells",
+            "termId": 601870,
+            "name": "CD4+CD25+ regulatory T cells",
             "firstLetter": "c",
             "type": "DrugTerm",
             "termNameType": "PreferredName",
-            "prettyUrlName": "ceftriaxone-sodium"
-        },
-        {
-            "preferredName": "celecoxib",
-            "termId": 43023,
-            "name": "Celebrex",
-            "firstLetter": "c",
-            "type": "DrugAlias",
-            "termNameType": "USBrandName",
-            "prettyUrlName": "celecoxib"
+            "prettyUrlName": "cd4-cd25-regulatory-t-cells"
         },
         {
             "aliases": [
                 {
-                    "type": "USBrandName",
-                    "name": "Celebrex"
-                },
-                {
-                    "type": "LexicalVariant",
-                    "name": "SC 58635"
-                },
-                {
                     "type": "CodeName",
-                    "name": "SC-58635"
-                },
-                {
-                    "type": "Abbreviation",
-                    "name": "SC-58635"
+                    "name": "CP-870,893"
                 },
                 {
                     "type": "LexicalVariant",
-                    "name": "SC58635"
-                },
-                {
-                    "type": "ChemicalStructureName",
-                    "name": "4-(5-(4-methylphenyl)-3-(trifluoromethyl)-1H-pyrazol-1-yl)benzenesulfonamide"
-                },
-                {
-                    "type": "Synonym",
-                    "name": "YM 177"
-                },
-                {
-                    "type": "NSCNumber",
-                    "name": "719627"
-                },
-                {
-                    "type": "CASRegistryName",
-                    "name": "169590-42-5"
+                    "name": "Anti-CD40 Monoclonal Antibody CP-870,893"
                 }
             ],
             "definition": {
-                "html": "A nonsteroidal anti-inflammatory drug (NSAID) with a diaryl-substituted pyrazole structure.  Celecoxib selectively inhibits cyclo-oxygenase-2 activity (COX-2); COX-2 inhibition may result in apoptosis and a reduction in tumor angiogenesis and metastasis. Check for <a ref=\"https://www.cancer.gov/about-cancer/treatment/clinical-trials/intervention/C1728\">active clinical trials</a> using this agent. (<a ref=\"https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI%20Thesaurus&code=C1728\">NCI Thesaurus</a>)",
-                "text": "A nonsteroidal anti-inflammatory drug (NSAID) with a diaryl-substituted pyrazole structure.  Celecoxib selectively inhibits cyclo-oxygenase-2 activity (COX-2); COX-2 inhibition may result in apoptosis and a reduction in tumor angiogenesis and metastasis. Check for active clinical trials using this agent. (NCI Thesaurus)"
+                "html": "A fully human monoclonal antibody (mAb) agonist of the cell surface receptor CD40 with potential immunostimulatory and antineoplastic activities. Similar to the CD40 ligand (CD40L or CD154), CD40 agonist monoclonal antibody CP-870,893 binds to CD40 on a variety of immune cell types, triggering the cellular proliferation and  activation of antigen-presenting cells (APCs), activating B cells and T cells,  and enhancing the immune response; in addition, this agent may activate CD40 present on the surfaces of some solid tumor cells, resulting in apoptosis and decreased tumor growth. CD40, a member of the tumor necrosis factor (TNF) receptor superfamily, is expressed on various immune cells, many B-cell malignancies, and some solid tumors, mediating both indirect tumor cell killing through the activation of the immune system and  direct tumor cell apoptosis.",
+                "text": "A fully human monoclonal antibody (mAb) agonist of the cell surface receptor CD40 with potential immunostimulatory and antineoplastic activities. Similar to the CD40 ligand (CD40L or CD154), CD40 agonist monoclonal antibody CP-870,893 binds to CD40 on a variety of immune cell types, triggering the cellular proliferation and  activation of antigen-presenting cells (APCs), activating B cells and T cells,  and enhancing the immune response; in addition, this agent may activate CD40 present on the surfaces of some solid tumor cells, resulting in apoptosis and decreased tumor growth. CD40, a member of the tumor necrosis factor (TNF) receptor superfamily, is expressed on various immune cells, many B-cell malignancies, and some solid tumors, mediating both indirect tumor cell killing through the activation of the immune system and  direct tumor cell apoptosis."
             },
             "drugInfoSummaryLink": null,
-            "nciConceptId": "C1728",
-            "nciConceptName": "Celecoxib",
-            "termId": 43023,
-            "name": "celecoxib",
+            "nciConceptId": "C74008",
+            "nciConceptName": "CD40 Agonist Monoclonal Antibody CP-870,893",
+            "termId": 588974,
+            "name": "CD40 agonist monoclonal antibody CP-870,893",
             "firstLetter": "c",
             "type": "DrugTerm",
             "termNameType": "PreferredName",
-            "prettyUrlName": "celecoxib"
+            "prettyUrlName": "cd40-agonist-monoclonal-antibody-cp-870893"
         },
         {
-            "preferredName": "betamethasone",
-            "termId": 39273,
-            "name": "Celestone",
+            "aliases": [
+                {
+                    "type": "CodeName",
+                    "name": "APX005M"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "APX 005"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "APX 005M"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "APX-005M"
+                },
+                {
+                    "type": "CodeName",
+                    "name": "EPI-0050"
+                }
+            ],
+            "definition": {
+                "html": "A humanized monoclonal antibody agonist of the cell surface receptor CD40, with potential immunostimulatory and antineoplastic activities. Similar to the endogenous CD40 ligand (CD40L or CD154), CD40 agonistic monoclonal antibody APX005M binds to CD40 on a variety of immune cell types. This triggers the cellular proliferation and activation of antigen-presenting cells (APCs), and activates B-cells, and effector and memory T-cells. This results in an enhanced immune response against tumor cells. APX005M also binds to and activates CD40 present on the surfaces of some solid tumor cells, leading to apoptosis and decreased tumor growth. CD40, a cell surface receptor and member of the tumor necrosis factor (TNF) receptor superfamily, is expressed on various immune cells and certain cancer cells; it mediates both indirect tumor cell killing through the activation of the immune system and direct tumor cell apoptosis.",
+                "text": "A humanized monoclonal antibody agonist of the cell surface receptor CD40, with potential immunostimulatory and antineoplastic activities. Similar to the endogenous CD40 ligand (CD40L or CD154), CD40 agonistic monoclonal antibody APX005M binds to CD40 on a variety of immune cell types. This triggers the cellular proliferation and activation of antigen-presenting cells (APCs), and activates B-cells, and effector and memory T-cells. This results in an enhanced immune response against tumor cells. APX005M also binds to and activates CD40 present on the surfaces of some solid tumor cells, leading to apoptosis and decreased tumor growth. CD40, a cell surface receptor and member of the tumor necrosis factor (TNF) receptor superfamily, is expressed on various immune cells and certain cancer cells; it mediates both indirect tumor cell killing through the activation of the immune system and direct tumor cell apoptosis."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C123734",
+            "nciConceptName": "CD40 Agonistic Monoclonal Antibody APX005M",
+            "termId": 775520,
+            "name": "CD40 agonistic monoclonal antibody APX005M",
             "firstLetter": "c",
-            "type": "DrugAlias",
-            "termNameType": "USBrandName",
-            "prettyUrlName": "betamethasone"
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "cd40-agonistic-monoclonal-antibody-apx005m"
         }
     ],
     "links": null
