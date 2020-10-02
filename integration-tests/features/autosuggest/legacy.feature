@@ -24,3 +24,4 @@ Feature: Autosuggest, including only PreferredName and USBrandName name types in
             | containing         | contains  | legacy-contains-containing.json   |
             # Path separator in term name
             | TLR5/TLR5          | contains  | legacy-contains-tlr5.json         |
+            | 2/3                | contains  | legacy-contains-two-thirds.json   |
