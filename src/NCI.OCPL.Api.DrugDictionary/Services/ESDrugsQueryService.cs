@@ -130,10 +130,16 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
 
             DrugTerm drugTerm;
 
-            // If there is only one term in the response, then the search by pretty URL name was successful.
-            if (response.Total == 1)
+            // If there is one or more terms in the response, then the search by pretty URL name was successful.
+            if (response.Total > 0)
             {
                 drugTerm = response.Documents.First();
+
+                // If there is more than one term in the response, log a warning.
+                if (response.Total > 1) {
+                    string msg = $"Multiple matches for pretty URL name '{prettyUrlName}'.";
+                    _logger.LogWarning(msg);
+                }
             }
             else if (response.Total == 0)
             {
