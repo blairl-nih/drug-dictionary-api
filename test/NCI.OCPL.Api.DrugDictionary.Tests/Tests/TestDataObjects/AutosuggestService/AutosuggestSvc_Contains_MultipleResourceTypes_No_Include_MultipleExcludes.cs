@@ -31,6 +31,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                 ""bool"": {
                     ""must"": [
                         { ""match"": { ""name._autocomplete"": { ""query"": ""ZFN ZFN-758"", ""type"": ""phrase"" } } },
+                        { ""match"": {""name._contain"": { ""query"": ""ZFN ZFN-758"" } } },
                         { ""terms"": { ""type"": [ ""DrugAlias"", ""DrugTerm"" ] } }
                     ],
                     ""must_not"": [

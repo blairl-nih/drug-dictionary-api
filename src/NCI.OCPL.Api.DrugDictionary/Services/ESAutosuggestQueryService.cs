@@ -190,6 +190,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
              *         "bool": {
              *             "must": [
              *                 { "match_phrase": {"name._autocomplete": "dox"} },
+             *                 { "match": {"name._contain": "dox"}},
              *                 { "terms": { "type": [ "DrugAlias", "DrugTerm" ] } },
              *                 { "terms": { "term_name_type": [ "PreferredName", "Synonym", "USbrandname" ] } }
              *             ],
@@ -209,6 +210,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
             {
                 Query =
                         new MatchPhraseQuery { Field = "name._autocomplete", Query = query.ToString() } &&
+                        new MatchQuery { Field = "name._contain", Query = query.ToString() } &&
                         new TermsQuery { Field = "type", Terms = includeResourceTypes.Select(p => p.ToString()) }  &&
                         new TermsQuery {Field = "term_name_type", Terms = includeNameTypes.Select(p => p.ToString()) } &&
                         !new PrefixQuery { Field = "name", Value = query } &&

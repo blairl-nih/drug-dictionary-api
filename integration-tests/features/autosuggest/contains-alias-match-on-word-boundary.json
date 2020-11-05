@@ -1,0 +1,82 @@
+[
+    {
+        "termId": 42286,
+        "termName": "2B1 Bispecific MAb"
+    },
+    {
+        "termId": 42286,
+        "termName": "2B1 Bispecific Murine MAb"
+    },
+    {
+        "termId": 688830,
+        "termName": "90Y anti-CD45 MAb BC8"
+    },
+    {
+        "termId": 744892,
+        "termName": "[131I] mAb HAb18G/CD147"
+    },
+    {
+        "termId": 690474,
+        "termName": "anti-ANG2 MAb MEDI-3617"
+    },
+    {
+        "termId": 747738,
+        "termName": "anti-CD19 MAb DI-B4"
+    },
+    {
+        "termId": 795705,
+        "termName": "anti-CD38 MAb TAK-079"
+    },
+    {
+        "termId": 769566,
+        "termName": "anti-CD47 Mab CC-90002"
+    },
+    {
+        "termId": 687567,
+        "termName": "anti-CTLA-4 mAb heavy and light chain RNA/GITRL RNA-transfected autologous DC"
+    },
+    {
+        "termId": 687567,
+        "termName": "anti-CTLA-4 mAb heavy and light chain RNA/GITRL RNA-transfected autologous dendritic cell"
+    },
+    {
+        "termId": 687564,
+        "termName": "anti-CTLA-4 mAb RNA-transfected autologous DC"
+    },
+    {
+        "termId": 687564,
+        "termName": "anti-CTLA-4 mAb RNA-transfected autologous dendritic cells"
+    },
+    {
+        "termId": 691187,
+        "termName": "anti-EGFR mAb ABT-806"
+    },
+    {
+        "termId": 686621,
+        "termName": "anti-EphA3 mAb KB004"
+    },
+    {
+        "termId": 681010,
+        "termName": "anti-HER2 mAb MGAH22"
+    },
+    {
+        "termId": 708211,
+        "termName": "anti-HER2 monoclonal antibody GT-Mab 7.3-GEX"
+    },
+    {
+        "termId": 365545,
+        "termName": "anti-huCD40 mAb"
+    },
+    {
+        "termId": 689549,
+        "termName": "anti-huGITR mAb TRX518"
+    },
+    {
+        "termId": 784959,
+        "termName": "anti-ICOS agonist MAb JTX-2011"
+    },
+    {
+        "termId": 780986,
+        "termName": "anti-IFNg mAb NI-0501"
+    }
+]

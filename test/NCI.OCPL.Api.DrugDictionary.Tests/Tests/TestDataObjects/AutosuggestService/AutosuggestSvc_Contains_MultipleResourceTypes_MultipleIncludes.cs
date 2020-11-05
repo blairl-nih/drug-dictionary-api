@@ -31,6 +31,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                 ""bool"": {
                     ""must"": [
                         { ""match"": { ""name._autocomplete"": { ""query"": ""bevaciz"", ""type"": ""phrase"" } } },
+                        { ""match"": {""name._contain"": { ""query"": ""bevaciz"" } } },
                         { ""terms"": { ""type"": [ ""DrugAlias"", ""DrugTerm"" ] } },
                         { ""terms"": { ""term_name_type"": [ ""USBrandName"", ""Synonym"" ] } }
                     ],

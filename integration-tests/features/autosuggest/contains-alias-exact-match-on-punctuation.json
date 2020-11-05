@@ -1,0 +1,82 @@
+[
+    {
+        "termId": 776631,
+        "termName": "allogeneic anti-CD133 CAR T cells"
+    },
+    {
+        "termId": 799962,
+        "termName": "allogeneic anti-CD19 CAR CRISPR-edited T cells CTX110"
+    },
+    {
+        "termId": 799962,
+        "termName": "allogeneic anti-CD19 CAR-T cells CTX110"
+    },
+    {
+        "termId": 800688,
+        "termName": "allogeneic anti-CD20 CAR T lymphocytes PBCAR20A"
+    },
+    {
+        "termId": 799962,
+        "termName": "allogeneic CRISPR-Cas9-engineered anti-CD19 CAR T cells CTX110"
+    },
+    {
+        "termId": 792167,
+        "termName": "allogeneic engineered T cells expressing anti-CD123 chimeric antigen receptor"
+    },
+    {
+        "termId": 797352,
+        "termName": "anti-EGFR/anti-c-Met bispecific antibody EMB-01"
+    },
+    {
+        "termId": 798662,
+        "termName": "autologous anti-c-Met/PD-L1 CAR T cells"
+    },
+    {
+        "termId": 794777,
+        "termName": "autologous anti-CD19 CAR T cells JWCAR029"
+    },
+    {
+        "termId": 801949,
+        "termName": "Autologous Anti-CD19 CAR T-cells AUTO1"
+    },
+    {
+        "termId": 792748,
+        "termName": "autologous anti-CD19 CAR TCR-zeta/4-1BB-transduced T cells BinD19"
+    },
+    {
+        "termId": 802259,
+        "termName": "autologous anti-CD19 CAR-CD28 T cells KTE-X19"
+    },
+    {
+        "termId": 795543,
+        "termName": "autologous anti-CD19 CAR-CD3zeta-4-1BB-expressing T cells huCART19"
+    },
+    {
+        "termId": 768723,
+        "termName": "autologous anti-CD19 CAR-positive T lymphocytes KTE-C19"
+    },
+    {
+        "termId": 792521,
+        "termName": "autologous anti-CD19 CAR-T cells 4SCAR19"
+    },
+    {
+        "termId": 791274,
+        "termName": "autologous anti-CD19 CAR-T cells C-CAR011"
+    },
+    {
+        "termId": 791828,
+        "termName": "autologous anti-CD19 CAR-T cells SJCAR19"
+    },
+    {
+        "termId": 791274,
+        "termName": "autologous anti-CD19 CART cells C-CAR011"
+    },
+    {
+        "termId": 791828,
+        "termName": "autologous anti-CD19 CART cells SJCAR19"
+    },
+    {
+        "termId": 792746,
+        "termName": "autologous anti-CD19 chimeric antigen receptor T cells TBI-1501"
+    }
+]
