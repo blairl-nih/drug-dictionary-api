@@ -90,9 +90,6 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
             if (excludeNameTypes == null)
                 excludeNameTypes = new TermNameType[0];
 
-            // searchText uses a catch-all route, make sure it's been decoded.
-            searchText = WebUtility.UrlDecode(searchText);
-
             return await _autosuggestQueryService.GetSuggestions(searchText, matchType, size, includeResourceTypes, includeNameTypes, excludeNameTypes);
         }
     }

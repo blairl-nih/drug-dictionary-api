@@ -232,5 +232,49 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             Assert.Equal(data.ExpectedResult, actual, new ArrayComparer<Suggestion, SuggestionComparer>());
         }
 
+        /// <summary>
+        /// Verify that the input search text is passed to the search service without unexpected modifications.
+        /// </summary>
+        /// <param name="searchString">The string being searched for</param>
+        [Theory]
+        [InlineData("chicken")]
+        [InlineData("2/3")]
+        [InlineData("AO+ Mist")]
+        [InlineData("%20")]
+        [InlineData("%3A")]
+        public async void SearchText(string searchString)
+        {
+            // Set up the mock query service
+            Mock<IAutosuggestQueryService> querySvc = new Mock<IAutosuggestQueryService>();
+            AutosuggestController controller = new AutosuggestController(new NullLogger<AutosuggestController>(), querySvc.Object);
+
+            querySvc.Setup(
+                autoSuggestQSvc => autoSuggestQSvc.GetSuggestions(
+                    It.IsAny<string>(),
+                    It.IsAny<MatchType>(),
+                    It.IsAny<int>(),
+                    It.IsAny<DrugResourceType[]>(),
+                    It.IsAny<TermNameType[]>(),
+                    It.IsAny<TermNameType[]>()
+                )
+            )
+            .Returns(Task.FromResult(new Suggestion[0]));
+
+            // The search return doesn't matter for this test, so don't capture it.
+            await controller.GetSuggestions(searchString);
+
+            querySvc.Verify(
+                svc => svc.GetSuggestions(
+                    searchString,
+                    It.IsAny<MatchType>(),
+                    It.IsAny<int>(),
+                    It.IsAny<DrugResourceType[]>(),
+                    It.IsAny<TermNameType[]>(),
+                    It.IsAny<TermNameType[]>()
+                ),
+                Times.Once
+            );
+        }
+
     }
 }

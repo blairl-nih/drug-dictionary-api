@@ -1,0 +1,203 @@
+{
+    "meta": {
+        "totalResults": 12,
+        "from": 0
+    },
+    "results": [
+        {
+            "aliases": [
+                {
+                    "type": "Synonym",
+                    "name": "acai juice"
+                }
+            ],
+            "definition": {
+                "html": "A juice product obtained from the fruit of the acai palm tree (Euterpe oleracea) with anti-inflammatory, antioxidant and potential chemopreventive activities. Besides high amounts of vitamins, minerals and fatty acids, acai berry is rich in phytonutrients such as anthocyanins and flavones which are potent scavengers of reactive oxygen species. The fruit also contains high amounts of the flavone velutin which exhibits potent anti-inflammatory properties. Velutin is able to inhibit the degradation of the inhibitor of nuclear factor kappa-B (NF-kB), thereby blocking the activation of NF-kB, as well as inhibiting phosphorylation of mitogen-activated protein kinase p38 and JNK. Inhibition of these processes results in suppression of the production of proinflammatory cytokines, such as tumor necrosis factor alpha and interleukin 6.",
+                "text": "A juice product obtained from the fruit of the acai palm tree (Euterpe oleracea) with anti-inflammatory, antioxidant and potential chemopreventive activities. Besides high amounts of vitamins, minerals and fatty acids, acai berry is rich in phytonutrients such as anthocyanins and flavones which are potent scavengers of reactive oxygen species. The fruit also contains high amounts of the flavone velutin which exhibits potent anti-inflammatory properties. Velutin is able to inhibit the degradation of the inhibitor of nuclear factor kappa-B (NF-kB), thereby blocking the activation of NF-kB, as well as inhibiting phosphorylation of mitogen-activated protein kinase p38 and JNK. Inhibition of these processes results in suppression of the production of proinflammatory cytokines, such as tumor necrosis factor alpha and interleukin 6."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C99901",
+            "nciConceptName": "Acai Berry Juice",
+            "termId": 724700,
+            "name": "acai berry juice",
+            "firstLetter": "a",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "acai-berry-juice"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "Synonym",
+                    "name": "beet juice"
+                }
+            ],
+            "definition": {
+                "html": "The juice of the beetroot, with potential antioxidant and protective activities. Beetroot juice contains antioxidants, including betacyanin, which scavenge free radicals. In addition, beetroot contains high levels of nitrates and folic acid. Consumption of beetroot juice leads to the conversion of nitrate to nitric oxide (NO) in the body. This juice may have a beneficial effect on blood flow and blood pressure through the induction of NO-mediated vasodilation. Additionally, this agent may decrease fatigue and increase physical performance.",
+                "text": "The juice of the beetroot, with potential antioxidant and protective activities. Beetroot juice contains antioxidants, including betacyanin, which scavenge free radicals. In addition, beetroot contains high levels of nitrates and folic acid. Consumption of beetroot juice leads to the conversion of nitrate to nitric oxide (NO) in the body. This juice may have a beneficial effect on blood flow and blood pressure through the induction of NO-mediated vasodilation. Additionally, this agent may decrease fatigue and increase physical performance."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C114297",
+            "nciConceptName": "Beetroot Juice",
+            "termId": 758240,
+            "name": "beetroot juice",
+            "firstLetter": "b",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "beetroot-juice"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "Synonym",
+                    "name": "Ribes nigrum L. juice"
+                }
+            ],
+            "definition": {
+                "html": "The juice from the berries of the black currant (Ribes nigrum L.) shrub belonging to the family Grossulariaceae, with potential antioxidant and protective activities. Black currant juice contains a variety of nutrients, including vitamin C, iron, potassium, manganese, anthocyanins, including delphinidin-3-O-glucoside, delphinidin-3-O-rutinoside, cyanidin-3-O-glucoside, and cyanidin-3-O-rutinoside. The antioxidants in black currant juice scavenge free radicals, thereby protecting cells from damage.",
+                "text": "The juice from the berries of the black currant (Ribes nigrum L.) shrub belonging to the family Grossulariaceae, with potential antioxidant and protective activities. Black currant juice contains a variety of nutrients, including vitamin C, iron, potassium, manganese, anthocyanins, including delphinidin-3-O-glucoside, delphinidin-3-O-rutinoside, cyanidin-3-O-glucoside, and cyanidin-3-O-rutinoside. The antioxidants in black currant juice scavenge free radicals, thereby protecting cells from damage."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C158098",
+            "nciConceptName": "Black Currant Juice",
+            "termId": 797026,
+            "name": "black currant juice",
+            "firstLetter": "b",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "black-currant-juice"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "USBrandName",
+                    "name": "Juice Plus"
+                }
+            ],
+            "definition": {
+                "html": "Extracts from fruits and vegetables that contain fiber, vitamins, minerals, and other natural substances with antioxidant, lipid-lowering, and antiproliferative properties. Used in chemoprevention therapy, these extracts may prevent the development or recurrence of cancer.",
+                "text": "Extracts from fruits and vegetables that contain fiber, vitamins, minerals, and other natural substances with antioxidant, lipid-lowering, and antiproliferative properties. Used in chemoprevention therapy, these extracts may prevent the development or recurrence of cancer."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C38707",
+            "nciConceptName": "Fruit and Vegetable Extract",
+            "termId": 315883,
+            "name": "fruit and vegetable extracts",
+            "firstLetter": "f",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "fruit-and-vegetable-extract"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "CommonUsage",
+                    "name": "noni extract"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "noni fruit juice"
+                }
+            ],
+            "definition": {
+                "html": "An extract prepared from the fruit of Morinda citrifolia, a plant that yields various herbal preparations.  Morinda citrifolia fruit juice has antioxidant properties and may prevent tumorigenesis via inhibition of DNA-carcinogen adduct formation.",
+                "text": "An extract prepared from the fruit of Morinda citrifolia, a plant that yields various herbal preparations.  Morinda citrifolia fruit juice has antioxidant properties and may prevent tumorigenesis via inhibition of DNA-carcinogen adduct formation."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C26662",
+            "nciConceptName": "Morinda Citrifolia Fruit Extract",
+            "termId": 304320,
+            "name": "Morinda citrifolia fruit extract",
+            "firstLetter": "m",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "morinda-citrifolia-fruit-extract"
+        },
+        {
+            "aliases": null,
+            "definition": {
+                "html": "A juice extracted from watercress containing high amounts of phenethyl isothiocyanate (PEITC), with potential chemopreventive and antitumor activities. Although the mechanism(s) of action through which PEITC exerts its effect(s) has yet to be fully elucidated, PEITC is able to induce apoptosis in tumor cells through the induction of reactive oxygen species (ROS). Additionally, PEITC is able to modulate extracellular signal-regulated kinases (ERK), c-Jun N-terminal kinase (JNK) and mitogen-activated protein kinase (MAPK) signal transduction pathways, activating the expression of stress-responsive genes and eventually inducing apoptosis. PEITC also inhibits the expression of genes involved in tumor progression such as HIF, STAT-3, HER2, BCL-XL, and XIAP and induces the expression of genes involved in tumor suppression such as p53, ATF-2, and p57. Furthermore, this agent has been shown to reactivate the gene expression of certain detoxification enzymes.",
+                "text": "A juice extracted from watercress containing high amounts of phenethyl isothiocyanate (PEITC), with potential chemopreventive and antitumor activities. Although the mechanism(s) of action through which PEITC exerts its effect(s) has yet to be fully elucidated, PEITC is able to induce apoptosis in tumor cells through the induction of reactive oxygen species (ROS). Additionally, PEITC is able to modulate extracellular signal-regulated kinases (ERK), c-Jun N-terminal kinase (JNK) and mitogen-activated protein kinase (MAPK) signal transduction pathways, activating the expression of stress-responsive genes and eventually inducing apoptosis. PEITC also inhibits the expression of genes involved in tumor progression such as HIF, STAT-3, HER2, BCL-XL, and XIAP and induces the expression of genes involved in tumor suppression such as p53, ATF-2, and p57. Furthermore, this agent has been shown to reactivate the gene expression of certain detoxification enzymes."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C105392",
+            "nciConceptName": "Phenethyl Isothiocyanate-containing Watercress Juice",
+            "termId": 746772,
+            "name": "phenethyl isothiocyanate-containing watercress juice",
+            "firstLetter": "p",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "phenethyl-isothiocyanate-containing-watercress-juice"
+        },
+        {
+            "aliases": null,
+            "definition": {
+                "html": "A natural juice isolated from the fruit of the plant Punica granatum with antioxidant, potential antineoplastic, and chemopreventive activities.  Pomegranate juice contains flavonoids which promote differentiation and apoptosis in tumor cells by down-regulating vascular endothelial growth factor (VEGF) and stimulating migration inhibitory factor (MIF), thereby inhibiting angiogenesis. The flavanoids in pomegranate juice also scavenge reactive oxygen species (ROS) and, in some cell types, may prevent ROS-mediated cell injury and death.",
+                "text": "A natural juice isolated from the fruit of the plant Punica granatum with antioxidant, potential antineoplastic, and chemopreventive activities.  Pomegranate juice contains flavonoids which promote differentiation and apoptosis in tumor cells by down-regulating vascular endothelial growth factor (VEGF) and stimulating migration inhibitory factor (MIF), thereby inhibiting angiogenesis. The flavanoids in pomegranate juice also scavenge reactive oxygen species (ROS) and, in some cell types, may prevent ROS-mediated cell injury and death."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C26665",
+            "nciConceptName": "Pomegranate Juice",
+            "termId": 304321,
+            "name": "pomegranate juice",
+            "firstLetter": "p",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "pomegranate-juice"
+        },
+        {
+            "aliases": [
+                {
+                    "type": "Abbreviation",
+                    "name": "PGJ"
+                }
+            ],
+            "definition": {
+                "html": "Juice made form dark, purple grapes that contain polyphenols with antioxidant and potential cardiovascular protecting activities. Purple grape juice contains high amounts of flavonoids that may increase antioxidant activity and reduce oxidative stress, reduce low-density lipoprotein (LDL), and improve nitric oxide formation, endothelial function and vasodilation.",
+                "text": "Juice made form dark, purple grapes that contain polyphenols with antioxidant and potential cardiovascular protecting activities. Purple grape juice contains high amounts of flavonoids that may increase antioxidant activity and reduce oxidative stress, reduce low-density lipoprotein (LDL), and improve nitric oxide formation, endothelial function and vasodilation."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C90536",
+            "nciConceptName": "Purple Grape Juice",
+            "termId": 663681,
+            "name": "purple grape juice",
+            "firstLetter": "p",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "purple-grape-juice"
+        },
+        {
+            "aliases": null,
+            "definition": {
+                "html": "Tomato juice derived from red tomatoes, with potential antioxidant and chemopreventive activities. Red tomato juice contains higher levels of the trans-isomer of lycopene (trans-LYC) compared to the cis-isomer (cis-LYC). Lycopene, a linear, unsaturated hydrocarbon carotenoid, is the major red pigment in certain fruits such as tomatoes, pink grapefruit, apricots, red oranges, watermelon, rosehips, and guava. As an antioxidant, lycopene scavenges free radicals which may both inhibit cellular oxidation and prevent free radical damage to cells. cis-LYC is better absorbed than its trans form.",
+                "text": "Tomato juice derived from red tomatoes, with potential antioxidant and chemopreventive activities. Red tomato juice contains higher levels of the trans-isomer of lycopene (trans-LYC) compared to the cis-isomer (cis-LYC). Lycopene, a linear, unsaturated hydrocarbon carotenoid, is the major red pigment in certain fruits such as tomatoes, pink grapefruit, apricots, red oranges, watermelon, rosehips, and guava. As an antioxidant, lycopene scavenges free radicals which may both inhibit cellular oxidation and prevent free radical damage to cells. cis-LYC is better absorbed than its trans form."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C116328",
+            "nciConceptName": "Red Tomato Juice",
+            "termId": 761603,
+            "name": "red tomato juice",
+            "firstLetter": "r",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "red-tomato-juice"
+        },
+        {
+            "aliases": null,
+            "definition": {
+                "html": "Tomato juice derived from the tangerine tomato, with potential antioxidant and chemopreventive activities. Tangerine tomato juice contains higher levels of the cis-isomer of lycopene (cis-LYC) compared to the trans-isomer (trans-LYC). Lycopene, a linear, unsaturated hydrocarbon carotenoid, is the major red pigment in certain fruits such as tomatoes, pink grapefruit, apricots, red oranges, watermelon, rosehips, and guava. As an antioxidant, lycopene scavenges free radicals, which may both inhibit cellular oxidation and prevent free radical damage to cells. cis-LYC is better absorbed than its trans form.",
+                "text": "Tomato juice derived from the tangerine tomato, with potential antioxidant and chemopreventive activities. Tangerine tomato juice contains higher levels of the cis-isomer of lycopene (cis-LYC) compared to the trans-isomer (trans-LYC). Lycopene, a linear, unsaturated hydrocarbon carotenoid, is the major red pigment in certain fruits such as tomatoes, pink grapefruit, apricots, red oranges, watermelon, rosehips, and guava. As an antioxidant, lycopene scavenges free radicals, which may both inhibit cellular oxidation and prevent free radical damage to cells. cis-LYC is better absorbed than its trans form."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C116327",
+            "nciConceptName": "Tangerine Tomato Juice",
+            "termId": 761602,
+            "name": "tangerine tomato juice",
+            "firstLetter": "t",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "tangerine-tomato-juice"
+        }
+    ],
+    "links": null
+}

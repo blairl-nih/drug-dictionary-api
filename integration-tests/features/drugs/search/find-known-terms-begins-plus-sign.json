@@ -1,0 +1,50 @@
+{
+    "meta": {
+        "totalResults": 1,
+        "from": 0
+    },
+    "results": [
+        {
+            "aliases": [
+                {
+                    "type": "USBrandName",
+                    "name": "AO+ Mist"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "topical probiotic spray"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "topical probiotic solution"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "AO bacteria-containing mist"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "AOB-based probiotic sprayt"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "ammonia oxidizing bacteria-containing probiotic Mist"
+                }
+            ],
+            "definition": {
+                "html": "A probiotic spray containing a live-cultured strain of ammonia-oxidizing bacteria (AOB), with potential skin restorative activity. Upon topical application of the AOB-based probiotic solution, the AOBs within the solution oxidize ammonia, thereby converting ammonia on your skin into nitric oxide and nitrite. AOB may potentially protect and restore the skin by preventing ammonia-mediated skin damage. AOB are a naturally-occurring bacteria found in ammonia-rich soil and water.",
+                "text": "A probiotic spray containing a live-cultured strain of ammonia-oxidizing bacteria (AOB), with potential skin restorative activity. Upon topical application of the AOB-based probiotic solution, the AOBs within the solution oxidize ammonia, thereby converting ammonia on your skin into nitric oxide and nitrite. AOB may potentially protect and restore the skin by preventing ammonia-mediated skin damage. AOB are a naturally-occurring bacteria found in ammonia-rich soil and water."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C154283",
+            "nciConceptName": "Topical Ammonia-oxidizing Bacteria-based Probiotic Solution",
+            "termId": 794123,
+            "name": "topical ammonia-oxidizing bacteria-based probiotic solution",
+            "firstLetter": "t",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "topical-ammonia-oxidizing-bacteria-based-probiotic-solution"
+        }
+    ],
+    "links": null
+}
