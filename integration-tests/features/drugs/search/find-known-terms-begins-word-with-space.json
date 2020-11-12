@@ -1,0 +1,41 @@
+{
+    "meta": {
+        "totalResults": 2,
+        "from": 0
+    },
+    "results": [
+        {
+            "aliases": null,
+            "definition": {
+                "html": "Tomato juice derived from red tomatoes, with potential antioxidant and chemopreventive activities. Red tomato juice contains higher levels of the trans-isomer of lycopene (trans-LYC) compared to the cis-isomer (cis-LYC). Lycopene, a linear, unsaturated hydrocarbon carotenoid, is the major red pigment in certain fruits such as tomatoes, pink grapefruit, apricots, red oranges, watermelon, rosehips, and guava. As an antioxidant, lycopene scavenges free radicals which may both inhibit cellular oxidation and prevent free radical damage to cells. cis-LYC is better absorbed than its trans form.",
+                "text": "Tomato juice derived from red tomatoes, with potential antioxidant and chemopreventive activities. Red tomato juice contains higher levels of the trans-isomer of lycopene (trans-LYC) compared to the cis-isomer (cis-LYC). Lycopene, a linear, unsaturated hydrocarbon carotenoid, is the major red pigment in certain fruits such as tomatoes, pink grapefruit, apricots, red oranges, watermelon, rosehips, and guava. As an antioxidant, lycopene scavenges free radicals which may both inhibit cellular oxidation and prevent free radical damage to cells. cis-LYC is better absorbed than its trans form."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C116328",
+            "nciConceptName": "Red Tomato Juice",
+            "termId": 761603,
+            "name": "red tomato juice",
+            "firstLetter": "r",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "red-tomato-juice"
+        },
+        {
+            "aliases": null,
+            "definition": {
+                "html": "Tomato juice derived from the tangerine tomato, with potential antioxidant and chemopreventive activities. Tangerine tomato juice contains higher levels of the cis-isomer of lycopene (cis-LYC) compared to the trans-isomer (trans-LYC). Lycopene, a linear, unsaturated hydrocarbon carotenoid, is the major red pigment in certain fruits such as tomatoes, pink grapefruit, apricots, red oranges, watermelon, rosehips, and guava. As an antioxidant, lycopene scavenges free radicals, which may both inhibit cellular oxidation and prevent free radical damage to cells. cis-LYC is better absorbed than its trans form.",
+                "text": "Tomato juice derived from the tangerine tomato, with potential antioxidant and chemopreventive activities. Tangerine tomato juice contains higher levels of the cis-isomer of lycopene (cis-LYC) compared to the trans-isomer (trans-LYC). Lycopene, a linear, unsaturated hydrocarbon carotenoid, is the major red pigment in certain fruits such as tomatoes, pink grapefruit, apricots, red oranges, watermelon, rosehips, and guava. As an antioxidant, lycopene scavenges free radicals, which may both inhibit cellular oxidation and prevent free radical damage to cells. cis-LYC is better absorbed than its trans form."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C116327",
+            "nciConceptName": "Tangerine Tomato Juice",
+            "termId": 761602,
+            "name": "tangerine tomato juice",
+            "firstLetter": "t",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "tangerine-tomato-juice"
+        }
+    ],
+    "links": null
+}

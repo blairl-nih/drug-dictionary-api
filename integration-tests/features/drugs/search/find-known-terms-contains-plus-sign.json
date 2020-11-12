@@ -1,0 +1,38 @@
+{
+    "meta": {
+        "totalResults": 1,
+        "from": 0
+    },
+    "results": [
+        {
+            "aliases": [
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "propanoic acid, 2-[4-[(7-chloro-2-quinoxalinyl)oxy]phenoxy}-, (+ )-(R)-"
+                },
+                {
+                    "type": "ChemicalStructureName",
+                    "name": "2-{4-[(7-chloro-2-quinoxalinyl)oxy]phenoxy}propionic acid"
+                },
+                {
+                    "type": "Synonym",
+                    "name": "XK469"
+                }
+            ],
+            "definition": {
+                "html": "The R-isomer of a synthetic quinoxaline phenoxypropionic acid derivative with proapoptotic and antiproliferative activities. R(+)XK469 selectively inhibits topoisomerase II-beta, blocks activation of MEK/MAPK signaling kinases, stimulates caspases, and upregulates p53-dependent proteins, including cyclins A and B1, thereby arresting cancer cells in the G2/M phase of the cell cycle. Both R(+) and S(-) isomers of this agent are cytotoxic, although the R-isomer is more potent.",
+                "text": "The R-isomer of a synthetic quinoxaline phenoxypropionic acid derivative with proapoptotic and antiproliferative activities. R(+)XK469 selectively inhibits topoisomerase II-beta, blocks activation of MEK/MAPK signaling kinases, stimulates caspases, and upregulates p53-dependent proteins, including cyclins A and B1, thereby arresting cancer cells in the G2/M phase of the cell cycle. Both R(+) and S(-) isomers of this agent are cytotoxic, although the R-isomer is more potent."
+            },
+            "drugInfoSummaryLink": null,
+            "nciConceptId": "C2662",
+            "nciConceptName": "Topoisomerase-II-beta Inhibitor Racemic XK469",
+            "termId": 38517,
+            "name": "R(+)XK469",
+            "firstLetter": "r",
+            "type": "DrugTerm",
+            "termNameType": "PreferredName",
+            "prettyUrlName": "topoisomerase-ii-beta-inhibitor-racemic-xk469"
+        }
+    ],
+    "links": null
+}

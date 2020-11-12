@@ -195,9 +195,6 @@ namespace NCI.OCPL.Api.DrugDictionary.Controllers
             if (from < 0)
                 from = 0;
 
-            // query uses a catch-all route, make sure it's been decoded.
-            query = WebUtility.UrlDecode(query);
-
             DrugTermResults res = await _termsQueryService.Search(query, matchType, size, from);
             return res;
         }

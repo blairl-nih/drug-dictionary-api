@@ -56,11 +56,18 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
         }
 
-        [Fact]
-        public async void Search_ValidSearchString()
+        /// <summary>
+        /// Verify that search text is passed without unexpected changes.
+        /// </summary>
+        /// <returns></returns>
+        [Theory]
+        [InlineData("iodinated-contrast-agent")]
+        [InlineData("2/3")]
+        [InlineData("AO+ Mist")]
+        [InlineData("%20")]
+        [InlineData("%3A")]
+        public async void Search_ValidSearchString(string searchText)
         {
-            const string theName = "iodinated-contrast-agent";
-
             DrugTermResults testResults = new DrugTermResults()
             {
                 Results = new DrugTerm[] {
@@ -114,7 +121,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
             // Call the controller.
             DrugsController controller = new DrugsController(NullLogger<DrugsController>.Instance, querySvc.Object);
-            DrugTermResults actual = await controller.Search(theName);
+            DrugTermResults actual = await controller.Search(searchText);
 
             Assert.Equal(testResults, actual);
 
@@ -122,9 +129,9 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             //  a) with the ID value.
             //  b) exactly once.
             querySvc.Verify(
-                svc => svc.Search(theName, MatchType.Begins, DEFAULT_SEARCH_SIZE, DEFAULT_SEARCH_FROM),
+                svc => svc.Search(searchText, MatchType.Begins, DEFAULT_SEARCH_SIZE, DEFAULT_SEARCH_FROM),
                 Times.Once,
-                $"ITermsQueryService::Search() should be called once, with id = '{theName}"
+                $"ITermsQueryService::Search() should be called once, with id = '{searchText}"
             );
 
         }
