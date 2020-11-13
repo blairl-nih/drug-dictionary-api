@@ -24,10 +24,6 @@
         "termName": "noni fruit juice"
     },
     {
-        "termId": 746772,
-        "termName": "phenethyl isothiocyanate-containing watercress juice"
-    },
-    {
         "termId": 304321,
         "termName": "pomegranate juice"
     },
@@ -38,5 +34,9 @@
     {
         "termId": 761603,
         "termName": "red tomato juice"
+    },
+    {
+        "termId": 797026,
+        "termName": "Ribes nigrum L. juice"
     }
 ]

@@ -10,5 +10,11 @@ namespace NCI.OCPL.Api.DrugDictionary.Models
         /// </summary>
         /// <value>The name of the alias.</value>
         public string AliasName { get; set; }
+
+        /// <summary>
+        /// Gets or sets configuration options specific to Autosuggest.
+        /// </summary>
+        /// <value>An object containing the configuration items specific to autosuggest.</value>
+        public AutosuggestOptions Autosuggest { get; set; }
     }
 }

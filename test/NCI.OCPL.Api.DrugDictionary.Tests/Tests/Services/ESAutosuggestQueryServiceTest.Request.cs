@@ -62,6 +62,7 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
             // Setup the mocked Options
             IOptions<DrugDictionaryAPIOptions> clientOptions = GetMockOptions();
+            clientOptions.Value.Autosuggest.MaxSuggestionLength = data.MaxSuggestionLength;
 
             ESAutosuggestQueryService query = new ESAutosuggestQueryService(client, clientOptions, new NullLogger<ESAutosuggestQueryService>());
 
@@ -114,9 +115,13 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
             Mock<IOptions<DrugDictionaryAPIOptions>> clientOptions = new Mock<IOptions<DrugDictionaryAPIOptions>>();
             clientOptions
                 .SetupGet(opt => opt.Value)
-                .Returns(new DrugDictionaryAPIOptions()
+                .Returns(new DrugDictionaryAPIOptions
                 {
-                    AliasName = "drugv1"
+                    AliasName = "drugv1",
+                    Autosuggest = new AutosuggestOptions
+                    {
+                        MaxSuggestionLength = 30
+                    }
                 }
             );
 

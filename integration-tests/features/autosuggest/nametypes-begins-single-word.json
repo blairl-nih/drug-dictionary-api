@@ -1,10 +1,6 @@
 [
     {
         "termId": 798439,
-        "termName": "bio-enhanced curcumin extract formulation"
-    },
-    {
-        "termId": 798439,
         "termName": "Biocurcumax"
     },
     {
@@ -18,5 +14,9 @@
     {
         "termId": 546971,
         "termName": "Biopress"
+    },
+    {
+        "termId": 577331,
+        "termName": "BioResponse DIM"
     }
 ]

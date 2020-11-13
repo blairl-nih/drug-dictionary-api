@@ -4,7 +4,7 @@ Feature: Autosuggest, find terms known to exist. (This is a good place for items
         * url apiHost
 
     Scenario Outline: Given the search text and type, validate the query result for a term known to exist.
-        Search for searchText: '<search>', matchType: '<match>'
+        Search for searchText: '<search>', matchType: '<match>', expected: '<expected>'
 
         Given path 'Autosuggest'
         And params { searchText: <search>, matchType: <match>, size: 10}

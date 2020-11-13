@@ -15,7 +15,7 @@ Feature: Autosuggest contains matches, with no filtering of alias types. This is
 
         Examples:
             | search             | expected                                        |
-            | anti-c             | contains-term-exact-match-on-punctuation.json   |
+            | FT-1101            | contains-term-exact-match-with-punctuation.json |
             | ster               | contains-term-match-on-word-boundary.json       |
 
     Scenario Outline: Given the search text, validate contains query for DrugAliases.
@@ -29,7 +29,7 @@ Feature: Autosuggest contains matches, with no filtering of alias types. This is
 
         Examples:
             | search             | expected                                         |
-            | anti-c             | contains-alias-exact-match-on-punctuation.json   |
+            | t-cel              | contains-alias-exact-match-with-punctuation.json   |
             | mab                | contains-alias-match-on-word-boundary.json       |
 
 
@@ -44,9 +44,9 @@ Feature: Autosuggest contains matches, with no filtering of alias types. This is
 
         Examples:
             | search             | expected                                               |
-            | anti-c             | contains-all-records-exact-match-on-punctuation.json   |
-            | mab                | contains-all-records-match-on-word-boundary.json       |
-            | ster               | contains-all-records-match-on-word-boundary2.json      |
+            | interleukin-2      | contains-all-records-exact-match-with-punctuation.json |
+            | anti               | contains-all-records-match-on-word-boundary.json       |
+            | doxorubicin        | contains-all-records-match-on-word-boundary2.json      |
 
 
     Scenario Outline: Given the search text, validate contains query for default resource types.
@@ -61,6 +61,6 @@ Feature: Autosuggest contains matches, with no filtering of alias types. This is
         Examples:
             | search             | expected                                               |
             # Default should be the same results as all, so let's use the same results files.
-            | anti-c             | contains-all-records-exact-match-on-punctuation.json   |
-            | mab                | contains-all-records-match-on-word-boundary.json       |
-            | ster               | contains-all-records-match-on-word-boundary2.json      |
+            | interleukin-2      | contains-all-records-exact-match-with-punctuation.json |
+            | anti               | contains-all-records-match-on-word-boundary.json       |
+            | doxorubicin        | contains-all-records-match-on-word-boundary2.json      |

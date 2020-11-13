@@ -17,6 +17,8 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
         public override MatchType MatchType => MatchType.Contains;
 
+        public override int MaxSuggestionLength => 30;
+
         public override int Size => 20;
 
         public override DrugResourceType[] IncludeResourceTypes => new DrugResourceType[] { DrugResourceType.DrugTerm };
@@ -38,6 +40,16 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     ""must_not"": [
                         { ""prefix"": { ""name"": { ""value"": ""gadavi"" } } },
                         { ""terms"": { ""term_name_type"": [ ""Synonym"" ] } }
+                    ],
+                    ""filter"": [
+                        {
+                            ""script"": {
+                                ""script"": {
+                                    ""inline"": ""doc['name'].value.length() <= 30"",
+                                    ""lang"": ""painless""
+                                }
+                            }
+                        }
                     ]
                 }
             },

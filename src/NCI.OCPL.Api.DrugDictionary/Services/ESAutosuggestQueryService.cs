@@ -119,36 +119,29 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
                     TermNameType[] excludeNameTypes
         )
         {
-            /*
-             * Create a query similar to the following.  The bool subquery is written with an overloaded version
-             * of operator && which supplies the `{"bool" :  {"must": [` portion for you.
-             * This is somewhat explained here: https://www.elastic.co/guide/en/elasticsearch/client/net-api/current/bool-queries.html.
-             *
-             * curl -XPOST http://SERVER_NAME/glossaryv1/terms/_search -H 'Content-Type: application/x-ndjson'   -d '{
-             *     "query": {
-             *         "bool": {
-             *             "must": [
-             *                 { "prefix": {"name": "dox"} },
-             *                 { "terms": { "type": [ "DrugAlias","DrugTerm" ] } },
-             *                 { "terms": { "term_name_type": [ "PreferredName", "Synonym", "USbrandname" ] } }
-             *             ],
-             *             "must_not": {
-             *                 "terms": {"term_name_type": []}
-             *             }
-             *         }
-             *     },
-             *     "sort": ["name"],
-             *     "size": 10
-             * }
-             *
-             */
             SearchRequest request = new SearchRequest(index, types)
             {
-                Query =
-                        new PrefixQuery {Field = "name", Value = query } &&
-                        new TermsQuery { Field = "type", Terms = includeResourceTypes.Select(p => p.ToString()) } &&
-                        new TermsQuery { Field = "term_name_type", Terms = includeNameTypes.Select(p => p.ToString()) } &&
-                        !new TermsQuery { Field = "term_name_type", Terms = excludeNameTypes.Select(p => p.ToString()) }
+                Query = new BoolQuery
+                {
+                    Must = new QueryContainer[]
+                    {
+                        new PrefixQuery {Field = "name", Value = query },
+                        new TermsQuery { Field = "type", Terms = includeResourceTypes.Select(p => p.ToString()) },
+                        new TermsQuery { Field = "term_name_type", Terms = includeNameTypes.Select(p => p.ToString()) }
+                    },
+                    MustNot = new QueryContainer[]
+                    {
+                        new TermsQuery { Field = "term_name_type", Terms = excludeNameTypes.Select(p => p.ToString()) }
+                    },
+                    Filter = new QueryContainer[]
+                    {
+                        new ScriptQuery
+                        {
+                            Inline = $"doc['name'].value.length() <= {_apiOptions.Autosuggest.MaxSuggestionLength}",
+                            Lang = "painless"
+                        }
+                    }
+                }
                 ,
                 Sort = new List<ISort>
                 {
@@ -180,41 +173,31 @@ namespace NCI.OCPL.Api.DrugDictionary.Services
                     TermNameType[] excludeNameTypes
         )
         {
-            /*
-             * Create a query similar to the following.  The bool subquery is written with an overloaded version
-             * of operator && which supplies the `{"bool" :  {"must": [` portion for you.
-             * This is somewhat explained here: https://www.elastic.co/guide/en/elasticsearch/client/net-api/current/bool-queries.html.
-             *
-             * curl -XPOST http://SERVER_NAME/drugv1/terms/_search -H 'Content-Type: application/x-ndjson'   -d '{
-             *     "query": {
-             *         "bool": {
-             *             "must": [
-             *                 { "match_phrase": {"name._autocomplete": "dox"} },
-             *                 { "match": {"name._contain": "dox"}},
-             *                 { "terms": { "type": [ "DrugAlias", "DrugTerm" ] } },
-             *                 { "terms": { "term_name_type": [ "PreferredName", "Synonym", "USbrandname" ] } }
-             *             ],
-             *             "must_not": [
-             *                 {"prefix": {"name": "dox"}},
-             *                 {"terms": {"term_name_type": []}}
-             *             ]
-             *         }
-             *     },
-             *     "sort": ["name"],
-             *     "size": 10
-             * }'
-             */
-
-
             SearchRequest request = new SearchRequest(index, types)
             {
-                Query =
-                        new MatchPhraseQuery { Field = "name._autocomplete", Query = query.ToString() } &&
-                        new MatchQuery { Field = "name._contain", Query = query.ToString() } &&
-                        new TermsQuery { Field = "type", Terms = includeResourceTypes.Select(p => p.ToString()) }  &&
-                        new TermsQuery {Field = "term_name_type", Terms = includeNameTypes.Select(p => p.ToString()) } &&
-                        !new PrefixQuery { Field = "name", Value = query } &&
-                        !new TermsQuery { Field = "term_name_type", Terms = excludeNameTypes.Select(p => p.ToString())}
+                Query = new BoolQuery
+                {
+                    Must = new QueryContainer[]
+                    {
+                        new MatchPhraseQuery { Field = "name._autocomplete", Query = query.ToString() },
+                        new MatchQuery { Field = "name._contain", Query = query.ToString() },
+                        new TermsQuery { Field = "type", Terms = includeResourceTypes.Select(p => p.ToString()) },
+                        new TermsQuery {Field = "term_name_type", Terms = includeNameTypes.Select(p => p.ToString()) }
+                    },
+                    MustNot = new QueryContainer[]
+                    {
+                        new PrefixQuery { Field = "name", Value = query },
+                        new TermsQuery { Field = "term_name_type", Terms = excludeNameTypes.Select(p => p.ToString())}
+                    },
+                    Filter = new QueryContainer[]
+                    {
+                        new ScriptQuery
+                        {
+                            Inline = $"doc['name'].value.length() <= {_apiOptions.Autosuggest.MaxSuggestionLength}",
+                            Lang = "painless"
+                        }
+                    }
+                }
                 ,
                 Sort = new List<ISort>
                 {

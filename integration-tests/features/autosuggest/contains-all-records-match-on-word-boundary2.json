@@ -1,14 +1,46 @@
 [
     {
-        "termId": 601983,
-        "termName": "androstane steroid HE3235"
+        "termId": 42904,
+        "termName": "HPMA-doxorubicin"
     },
     {
-        "termId": 799647,
-        "termName": "chlorine dioxide sterilization"
+        "termId": 39424,
+        "termName": "liposomal doxorubicin"
     },
     {
-        "termId": 799071,
-        "termName": "submicron particle paclitaxel sterile suspension"
+        "termId": 795832,
+        "termName": "micro needle array-doxorubicin"
+    },
+    {
+        "termId": 795832,
+        "termName": "micro-needle array doxorubicin"
+    },
+    {
+        "termId": 795832,
+        "termName": "microneedle array doxorubicin"
+    },
+    {
+        "termId": 795832,
+        "termName": "MNA-doxorubicin"
+    },
+    {
+        "termId": 39424,
+        "termName": "S-Liposomal Doxorubicin"
+    },
+    {
+        "termId": 39424,
+        "termName": "Stealth Liposomal Doxorubicin"
+    },
+    {
+        "termId": 38775,
+        "termName": "Tetrahydropyranyl-Doxorubicin"
+    },
+    {
+        "termId": 38775,
+        "termName": "THP-Doxorubicin"
+    },
+    {
+        "termId": 583257,
+        "termName": "zoptarelin doxorubicin"
     }
 ]

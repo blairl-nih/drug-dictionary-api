@@ -1,27 +1,26 @@
-Feature: Autosuggest, including only PreferredName and USBrandName name types in order to
-    approximate the legacy WCMS dictionary.
+Feature: Autosuggest, approximating the legacy WCMS drug dictionary.
 
     Background:
         * url apiHost
 
     Scenario Outline: Given the search text and type, validate the query result.
+        search: '<search>', match: '<match>', expected: '<expected>'
 
         Given path 'Autosuggest'
-        And params { searchText: <search>, matchType: <match>, size: 5, includeNameTypes: ['USBrandName', 'PreferredName'] }
+        And params { searchText: <search>, matchType: <match>, size: 5 }
         When method get
         Then status 200
         And match response == read( expected )
 
         Examples:
-            | search             | match     | expected                          |
+            | search             | match     | expected                                 |
             # Begins
-            | bio                | begins    | legacy-begins-bio.json            |
+            | bio                | begins    | legacy-begins-single-word.json           |
             # Contains
-            | juice              | contains  | legacy-contains-juice.json        |
+            | juice              | contains  | legacy-contains-single-word.json         |
             # Contains - with embedded spaces
-            | tomato juice       | contains  | legacy-contains-tomato-juice.json |
-            # Contains - match after dash
-            | containing         | contains  | legacy-contains-containing.json   |
+            | tomato juice       | contains  | legacy-contains-with-space.json          |
+            # Contains - match after hyphen
+            | containing         | contains  | legacy-contains-after-hyphen.json          |
             # Path separator in term name
-            | TLR5/TLR5          | contains  | legacy-contains-tlr5.json         |
-            | 2/3                | contains  | legacy-contains-two-thirds.json   |
+            | SD/01              | contains  | legacy-contains-with-path-separator.json |

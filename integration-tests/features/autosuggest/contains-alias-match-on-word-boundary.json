@@ -32,22 +32,6 @@
         "termName": "anti-CD47 Mab CC-90002"
     },
     {
-        "termId": 687567,
-        "termName": "anti-CTLA-4 mAb heavy and light chain RNA/GITRL RNA-transfected autologous DC"
-    },
-    {
-        "termId": 687567,
-        "termName": "anti-CTLA-4 mAb heavy and light chain RNA/GITRL RNA-transfected autologous dendritic cell"
-    },
-    {
-        "termId": 687564,
-        "termName": "anti-CTLA-4 mAb RNA-transfected autologous DC"
-    },
-    {
-        "termId": 687564,
-        "termName": "anti-CTLA-4 mAb RNA-transfected autologous dendritic cells"
-    },
-    {
         "termId": 691187,
         "termName": "anti-EGFR mAb ABT-806"
     },
@@ -58,10 +42,6 @@
     {
         "termId": 681010,
         "termName": "anti-HER2 mAb MGAH22"
-    },
-    {
-        "termId": 708211,
-        "termName": "anti-HER2 monoclonal antibody GT-Mab 7.3-GEX"
     },
     {
         "termId": 365545,
@@ -78,5 +58,25 @@
     {
         "termId": 780986,
         "termName": "anti-IFNg mAb NI-0501"
+    },
+    {
+        "termId": 777272,
+        "termName": "anti-KIR3DL2 mAb IPH4102"
+    },
+    {
+        "termId": 785869,
+        "termName": "anti–M-CSF mAb PD-0360324"
+    },
+    {
+        "termId": 689646,
+        "termName": "anti-P3 Ab idiotype mAB1E10"
+    },
+    {
+        "termId": 796496,
+        "termName": "anti-S15 mAb NC318"
+    },
+    {
+        "termId": 794047,
+        "termName": "anti-SAP mAb"
     }
 ]

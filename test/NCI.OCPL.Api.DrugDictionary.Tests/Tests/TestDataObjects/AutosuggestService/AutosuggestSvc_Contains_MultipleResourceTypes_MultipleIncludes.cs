@@ -17,6 +17,8 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
         public override MatchType MatchType => MatchType.Contains;
 
+        public override int MaxSuggestionLength => 17;
+
         public override int Size => 5;
 
         public override DrugResourceType[] IncludeResourceTypes => new DrugResourceType[] {DrugResourceType.DrugAlias, DrugResourceType.DrugTerm};
@@ -37,6 +39,16 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     ],
                     ""must_not"": [
                         { ""prefix"": { ""name"": { ""value"": ""bevaciz"" } } }
+                    ],
+                    ""filter"": [
+                        {
+                            ""script"": {
+                                ""script"": {
+                                    ""inline"": ""doc['name'].value.length() <= 17"",
+                                    ""lang"": ""painless""
+                                }
+                            }
+                        }
                     ]
                 }
             },

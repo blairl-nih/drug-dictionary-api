@@ -1,5 +1,5 @@
-Feature: Expand, with includedNameTypes set to 'PreferredName', 'USBrandName'
-    (equivalent to legacy WCMS functionality)
+Feature: Expand, with includedNameTypes set to 'PreferredName', 'USBrandName' (equivalent to legacy WCMS functionality)
+    Letter: '<letter>', From: <from>
 
     Background:
         * url apiHost

@@ -1,82 +1,82 @@
 [
     {
-        "termId": 42286,
-        "termName": "2B1 Bispecific MAb"
+        "termId": 674133,
+        "termName": "(131I) antibody L19-SIP"
+    },
+    {
+        "termId": 674133,
+        "termName": "(131I) antibody L19SIP"
+    },
+    {
+        "termId": 38135,
+        "termName": "11D10 anti-idiotype vaccine"
+    },
+    {
+        "termId": 41244,
+        "termName": "14G2A, monoclonal antibody"
+    },
+    {
+        "termId": 38451,
+        "termName": "1D1O Anti-lymphoma Antibody"
     },
     {
         "termId": 42286,
-        "termName": "2B1 Bispecific Murine MAb"
+        "termName": "2B1 antibody, bispecific"
+    },
+    {
+        "termId": 322808,
+        "termName": "2C4 antibody"
+    },
+    {
+        "termId": 41259,
+        "termName": "3F8 Monoclonal Antibody"
+    },
+    {
+        "termId": 42652,
+        "termName": "3H1 anti-idiotype vaccine"
+    },
+    {
+        "termId": 794875,
+        "termName": "68Ga-NOTA-anti-HER2 VHH1"
     },
     {
         "termId": 688830,
         "termName": "90Y anti-CD45 MAb BC8"
     },
     {
-        "termId": 744892,
-        "termName": "[131I] mAb HAb18G/CD147"
+        "termId": 688830,
+        "termName": "90Y anti-CD45 MoAb BC8"
     },
     {
-        "termId": 690474,
-        "termName": "anti-ANG2 MAb MEDI-3617"
+        "termId": 778997,
+        "termName": "[131I]-SGMIB anti-HER2 VHH1"
     },
     {
-        "termId": 747738,
-        "termName": "anti-CD19 MAb DI-B4"
+        "termId": 42527,
+        "termName": "A33 monoclonal antibody"
     },
     {
-        "termId": 795705,
-        "termName": "anti-CD38 MAb TAK-079"
+        "termId": 37857,
+        "termName": "ABX-EGF monoclonal antibody"
     },
     {
-        "termId": 769566,
-        "termName": "anti-CD47 Mab CC-90002"
+        "termId": 783989,
+        "termName": "ADC anti-TIM-1-vcMMAE CDX-014"
     },
     {
-        "termId": 687567,
-        "termName": "anti-CTLA-4 mAb heavy and light chain RNA/GITRL RNA-transfected autologous DC"
+        "termId": 793440,
+        "termName": "agonist CD40 antibody CDX-1140"
     },
     {
-        "termId": 687567,
-        "termName": "anti-CTLA-4 mAb heavy and light chain RNA/GITRL RNA-transfected autologous dendritic cell"
+        "termId": 721983,
+        "termName": "alpha 1 antitrypsin"
     },
     {
-        "termId": 687564,
-        "termName": "anti-CTLA-4 mAb RNA-transfected autologous DC"
+        "termId": 721983,
+        "termName": "alpha-1 antitrypsin"
     },
     {
-        "termId": 687564,
-        "termName": "anti-CTLA-4 mAb RNA-transfected autologous dendritic cell vaccine"
-    },
-    {
-        "termId": 687564,
-        "termName": "anti-CTLA-4 mAb RNA-transfected autologous dendritic cells"
-    },
-    {
-        "termId": 687567,
-        "termName": "anti-CTLA4 mAb RNA/GITRL RNA-transfected autologous dendritic cell vaccine"
-    },
-    {
-        "termId": 691187,
-        "termName": "anti-EGFR mAb ABT-806"
-    },
-    {
-        "termId": 686621,
-        "termName": "anti-EphA3 mAb KB004"
-    },
-    {
-        "termId": 681010,
-        "termName": "anti-HER2 mAb MGAH22"
-    },
-    {
-        "termId": 708211,
-        "termName": "anti-HER2 monoclonal antibody GT-Mab 7.3-GEX"
-    },
-    {
-        "termId": 365545,
-        "termName": "anti-huCD40 mAb"
-    },
-    {
-        "termId": 689549,
-        "termName": "anti-huGITR mAb TRX518"
+        "termId": 800471,
+        "termName": "ARC-T plus anti-BCMA SparX"
     }
 ]

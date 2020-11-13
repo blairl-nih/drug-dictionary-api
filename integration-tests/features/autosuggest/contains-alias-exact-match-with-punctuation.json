@@ -1,0 +1,26 @@
+[
+    {
+        "termId": 748623,
+        "termName": "4ab T1E28-positive T-cells"
+    },
+    {
+        "termId": 801949,
+        "termName": "CD19CAR T-cells AUTO1"
+    },
+    {
+        "termId": 797486,
+        "termName": "iC9.GD2.CAR.IL-15 T-cells"
+    },
+    {
+        "termId": 794052,
+        "termName": "IMA202 T-cell product"
+    },
+    {
+        "termId": 798429,
+        "termName": "IMA203 T-cell product"
+    },
+    {
+        "termId": 799099,
+        "termName": "SPEAR T-cell ADP-A2M4CD8"
+    }
+]

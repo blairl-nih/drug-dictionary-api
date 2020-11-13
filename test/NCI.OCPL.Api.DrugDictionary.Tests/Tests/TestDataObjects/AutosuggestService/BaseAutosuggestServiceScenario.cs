@@ -21,6 +21,11 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
         public abstract MatchType MatchType { get; }
 
         /// <summary>
+        /// Maximum length of suggestions the query should return.
+        /// </summary>
+        public abstract int MaxSuggestionLength { get; }
+
+        /// <summary>
         /// Contains the maximum number of suggestions the controller should return.
         /// </summary>
         public abstract int Size { get; }

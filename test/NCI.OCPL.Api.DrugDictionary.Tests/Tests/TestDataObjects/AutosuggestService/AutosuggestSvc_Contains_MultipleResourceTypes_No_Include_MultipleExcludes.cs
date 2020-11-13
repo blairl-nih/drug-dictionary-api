@@ -17,6 +17,8 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
         public override MatchType MatchType => MatchType.Contains;
 
+        public override int MaxSuggestionLength => 33;
+
         public override int Size => 3;
 
         public override DrugResourceType[] IncludeResourceTypes => new DrugResourceType[] { DrugResourceType.DrugAlias, DrugResourceType.DrugTerm };
@@ -37,6 +39,16 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     ""must_not"": [
                         { ""prefix"": { ""name"": { ""value"": ""ZFN ZFN-758"" } } },
                         { ""terms"": { ""term_name_type"": [ ""USBrandName"", ""ForeignBrandName"" ] } }
+                    ],
+                    ""filter"": [
+                        {
+                            ""script"": {
+                                ""script"": {
+                                    ""inline"": ""doc['name'].value.length() <= 33"",
+                                    ""lang"": ""painless""
+                                }
+                            }
+                        }
                     ]
                 }
             },

@@ -17,6 +17,8 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
 
         public override MatchType MatchType => MatchType.Begins;
 
+        public override int MaxSuggestionLength => 20;
+
         public override int Size => 8;
 
         public override DrugResourceType[] IncludeResourceTypes => new DrugResourceType[] { DrugResourceType.DrugAlias, DrugResourceType.DrugTerm };
@@ -35,6 +37,16 @@ namespace NCI.OCPL.Api.DrugDictionary.Tests
                     ],
                     ""must_not"": [
                         { ""terms"": { ""term_name_type"": [ ""CASRegistryName"", ""ChemicalStructureName"" ] } }
+                    ],
+                    ""filter"": [
+                        {
+                            ""script"": {
+                                ""script"": {
+                                    ""inline"": ""doc['name'].value.length() <= 20"",
+                                    ""lang"": ""painless""
+                                }
+                            }
+                        }
                     ]
                 }
             },
